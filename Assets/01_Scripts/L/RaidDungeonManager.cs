@@ -26,7 +26,7 @@ public class RaidDungeonManager : MonoBehaviourPunCallbacks
         // 접속 정보 추출 및 표시
         SetRoomInfo();
         // Exit 버튼 이벤트 연결
-        exitBtn.onClick.AddListener(() => OnClickExitBtn());
+        //exitBtn.onClick.AddListener(() => OnClickExitBtn());
 
         Debug.Log("클라이언트 상태: " + PhotonNetwork.NetworkClientState + ", InRoom : "+PhotonNetwork.InRoom+ ", InRoom : "+PhotonNetwork.InLobby);
         spawnMgr = GameObject.Find("SpawnMgr").GetComponent<SpawnScipt>();
@@ -38,7 +38,7 @@ public class RaidDungeonManager : MonoBehaviourPunCallbacks
     }
 
     // Exit 버튼의 OnClick에 연결할 함수
-    private void OnClickExitBtn()
+    public void OnClickExitBtn()
     {
         RoomEnterManager.dungeonType = "None";
         PhotonNetwork.LeaveRoom();

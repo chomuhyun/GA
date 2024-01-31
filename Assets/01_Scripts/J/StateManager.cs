@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class StateManager : MonoBehaviour
 {
-   
-
-
     [Header("Stet")]
     // 플레이어의 스텟!!!!
     public float maxhp;

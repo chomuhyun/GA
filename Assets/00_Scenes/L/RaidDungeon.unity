@@ -242,9 +242,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ExitDengeonMgr, Assembly-CSharp
-        m_MethodName: OnClickExitDuneonBtn
+      - m_Target: {fileID: 385953834}
+        m_TargetAssemblyTypeName: RaidDungeonManager, Assembly-CSharp
+        m_MethodName: OnClickExitBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1350,10 +1350,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc415663cfd9b0498146da84c758dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterPrefabs:
-  - {fileID: 1601072967639036023, guid: 9af49a76c39748e41b4a22d0d7b5d92f, type: 3}
-  - {fileID: 3195543640418806037, guid: 52eb6f8fff86614419c3133b3316f2e9, type: 3}
-  - {fileID: 3607375465105616540, guid: 2e857cd1180de62419be3d05406ef047, type: 3}
+  cH:
+  - {fileID: 5600084692600214261, guid: 54e8e1c297dcd49479f028fd55554eee, type: 3}
+  - {fileID: 8861336943671075563, guid: b990da8d2303ea841b562d7c6add81e5, type: 3}
+  - {fileID: 4099242668333204363, guid: 85c6353c80a670a46a674ba50ad489a6, type: 3}
+  vc: {fileID: 0}
+  classNum: 0
+  thrid: {fileID: 0}
 --- !u!4 &1499654417
 Transform:
   m_ObjectHideFlags: 0

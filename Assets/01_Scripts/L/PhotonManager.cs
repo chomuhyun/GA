@@ -11,10 +11,8 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     // 게임의 버전
     private readonly string version = "1.0";
 
-    // 룸 목록에 대한 데이터를 저장하기 위한 딕셔너리 자료형
-    private Dictionary<string, GameObject> rooms = new Dictionary<string, GameObject>();
-
-    bool roomHomeExists = false;
+    public LoadPlayerInfo loadPlayerInfo;
+    public int slotNum;
 
     void Awake()
     {
@@ -32,6 +30,8 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.ConnectUsingSettings();
         }
+
+        loadPlayerInfo = GameObject.Find("LoadPlayerInfo").GetComponent<LoadPlayerInfo>();
     }
 
 
@@ -80,15 +80,35 @@ public class PhotonManager : MonoBehaviourPunCallbacks
             PhotonNetwork.LoadLevel("Town");
         }
     }
-
-    // 룸 목록을 수신하는 콜백 함수
-    public override void OnRoomListUpdate(List<RoomInfo> roomList)
-    {
-
-    }
     #endregion
 
     #region UI_BUTTON_EVENT
+    //유저명을 설정하는 로직
+    public void SetUserId()
+    {
+        slotNum = SelectSlot.slotNum;
+        Debug.Log("SlotNum : " + slotNum);
+        switch (slotNum)
+        {
+            case 0:
+                PhotonNetwork.NickName = loadPlayerInfo.slot1Text[0].text;
+                break;
+            case 1:
+                PhotonNetwork.NickName = loadPlayerInfo.slot2Text[0].text;
+                break;
+            case 2:
+                PhotonNetwork.NickName = loadPlayerInfo.slot3Text[0].text;
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void OnClickStartBtn()
+    {
+        SetUserId();
+        JoinHome();
+    }
     public void JoinHome()
     {
         Debug.Log("JoinHome 실행");

@@ -6,24 +6,24 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    #region 싱글톤
-    private static InventoryManager instance;
-    public static InventoryManager Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                // 인스턴스가 없으면 새로 생성
-                GameObject singletonObject = new GameObject("InventoryManager");
-                instance = singletonObject.AddComponent<InventoryManager>();
-                DontDestroyOnLoad(singletonObject); // 씬 전환 시에도 유지되도록 설정
-            }
+    //#region 싱글톤
+    //private static InventoryManager instance;
+    //public static InventoryManager Instance
+    //{
+    //    get
+    //    {
+    //        if (instance == null)
+    //        {
+    //             인스턴스가 없으면 새로 생성
+    //            GameObject singletonObject = new GameObject("InventoryManager");
+    //            instance = singletonObject.AddComponent<InventoryManager>();
+    //            DontDestroyOnLoad(singletonObject); // 씬 전환 시에도 유지되도록 설정
+    //        }
 
-            return instance;
-        }
-    }
-    #endregion  
+    //        return instance;
+    //    }
+    //}
+    //#endregion  
 
     [Space(1)]
     public StateManager stateMgr;
@@ -33,10 +33,11 @@ public class InventoryManager : MonoBehaviour
 
     [Header("PlayerState")]
     [Header("싱글톤 적용됌")]
-
+    // 이 데이터들도 DataManager같은 싱글톤에서 땡겨와야한다.
     public int weaponLv = 1;
-    public string playerName;
-    public string playerNick;
+    public string playerNick; // 닉네임
+    public string playerTitle; // 칭호
+    public int playerLevel;
 
     public int expPotion;
     public int materials;
@@ -50,14 +51,15 @@ public class InventoryManager : MonoBehaviour
     public Text expTxt;
     public Text materialTxt;
     public Text atkInfo;
-    public Text playerLv;   // 인벤토리창 레벨
-    public Text playerNickTxt; // 인벤토리창 칭호
-    public Text playerNameTxt; // 인벤토리창 이름
+    public Text playerLvTxt;   // 인벤토리창 레벨
+    public Text playerTitleTxt; // 인벤토리창 칭호
+    public Text playerNickTxt; // 인벤토리창 이름
+
 
     private void Awake()
     {
         Transform tr = transform.GetChild(0).GetChild(0).GetChild(1);
-        rewardCanvas = GameObject.Find("RewardContent").gameObject;//TODO:
+        //rewardCanvas = GameObject.Find("RewardContent").gameObject;//TODO:
         inventoryCanvas = GameObject.Find("InventoryCanvas").gameObject;
         goldImage = tr.Find("item_gold").GetComponent<Image>();
         expImage = tr.transform.Find("item_exp").GetComponent<Image>();
@@ -66,29 +68,15 @@ public class InventoryManager : MonoBehaviour
         expTxt = tr.transform.Find("item_expTxt").GetComponent<Text>();
         materialTxt = tr.transform.Find("item_materialTxt").GetComponent<Text>();
         atkInfo = tr.transform.Find("atkInfo").GetComponent<Text>();
-        playerLv = tr.transform.Find("lvInfo").GetComponent<Text>();
-
-        playerNameTxt = tr.transform.Find("PlayerName").GetComponent<Text>();
+        playerLvTxt = tr.transform.Find("lvInfo").GetComponent<Text>();
         playerNickTxt = tr.transform.Find("PlayerNick").GetComponent<Text>();
+        playerTitleTxt = tr.transform.Find("PlayerTitle").GetComponent<Text>();
 
         inventoryCanvas.SetActive(false);
-
-
     }
 
     private void Start()
     {
-        // 싱글톤 인스턴스가 이미 존재하면 현재 인스턴스를 파괴
-        if (instance != null && instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            // 처음 생성된 경우, 현재 인스턴스를 설정
-            instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
     } // 싱글톤 전용
 
     private void Update() // i 눌러서 인벤토리 열기
@@ -106,7 +94,6 @@ public class InventoryManager : MonoBehaviour
                 isInven = false;
             }
         }
-
     }
 
 
@@ -147,10 +134,10 @@ public class InventoryManager : MonoBehaviour
         expTxt.text = expPotion.ToString();
         materialTxt.text = materials.ToString();
         atkInfo.text = stateMgr.atk.ToString();
-        playerLv.text = stateMgr.level.ToString();
+        playerLvTxt.text = stateMgr.level.ToString();
         
         playerNickTxt.text = playerNick;
-        playerNameTxt.text = playerName;
+        playerTitleTxt.text = playerTitle;
 
     } //아이템 1개 이상이면 불들어오게
 

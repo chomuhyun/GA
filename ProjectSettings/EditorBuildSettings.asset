@@ -4,17 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/00_Scenes/MainFile/LoginIntro.unity
-    guid: 45e36d1fb55b69542a5779ab28027995
-  - enabled: 1
-    path: Assets/00_Scenes/MainFile/Town.unity
-    guid: 074da3b5c3e478b4bbc73b6d7320d77d
-  - enabled: 1
-    path: Assets/00_Scenes/P/PDG.unity
-    guid: da22e4eec1f479440ad0c74defb90c40
-  - enabled: 1
-    path: Assets/00_Scenes/L/DungeonLoadingScene.unity
-    guid: 654a614fce6b5cf4f8ce23d08d543623
+  m_Scenes: []
   m_configObjects: {}

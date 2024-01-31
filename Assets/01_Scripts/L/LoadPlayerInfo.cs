@@ -11,22 +11,6 @@ public class LoadPlayerInfo : MonoBehaviour
     public Text[] slot2Text;
     public Text[] slot3Text;
 
-    // 나중에 이렇게 for문 돌리기.
-    //public Text[][] allTextArrays = new Text[3][3] { slot1Text, slot2Text, slot3Text };
-    //for (int i = 0; i<allTextArrays.Length; i++)
-//{
-    //Text[] currentArray = allTextArrays[i];
-
-    // 여기에서 currentArray를 사용하여 작업 수행
-    //Debug.Log($"Using array {i + 1}");
-
-    // currentArray를 반복하여 각 텍스트 요소에 접근
-    //foreach (Text text in currentArray)
-    //{
-        // 텍스트 요소에 대한 작업 수행
-    //}
-//}
-
     public CharacterCreate characterCreate;
 
     private void Start()
@@ -34,7 +18,7 @@ public class LoadPlayerInfo : MonoBehaviour
         characterCreate = GameObject.Find("CharacterCreate").GetComponent<CharacterCreate>();
         LoadEverySlotData();
     }
-
+    
     public void LoadEverySlotData()
     {
         for (int slotNum = 0; slotNum < 3; slotNum++)

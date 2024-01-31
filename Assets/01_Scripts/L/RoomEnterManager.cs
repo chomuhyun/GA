@@ -63,21 +63,21 @@ public class RoomEnterManager : MonoBehaviourPunCallbacks
         Debug.Log("Lobby에 입장 완료");
         SceneManager.LoadScene("DungeonLoadingScene");
     }
-    public override void OnJoinedRoom()
-    {
-        // 현재 방의 던전 타입을 가져옴
-        if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue("DungeonType", out object dungeonTypeObj))
-        {
-            string dungeonType = dungeonTypeObj.ToString();
-            Debug.Log("던전의 이름은 : " + dungeonType);
-            // 방장인 경우
-            if (PhotonNetwork.IsMasterClient)
-            {
-                // 해당 던전 타입에 맞는 씬을 로드
-                PhotonNetwork.LoadLevel(dungeonType);
-            }
-        }
-    }
+    //public override void OnJoinedRoom()
+    //{
+    //    // 현재 방의 던전 타입을 가져옴
+    //    if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue("DungeonType", out object dungeonTypeObj))
+    //    {
+    //        string dungeonType = dungeonTypeObj.ToString();
+    //        Debug.Log("던전의 이름은 : " + dungeonType);
+    //        // 방장인 경우
+    //        if (PhotonNetwork.IsMasterClient)
+    //        {
+    //            // 해당 던전 타입에 맞는 씬을 로드
+    //            PhotonNetwork.LoadLevel(dungeonType);
+    //        }
+    //    }
+    //}
 
     public override void OnJoinRoomFailed(short returnCode, string message)
     {

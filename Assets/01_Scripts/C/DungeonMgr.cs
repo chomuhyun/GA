@@ -64,7 +64,7 @@ public class DungeonMgr : MonoBehaviour
         }
         for (int i = 1; i < jsonData["Chaos"].Count + 1; i++)
         {
-            InstChaosDunGeon(i);
+            InstChaosDunGeon(i); 
         }
         for (int i = 1; i < jsonData["Raid"].Count + 1; i++)
         {

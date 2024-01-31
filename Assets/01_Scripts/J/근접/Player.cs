@@ -11,6 +11,11 @@ using Cinemachine;
 
 public class Player : MonoBehaviourPunCallbacks, IPunObservable
 {
+    public Text nickNameTxt;
+    public ChatManager chatManager;
+    public bool allowMove = false;
+    // 여기 위에를 추가했음. 현창
+
     private Vector3 currPos;
     private Quaternion currRot;
     private Transform tr;
@@ -100,7 +105,6 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
 
     void Awake()
     {
-        
         camera = Camera.main;
         isFireReady = true;
         weapons = GetComponentInChildren<Weapons>();
@@ -131,6 +135,11 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
 
     private void Start()
     {
+        chatManager = GetComponent<ChatManager>();
+        Canvas nickCanvas = GetComponentInChildren<Canvas>();
+        nickNameTxt = nickCanvas.GetComponentInChildren<Text>();
+        // 여기 위에를 추가했음. 현창
+
         pv = GetComponent<PhotonView>();
         pav = GetComponent<PhotonAnimatorView>();
         plane = new Plane(transform.up, transform.position);
@@ -142,7 +151,8 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
             //cvc.Follow = transform;
             //cvc.LookAt = transform;
         }
-      // ob[6] = GameObject.FindGameObjectWithTag("Heal").GetComponent<GameObject>();
+        // ob[6] = GameObject.FindGameObjectWithTag("Heal").GetComponent<GameObject>();
+        //chatManager.StartCoroutine(chatManager.CheckEnterKey());
     }
 
     //"��������"
@@ -219,28 +229,40 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
         }
     }
     // Update is called once per frame
-    void FixedUpdate()
+    void Update() // 원래 FixedUpdate였음
     {
        
         if (pv.IsMine)
         {
-            
+            nickNameTxt.text = PhotonNetwork.NickName + " (나)"; //여기 추가했음. 현창
+            nickNameTxt.color = Color.white;
+
             originalTimeScale = Time.timeScale * Time.unscaledDeltaTime;
 
             if (!isDeath)
             {
-                moves();
-                //lookAround();
-                GetinPut();
-                Attack();
-                //check();
-                SkillOn();
-                Death();
-                Deshs();
-                Interation();
-                SkillCoolTime();
-                //Turn();
+                //Debug.Log("현재의 allowMove는 " + allowMove);
+                if (allowMove)
+                {
+                    GetinPut();
+                    moves();
+                    //lookAround();
+                    //GetinPut();
+                    Attack();
+                    //check();
+                    SkillOn();
+                    Death();
+                    Deshs();
+                    Interation();
+                    SkillCoolTime();
+                    //Turn();
+                }
             }
+        }
+        else
+        {
+            nickNameTxt.text = pv.Owner.NickName;
+            nickNameTxt.color = Color.red;
         }
     }
 

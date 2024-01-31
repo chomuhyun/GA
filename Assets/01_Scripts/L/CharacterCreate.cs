@@ -22,6 +22,7 @@ public class CharacterCreate : MonoBehaviour
     public Button[] slots;
 
     public LoadPlayerInfo loadPlayerInfo;
+    private int classNum;
 
     void Start()
     {
@@ -67,6 +68,21 @@ public class CharacterCreate : MonoBehaviour
         currentSlotNum = SelectSlot.slotNum;
         characterNickName = nickNameIF.text;
         currentCharacterClass = SelectChar.currentCharacter;
+        
+        switch (currentCharacterClass) //Warrior, Gunner, Magician
+        {
+            case "Warrior":
+                classNum = 0;
+                break;
+            case "Gunner":
+                classNum = 1;
+                break;
+            case "Magician":
+                classNum = 2;
+                break;
+            default:
+                break;
+        }
         Debug.Log(currentCharacterClass);
         StartCoroutine(CreateCharacter(currentSlotNum, characterNickName, currentCharacterClass, currentClassNum));
         Debug.Log("닉네임, 캐릭터생성 완료");
@@ -110,6 +126,7 @@ public class CharacterCreate : MonoBehaviour
         {
             PlayerPrefs.DeleteKey($"{slotNum}_NickName");
             PlayerPrefs.DeleteKey($"{slotNum}_Class");
+            PlayerPrefs.DeleteKey($"{slotNum}_ClassNum");
             PlayerPrefs.DeleteKey($"{slotNum}_Level");
             PlayerPrefs.DeleteKey($"{slotNum}_MaxHp");
             PlayerPrefs.DeleteKey($"{slotNum}_WeaponLevel");
@@ -141,7 +158,7 @@ public class CharacterCreate : MonoBehaviour
         //PlayerPrefs.Save();
     //}
 
-    public void OnClickGoLoginSceneBtn()
+    public void OnClickGoLoginSceneBtn() // 로비에서 연결끊고 나가는거 추가하기
     {
         SceneManager.LoadScene("Login");
     }
