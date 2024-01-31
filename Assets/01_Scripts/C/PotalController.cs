@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class PotalController : MonoBehaviour
 {
+    public QuestPopUpManager qPopupMgr;
+    //나중애 삭제
+
     public bool isPortal = false;
     public GameObject portalPanel;
 
@@ -13,6 +16,7 @@ public class PotalController : MonoBehaviour
 
     private void Awake()
     {
+        qPopupMgr = GameObject.Find("QuestPopUp").GetComponent<QuestPopUpManager>();//퀘스트 1 달성과제 관련 항목.
         portalPanel = GameObject.Find("PortalPanel");
         skyPortal = GameObject.Find("SkyPortal");
         skyPortal.SetActive(false);
@@ -27,6 +31,8 @@ public class PotalController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Portal();
+            qPopupMgr.QuestIndexUp(1);
+
         }
     }
     private void OnTriggerExit(Collider other)
@@ -43,7 +49,6 @@ public class PotalController : MonoBehaviour
             Jun_TweenRuntime[] gameObjects = portalPanel.GetComponents<Jun_TweenRuntime>();
             gameObjects[0].Play();
             isPortal = true;
-
             skyPortal.SetActive(true);
             skyPortal.GetComponent<Jun_TweenRuntime>().Play();
         }

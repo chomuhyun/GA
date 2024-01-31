@@ -5,7 +5,6 @@ using UnityEngine;
 public class Nem2Casting : MonoBehaviour
 {
 
-    public GameObject gameObject;
     public GameObject bombArea;
     public float castingTime;
 
@@ -21,17 +20,17 @@ public class Nem2Casting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(Up());
+        StartCoroutine(Casting());
     }
 
 
-    IEnumerator Up()
+    IEnumerator Casting()
     {
         while (bombArea.transform.localScale.x < size)
         {
             castingTime += Time.deltaTime;
             float speed = 0.000001f;
-            bombArea.transform.localScale += new Vector3(castingTime * speed * 0.007f, 0, castingTime * speed * 0.007f);
+            bombArea.transform.localScale += new Vector3(castingTime * speed * 0.03f * Time.deltaTime, 0, castingTime * speed * 0.03f * Time.deltaTime);
 
 
             if (bombArea.transform.localScale.x >= size)

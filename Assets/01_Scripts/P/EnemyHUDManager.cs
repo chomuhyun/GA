@@ -23,7 +23,7 @@ public class EnemyHUDManager : MonoBehaviour
 
         HpSlider = GameObject.Find("EnemyHUD").GetComponent<Slider>(); //TODO: 자기가 가진 내부 슬라이더로 적용할 것!!!
         //HpText = GameObject.Find("EnemyHP").GetComponent<Text>();
-        DHpBar = GameObject.Find("DecreasePBar").GetComponent<Image>();
+        DHpBar = GameObject.Find("DecreaseEBar").GetComponent<Image>();
     }
 
     public void InitHP()

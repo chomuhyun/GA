@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/ExternalDependencyManager.meta
+guid: d762ea8584675934e8cdd1b893dd9a44
+folderAsset: yes
+========
 guid: 98efaed897f9d5347b1221a23ae990dc
+>>>>>>>> upstream/DEV:Assets/00_Scenes/K/EnforceScene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

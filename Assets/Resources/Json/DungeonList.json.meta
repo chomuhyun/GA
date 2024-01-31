@@ -1,6 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Tiny_Toony_City_Demo/PolygonBlacksmith/TT_Citizens_demo/prefabs/TT_demo_male_A.prefab.meta
+<<<<<<< Updated upstream
+guid: 94fa17ef2ba1a1a489072621adf275a3
+=======
+guid: ddc9c5832645fb04f82054c5f3f7db8e
+>>>>>>> Stashed changes
+PrefabImporter:
+=======
 guid: 0cdf04f6c52580c40b31e7a31abd9686
 TextScriptImporter:
+>>>>>>> 7032fa26e6243831e42bdbde919c5ca513472b1c:Assets/Resources/Json/DungeonList.json.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

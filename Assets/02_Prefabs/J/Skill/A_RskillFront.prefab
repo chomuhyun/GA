@@ -58880,7 +58880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 5813846265943363976, guid: b60ebb74b31ffde44a334068570fdef8, type: 3}
-  atkPer: 500
+  atkPer: 900
 --- !u!65 &7318728235550924430
 BoxCollider:
   m_ObjectHideFlags: 0

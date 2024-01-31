@@ -12,7 +12,9 @@ public class NPCController : MonoBehaviour
     public GameObject lvPanel;
     public GameObject clothingPanel;
 
-
+    public InventoryManager inventoryMgr;
+    public EnforceMgr enforceMgr;
+    public LevelUpMgr levelupMgr;
 
     [TextArea(1, 3)]
     public string introduce;
@@ -21,10 +23,14 @@ public class NPCController : MonoBehaviour
     
     void Awake()
     {
+        inventoryMgr = GameObject.Find("InventoryMgr").GetComponent<InventoryManager>();
+        enforceMgr = GameObject.Find("EnforceMgr").GetComponent<EnforceMgr>();
+        levelupMgr = GameObject.Find("LevelupMgr").GetComponent<LevelUpMgr>();
+
         questPanel = GameObject.Find("QuestPanel");
         achievementPanel = GameObject.Find("AchievementPanel");
-        weaponPanel = GameObject.Find("WeaponPanel");
-        lvPanel = GameObject.Find("LvPanel");
+        weaponPanel = GameObject.Find("EnforcePanel");
+        lvPanel = GameObject.Find("LevelUpPanel");
         clothingPanel = GameObject.Find("ClothingPanel");
     }
     
@@ -39,27 +45,31 @@ public class NPCController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")&& npcNum== 1)
+        if (other.CompareTag("Player")&& npcNum== 1) //Äù½ºÆ®
         {
             questPanel.SetActive(true);
 
         }
-        if (other.CompareTag("Player") && npcNum == 2)
+        if (other.CompareTag("Player") && npcNum == 2) //¾÷Àû
         {
             achievementPanel.SetActive(true);
 
         }
-        if (other.CompareTag("Player") && npcNum == 3)
+        if (other.CompareTag("Player") && npcNum == 3) //´ëÀåÀåÀÌ
         {
+            enforceMgr.stateMgr = GameObject.FindWithTag("Player").GetComponent<StateManager>();
+            enforceMgr.inventoryMgr = GameObject.Find("InventoryMgr").GetComponent<InventoryManager>();
+            enforceMgr.InitAtk();
             weaponPanel.SetActive(true);
 
         }
-        if (other.CompareTag("Player") && npcNum == 4)
+        if (other.CompareTag("Player") && npcNum == 4) //·¾¾÷
         {
+            levelupMgr.stateMgr = GameObject.FindWithTag("Player").GetComponent<StateManager>();
             lvPanel.SetActive(true);
 
         }
-        if (other.CompareTag("Player") && npcNum == 5)
+        if (other.CompareTag("Player") && npcNum == 5) //¿Ê
         {
             clothingPanel.SetActive(true);
 

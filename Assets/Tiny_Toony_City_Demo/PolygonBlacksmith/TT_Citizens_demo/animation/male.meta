@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+guid: f50c68b17d39d9d47ba22d28f71c763e
+=======
 guid: e69e002cb3bf420448b1dae4f4071704
+>>>>>>> Stashed changes
+=======
+guid: e69e002cb3bf420448b1dae4f4071704
+>>>>>>> DEV
 folderAsset: yes
 timeCreated: 1520446514
 licenseType: Store

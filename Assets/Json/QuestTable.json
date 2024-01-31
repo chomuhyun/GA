@@ -2,69 +2,75 @@
   "Quest": {
     "1": {
       "QuestName": "러드에게 말걸기",
-      "Goal": "( ) 앞에 있는 러드에게 말을 걸자",
+      "Goal": "( ) 앞에 있는 러드에게 말을 걸기",
       "Count": 1,
       "RewardName1": 1,
       "Reward1": 50,
       "RewardName2": 2,
       "Reward2": 10,
       "RewardName3": 3,
-      "Reward3": 500
+      "Reward3": 500,
+      "QuestNum": 1
     },
     "2": {
       "QuestName": "몬스터 5마리 처치",
-      "Goal": "차원의 균열틈으로 들어온 몬스터 5마리를 잡자",
+      "Goal": "차원의 균열틈으로 들어온 몬스터 5마리를 잡기",
       "Count": 5,
       "RewardName1": 1,
       "Reward1": 60,
       "RewardName2": 2,
       "Reward2": 30,
       "RewardName3": 3,
-      "Reward3": 1000
+      "Reward3": 1000,
+      "QuestNum": 2
     },
     "3": {
       "QuestName": "장로 에게 말걸기",
-      "Goal": "( ) 앞에 있는 장로에게 말을 걸자",
+      "Goal": "( ) 앞에 있는 장로에게 말을 걸기",
       "Count": 1,
       "RewardName1": 1,
       "Reward1": 20,
       "RewardName2": 2,
       "Reward2": 20,
       "RewardName3": 3,
-      "Reward3": 700
+      "Reward3": 700,
+      "QuestNum": 3
     },
     "4": {
       "QuestName": "분노한 기사",
-      "Goal": "던전으로 가서 보스를 처치하자",
+      "Goal": "던전으로 가서 보스를 처치",
       "Count": 1,
       "RewardName1": 1,
       "Reward1": 100,
       "RewardName2": 2,
       "Reward2": 50,
       "RewardName3": 3,
-      "Reward3": 2000
+      "Reward3": 2000,
+      "QuestNum": 4
     },
     "5": {
       "QuestName": "골드 획득",
-      "Goal": "장로에게 100골드를 얻자",
+      "Goal": "장로에게 100골드 얻기",
       "Count": 100,
       "RewardName1": 1,
       "Reward1": 20,
       "RewardName2": 2,
       "Reward2": 0,
       "RewardName3": 3,
-      "Reward3": 100
+      "Reward3": 100,
+      "QuestNum": 5
     },
     "6": {
       "QuestName": "( ) 구매",
-      "Goal": "상점에서 ( )를 사자",
+      "Goal": "상점에서 ( )를 구매",
       "Count": 1,
       "RewardName1": 1,
       "Reward1": 50,
       "RewardName2": 2,
       "Reward2": 0,
       "RewardName3": 3,
-      "Reward3": 0
+      "Reward3": 0,
+      "QuestNum": 6
     }
   }
 }
