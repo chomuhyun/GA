@@ -13,7 +13,17 @@ public class BulletCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * 0.5f);
-        Destroy(gameObject, 0.4f);
+        transform.Translate(Vector3.forward * 0.3f);
+        Destroy(gameObject, 1f);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Boss"))
+        {
+            
+            Destroy(gameObject);
+        }
+        
     }
 }

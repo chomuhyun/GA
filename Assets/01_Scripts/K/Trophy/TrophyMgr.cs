@@ -38,8 +38,7 @@ public class TrophyMgr : MonoBehaviour
     public GameObject achievementPanel;
     public bool isTrophy; //TODO: npc생기면 지움!!
 
-
-    private void Start()
+    private void Awake()
     {
         trophyPanel = GameObject.Find("TrophyCanvas"); //TODO: npc생기면 지움!!
 
@@ -55,6 +54,8 @@ public class TrophyMgr : MonoBehaviour
         dailyPanel = GameObject.Find("DailyPanel");
         weekPanel = GameObject.Find("WeekPanel");
         achievementPanel = GameObject.Find("AchievementPanel");
+        
+
 
         string json = txtFile.text;
         var jsonData = JSON.Parse(json);
@@ -62,16 +63,18 @@ public class TrophyMgr : MonoBehaviour
         {
             InstDailyContent(i);
         }
-        for (int i = 1; i < jsonData["WeekA"].Count+1; i++)
+        for (int i = 1; i < jsonData["WeekA"].Count + 1; i++)
         {
             InstWeekContent(i);
         }
-        for (int i = 1; i < jsonData["Achievement"].Count+1; i++)
+        for (int i = 1; i < jsonData["Achievement"].Count + 1; i++)
         {
             InstachievementContent(i);
         }
+    }
+    private void Start()
+    {
 
-        trophyPanel.SetActive(false); //TODO: npc생기면 지움!!
 
     }
 

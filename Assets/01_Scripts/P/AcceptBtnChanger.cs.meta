@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/01_Scripts/K/Trophy/WeekQData.cs.meta
+guid: c53ec12c33036b64a9c65aa7cd9a349d
+========
 guid: a867d19c96a6a6346b7ef9876649b455
+>>>>>>>> upstream/DEV:Assets/01_Scripts/P/AcceptBtnChanger.cs.meta
+=======
+guid: a867d19c96a6a6346b7ef9876649b455
+>>>>>>> upstream/DEV
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

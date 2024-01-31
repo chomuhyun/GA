@@ -46,7 +46,8 @@ public class Boss : MonoBehaviour
     public bool attacking;
     public float patternTime;
     public float nem2PatternTime;
-
+    public float originalTimeScale;
+    public List<GameObject> collidedEnemies = new List<GameObject>();
     void Start()
     {
         bossAnim = GetComponent<Animator>();
@@ -191,6 +192,7 @@ public class Boss : MonoBehaviour
         yield return null;
     }
 
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("DownSkill"))
@@ -198,9 +200,21 @@ public class Boss : MonoBehaviour
             nvAgent.speed = 0;
             bossState = BOSSSTATE.DOWN;
         }
-
-       
     }
+     void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("TimeSlow"))
+        {
+            bossAnim.speed = 0.15f;
+            speed = 1f;
+        }
+        else
+        {
+            speed = 3f;
+            bossAnim.speed = 1f;
+        }
+    }
+    
 
     IEnumerator StandUp() 
     {

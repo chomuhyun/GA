@@ -1,5 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/01_Scripts/K/Inventory/InventorySlot.cs.meta
 guid: 0bdc75fdedd18d94996b3c991549891f
+========
+guid: 7e1ae25f026d62142aee2ecd85b6e5ec
+>>>>>>>> upstream/DEV:Assets/01_Scripts/J/AttackController.cs.meta
+=======
+guid: 0bdc75fdedd18d94996b3c991549891f
+>>>>>>> upstream/DEV
+=======
+guid: 0bdc75fdedd18d94996b3c991549891f
+>>>>>>> Stashed changes
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

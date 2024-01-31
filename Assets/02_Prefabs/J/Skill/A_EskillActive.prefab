@@ -39202,9 +39202,10 @@ GameObject:
   - component: {fileID: 7824240405379873224}
   - component: {fileID: 3808240667357645575}
   - component: {fileID: 512179511241026725}
+  - component: {fileID: 3381229345748057725}
   m_Layer: 0
   m_Name: A_EskillActive
-  m_TagString: Untagged
+  m_TagString: DownSkill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44158,6 +44159,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 90
   m_CollisionDetection: 0
+--- !u!114 &3381229345748057725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6615891376370477388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115013b39e026304cb37594300e75a38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plusPrefab: {fileID: 4866149053937976112, guid: 1ff5a60d99f127848826b5105f5c7fcd, type: 3}
+  genTime: 1.14
 --- !u!1 &6924751377000287196
 GameObject:
   m_ObjectHideFlags: 0

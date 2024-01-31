@@ -17,7 +17,7 @@ MonoBehaviour:
     AppIdFusion: 
     AppIdChat: 
     AppIdVoice: 
-    AppVersion: 
+    AppVersion: 1.0
     UseNameServer: 1
     FixedRegion: 
     Server: 
@@ -38,9 +38,18 @@ MonoBehaviour:
   - DestroyRpc
   - DestroySpaceship
   - Fire
-  - ReceiveMsg
   - RespawnSpaceship
+  - ReceiveMsg
   - SyncChatterList
+  - Attacks
+  - Death
+  - Deshs
+  - GetinPut
+  - OnTriggerEnter
+  - OnTriggerExit
+  - OnTriggerStay
+  - SkillCoolTime
+  - SkillOn
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

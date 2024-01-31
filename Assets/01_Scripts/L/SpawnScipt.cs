@@ -6,17 +6,37 @@ using Photon.Realtime;
 
 public class SpawnScipt : MonoBehaviourPunCallbacks
 {
-    public GameObject[] characterPrefabs;
+    public GameObject[] cH;
+    public GameObject vc;
+    public int classNum;
+    GameObject player;
+    public ThirdPersonOrbitCamBasicA thrid;
 
+    private void Start()
+    {
+        thrid = GameObject.Find("Virtual Camera").GetComponent<ThirdPersonOrbitCamBasicA>();
+    }
+    public IEnumerator SpwanPlayer()
+    {
+        yield return new WaitForSeconds(0.1f);
+        CreatePlayer();
+        
+    }
     public void CreatePlayer()
     {
-        PhotonNetwork.AutomaticallySyncScene = true;
+        
+        int curSlotNum = SelectSlot.slotNum;
+        int classNum = PlayerPrefs.GetInt($"{curSlotNum}_ClassNum");
+        Debug.Log(classNum);
+        Debug.Log("spawnScriptø°º≠ curSlotNum¿∫ "+curSlotNum);
         if (PhotonNetwork.IsConnected)
         {
             Transform[] points = GameObject.Find("SpawnPointGroup").GetComponentsInChildren<Transform>();
             int idx = Random.Range(1, points.Length);
-
-            PhotonNetwork.Instantiate(characterPrefabs[(int)DataMgr.instance.currentCharacter].name, points[idx].position, points[idx].rotation, 0);
+            //PhotonNetwork.Instantiate(characterPrefabs[(int)DataMgr.instance.currentCharacter].name, points[idx].position, points[idx].rotation, 0);
+            GameObject obj;
+            obj = PhotonNetwork.Instantiate(cH[classNum].name, points[idx].position, points[idx].rotation, 0);
+            
         }
     }
 }

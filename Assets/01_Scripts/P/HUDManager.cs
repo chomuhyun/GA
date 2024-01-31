@@ -18,16 +18,25 @@ public class HUDManager : MonoBehaviour
 
 
     //여기 함수를 피격판정에서 불러온다!
-    private void Start()
+    private void Awake()
     {
-        stateManager = GameObject.FindGameObjectWithTag("Player").GetComponent<StateManager>();
-
+        stateManager = gameObject.GetComponent<StateManager>();
+        if (stateManager.CompareTag("Player"))
+        {
             HpSlider = GameObject.Find("PlayerHUD").GetComponent<Slider>(); //TODO: 자기가 가진 내부 슬라이더로 적용할 것!!!
             HpText = GameObject.Find("MainHP").GetComponent<Text>();
             DHpBar = GameObject.Find("DecreasePBar").GetComponent<Image>();
-       
+        }
+        else 
+        {
+            HpSlider = GameObject.Find("EnemyHUD").GetComponent<Slider>(); //TODO: 자기가 가진 내부 슬라이더로 적용할 것!!!
+            HpText = GameObject.Find("EnemyHP").GetComponent<Text>();
+            DHpBar = GameObject.Find("DecreaseEBar").GetComponent<Image>();
+        }
+
         InitHP();
     }
+
 
     public void InitHP()
     {
@@ -49,17 +58,23 @@ public class HUDManager : MonoBehaviour
 
         if (stateManager.hp <= 0)
         {
-            Debug.Log("여기서 캐릭터 죽고 다음캐릭터로 강제로 넘겨야 함!!!");
+            HpText.text = ("0" + "/" + (int)stateManager.maxhp).ToString();
         }
     }
 
     private void Update()
     {
+        
         float targetFillAmount = Mathf.InverseLerp(0, stateManager.maxhp, stateManager.hp);
 
         if (DHpBar.fillAmount > targetFillAmount)
         {
-            DHpBar.fillAmount -= 0.2f * Time.deltaTime;
+            DHpBar.fillAmount -= 0.1f * Time.deltaTime;
+            DHpBar.fillAmount = Mathf.Max(DHpBar.fillAmount, targetFillAmount);
+        }
+        if(DHpBar.fillAmount < targetFillAmount)
+        {
+            DHpBar.fillAmount += 0.1f * Time.deltaTime;
             DHpBar.fillAmount = Mathf.Max(DHpBar.fillAmount, targetFillAmount);
         }
     }

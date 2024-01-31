@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/01_Scripts/K/Trophy/DayQData.cs.meta
 guid: 8ded9f1e0f1e55e4e97468000cb7b4ae
+========
+guid: ad0b2dc74726848428cc6db57dd713fc
+>>>>>>>> upstream/DEV:Assets/01_Scripts/K/Trophy/BulletCtrl.cs.meta
+=======
+guid: 8ded9f1e0f1e55e4e97468000cb7b4ae
+>>>>>>> upstream/DEV
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

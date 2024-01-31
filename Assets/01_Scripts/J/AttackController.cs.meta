@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/01_Scripts/K/Inventory/InventorySlot.cs.meta
+guid: ed6f4d1e3da82aa4fa9f61a1e3339040
+========
 guid: 7e1ae25f026d62142aee2ecd85b6e5ec
+>>>>>>>> upstream/DEV:Assets/01_Scripts/J/AttackController.cs.meta
+=======
+guid: 7e1ae25f026d62142aee2ecd85b6e5ec
+>>>>>>> upstream/DEV
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

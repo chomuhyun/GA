@@ -54,16 +54,22 @@ public class TrophyJsonData : MonoBehaviour
 
     public void GetRewardBtn() // 보상 수령 버튼
     {
+
         if(rewardItem == 1)
         {
             inventoryMgr.expPotion += rewardCount;
         }
+
         //얻었다 창 팝업
         if(rewardItem == 2) //2번은 재료
         {
             inventoryMgr.materials += rewardCount;
         }
+
         if (rewardItem == 3) //3번은 골드
+
+        if (rewardItem == 3) //3번은 아이템
+
         {
             inventoryMgr.gold += rewardCount;
         }
