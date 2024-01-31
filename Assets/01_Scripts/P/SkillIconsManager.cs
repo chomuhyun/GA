@@ -1,6 +1,4 @@
 using JetBrains.Annotations;
-
-using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +8,7 @@ public class SkillIconsManager : MonoBehaviour
 {
    // public StateManager stateManager;
     public Player player;
+    
 
     public Image coolTImeFillQ; //아이콘에 필어마운트 가져올거
     public Image coolTImeFillE;
@@ -20,15 +19,15 @@ public class SkillIconsManager : MonoBehaviour
     public Image rskillIcon;
 
 
-    void Start()
+    void Awake()
     {
-        player = GameObject.Find("Player").GetComponent<Player>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         
         if(player != null)
         {
-            coolTImeFillQ = GameObject.Find("CoolTImeFillQ").GetComponent<Image>();
-            coolTImeFillE = GameObject.Find("CoolTimeFillE").GetComponent<Image>();
-            coolTImeFillR = GameObject.Find("CoolTimeFillR").GetComponent<Image>();
+            coolTImeFillQ = GameObject.Find("CoolTimeBGQ").GetComponent<Image>();
+            coolTImeFillE = GameObject.Find("CoolTimeBGE").GetComponent<Image>();
+            coolTImeFillR = GameObject.Find("CoolTimeBGR").GetComponent<Image>();
 
             qskillIcon = GameObject.Find("SkillIconQ").GetComponent<Image>();
             qskillIcon = GameObject.Find("SkillIconE").GetComponent<Image>();
@@ -36,18 +35,28 @@ public class SkillIconsManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        coolTImeFillQ.fillAmount = 0;
+        coolTImeFillE.fillAmount = 0;
+        coolTImeFillR.fillAmount = 0;
+    }
+
     void Update()
     {
-        if(player != null)
+        if(!player.qisReady)
         {
-            coolTImeFillQ.fillAmount = player.qskillcool / player.curQskillcool;
-            coolTImeFillE.fillAmount = player.eskillcool / player.curEskillcool;
-            coolTImeFillR.fillAmount = player.rskillcool / player.curRskillcool;
-
+            coolTImeFillQ.fillAmount = 1 - player.qskillcool / player.curQskillcool;
         }
-        else
+        if(!player.eisReady)
         {
-            Debug.Log("플레이어 못찾음");
+            coolTImeFillE.fillAmount = 1 - player.eskillcool / player.curEskillcool;
+        }
+        if (!player.risReady)
+        {
+            coolTImeFillR.fillAmount = 1 - player.rskillcool / player.curRskillcool;
         }
     }
+
+    
 }

@@ -5,31 +5,32 @@ using UnityEngine;
 
 public class StateManager : MonoBehaviour
 {
-   
-
-
     [Header("Stet")]
     // 플레이어의 스텟!!!!
     public float maxhp;
     public float hp;
     public int atk;
+    public int level = 1;
+    public int exp;
+    public int classNum; // 클래스 변경시, 이 부분도 신경써주세요 1전사 2원딜 3마법
+    
     [Space(10)]
     [Range(0, 100)]
     public int criChance = 50; //in percentage
-    public float criDamage = 1.5f;
+    public float criDamage = 120f;
     public int def;
     public float gageTime;
 
     [HideInInspector]
-    public int asdf;
-    //public HUDManager hudManager;
-    //public AttackController atkctrl;
+    
+    public HUDManager hudManager;
+   
 
 
     private void Start()
     {
-        //atkctrl = GetComponentInChildren<AttackController>();
-        //hudManager = gameObject.GetComponent<HUDManager>();
+        
+        hudManager = gameObject.GetComponent<HUDManager>();
     }
 
 

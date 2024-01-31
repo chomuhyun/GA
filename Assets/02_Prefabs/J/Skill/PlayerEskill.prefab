@@ -29434,7 +29434,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.94, y: 1, z: 1.99}
+  m_Size: {x: 5, y: 1, z: 3}
   m_Center: {x: 0, y: 0, z: 1.5}
 --- !u!54 &6396992964361274832
 Rigidbody:
@@ -29475,7 +29475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31b1b04b55946aa45a018ed924c61fed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sm: {fileID: 0}
+  sm: {fileID: 0}
   atkPer: 150
 --- !u!1 &1985817477992794
 GameObject:

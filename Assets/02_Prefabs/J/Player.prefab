@@ -5153,14 +5153,15 @@ MonoBehaviour:
   isDeshInvincible: 0
   characterController: {fileID: 0}
   rigid: {fileID: 0}
-  rigids: {fileID: 0}
   CameraArm: {fileID: 0}
   trailRenderer: {fileID: 0}
   weapons: {fileID: 0}
   Ta:
-  - {fileID: 11400000, guid: 2433e2b8f6ccea14f929008f4eb8b73a, type: 2}
+  - {fileID: 0}
   tps: {fileID: 0}
   stateManager: {fileID: 0}
+  hudManager: {fileID: 0}
+  magition: {fileID: 0}
   isAttack: 0
   isAttack1: 0
   isAttack2: 0
@@ -5168,18 +5169,24 @@ MonoBehaviour:
   isFireReady: 0
   isDeath: 0
   downing: 0
-  SkillOneEffect: {fileID: 1210069404974878, guid: fbab27c98b168764eb295cfff1e9f61f, type: 3}
-  SkillQ: {fileID: 1996079926692674, guid: fb101b1453aec9747a5ed7244075b1a2, type: 3}
-  SkillE: {fileID: 1872147318604286, guid: 5bea49531fc500c408823a2e2863106f, type: 3}
-  SkillR: {fileID: 1602379607235420, guid: 028b1ae485e846c4688aabad7557e474, type: 3}
-  SkillLoding: {fileID: 1236453127613114, guid: 26eb63a49b545534abe5c7fcf2bfad9e, type: 3}
-  TargetPlayer: {fileID: 350380202625865968}
-  Qskillcool: 0
-  Eskillcool: 0
-  Rskillcool: 0
-  CurQskillcool: 12
-  CurEskillcool: 8
-  CurRskillcool: 15
+  Skill: []
+  Point: []
+  ob: []
+  skillIcon: []
+  skillUse: 0
+  qisReady: 0
+  eisReady: 0
+  risReady: 0
+  rischarging: 0
+  onMagic: 0
+  qskillcool: 0
+  eskillcool: 0
+  rskillcool: 0
+  curQskillcool: 0
+  curEskillcool: 0
+  curRskillcool: 0
+  chargingSlider: {fileID: 0}
+  originalTimeScale: 0
   rotCamXAxisSpeed: 500
   rotCamYAxisSpeed: 3
 --- !u!54 &6955921067475938866
@@ -5250,11 +5257,14 @@ MonoBehaviour:
   maxhp: 3000
   hp: 3000
   atk: 150
+  level: 1
+  exp: 0
+  classNum: 0
   criChance: 50
   criDamage: 200
   def: 0
   gageTime: 0
-  asdf: 0
+  hudManager: {fileID: 0}
 --- !u!114 &4868534801855085876
 MonoBehaviour:
   m_ObjectHideFlags: 0

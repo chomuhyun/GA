@@ -4,26 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/00_Scenes/K/EnforceScene.unity
-    guid: 98efaed897f9d5347b1221a23ae990dc
-  - enabled: 0
-    path: Assets/00_Scenes/K/InvenScene_0.unity
-    guid: c8781a833d4ac434fb6b21dc50e6f006
-  - enabled: 1
-    path: Assets/00_Scenes/L/Dungeon_1.unity
-    guid: 21902ccc77335c84fb6ee47597ea3cae
-  - enabled: 1
-    path: Assets/00_Scenes/L/Dungeon_2.unity
-    guid: 44e87d95f6c615b4293e28337a95ed10
-  - enabled: 1
-    path: Assets/00_Scenes/L/Home.unity
-    guid: f70bc9dd21bb5364fbb49964f17f8f4e
-  - enabled: 1
-    path: Assets/00_Scenes/L/Login.unity
-    guid: 91abc19d226a04fb78569feefeaf4fcb
-  - enabled: 1
-    path: Assets/00_Scenes/L/RaidDungeon.unity
-    guid: c23649c3708515147b524cf0947d97ca
+  m_Scenes: []
   m_configObjects: {}

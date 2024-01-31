@@ -1,0 +1,1860 @@
+{
+  "LvWarrior": {
+    "1": {
+      "PlayerHp": 500,
+      "needExp": 0,
+      "Exponential": 400,
+      "Lv": 1,
+      "CriPer": 0,
+      "PerAbsolute": 50,
+      "CriDMG": 0,
+      "DmgAbsolute": 120
+    },
+    "2": {
+      "PlayerHp": 620,
+      "needExp": 400,
+      "Exponential": 700,
+      "Lv": 2,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "3": {
+      "PlayerHp": 740,
+      "needExp": 1100,
+      "Exponential": 1000,
+      "Lv": 3,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "4": {
+      "PlayerHp": 860,
+      "needExp": 2100,
+      "Exponential": 1300,
+      "Lv": 4,
+      "CriPer": 0,
+      "PerAbsolute": 50,
+      "CriDMG": 0,
+      "DmgAbsolute": 120
+    },
+    "5": {
+      "PlayerHp": 980,
+      "needExp": 3400,
+      "Exponential": 1600,
+      "Lv": 5,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "6": {
+      "PlayerHp": 1100,
+      "needExp": 5000,
+      "Exponential": 1900,
+      "Lv": 6,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "7": {
+      "PlayerHp": 1220,
+      "needExp": 6900,
+      "Exponential": 2200,
+      "Lv": 7,
+      "CriPer": 0,
+      "PerAbsolute": 50,
+      "CriDMG": 0,
+      "DmgAbsolute": 120
+    },
+    "8": {
+      "PlayerHp": 1340,
+      "needExp": 9100,
+      "Exponential": 2500,
+      "Lv": 8,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "9": {
+      "PlayerHp": 1460,
+      "needExp": 11600,
+      "Exponential": 2800,
+      "Lv": 9,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "10": {
+      "PlayerHp": 1580,
+      "needExp": 14400,
+      "Exponential": 3100,
+      "Lv": 10,
+      "CriPer": 0,
+      "PerAbsolute": 50,
+      "CriDMG": 0,
+      "DmgAbsolute": 120
+    },
+    "11": {
+      "PlayerHp": 1700,
+      "needExp": 17500,
+      "Exponential": 3400,
+      "Lv": 11,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "12": {
+      "PlayerHp": 1820,
+      "needExp": 20900,
+      "Exponential": 3700,
+      "Lv": 12,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "13": {
+      "PlayerHp": 1940,
+      "needExp": 24600,
+      "Exponential": 4000,
+      "Lv": 13,
+      "CriPer": 0,
+      "PerAbsolute": 50,
+      "CriDMG": 0,
+      "DmgAbsolute": 120
+    },
+    "14": {
+      "PlayerHp": 2060,
+      "needExp": 28600,
+      "Exponential": 4300,
+      "Lv": 14,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "15": {
+      "PlayerHp": 2180,
+      "needExp": 32900,
+      "Exponential": 4600,
+      "Lv": 15,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "16": {
+      "PlayerHp": 2300,
+      "needExp": 37500,
+      "Exponential": 4900,
+      "Lv": 16,
+      "CriPer": 0,
+      "PerAbsolute": 50,
+      "CriDMG": 0,
+      "DmgAbsolute": 120
+    },
+    "17": {
+      "PlayerHp": 2420,
+      "needExp": 42400,
+      "Exponential": 5200,
+      "Lv": 17,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "18": {
+      "PlayerHp": 2540,
+      "needExp": 47600,
+      "Exponential": 5500,
+      "Lv": 18,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "19": {
+      "PlayerHp": 2660,
+      "needExp": 53100,
+      "Exponential": 5800,
+      "Lv": 19,
+      "CriPer": 0,
+      "PerAbsolute": 50,
+      "CriDMG": 5,
+      "DmgAbsolute": 125
+    },
+    "20": {
+      "PlayerHp": 2780,
+      "needExp": 58900,
+      "Exponential": 6100,
+      "Lv": 20,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "21": {
+      "PlayerHp": 2900,
+      "needExp": 65000,
+      "Exponential": 6400,
+      "Lv": 21,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "22": {
+      "PlayerHp": 3020,
+      "needExp": 71400,
+      "Exponential": 6700,
+      "Lv": 22,
+      "CriPer": 5,
+      "PerAbsolute": 55,
+      "CriDMG": 15,
+      "DmgAbsolute": 140
+    },
+    "23": {
+      "PlayerHp": 3140,
+      "needExp": 78100,
+      "Exponential": 7000,
+      "Lv": 23,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "24": {
+      "PlayerHp": 3260,
+      "needExp": 85100,
+      "Exponential": 7300,
+      "Lv": 24,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "25": {
+      "PlayerHp": 3380,
+      "needExp": 92400,
+      "Exponential": 7600,
+      "Lv": 25,
+      "CriPer": 0,
+      "PerAbsolute": 55,
+      "CriDMG": 5,
+      "DmgAbsolute": 145
+    },
+    "26": {
+      "PlayerHp": 3500,
+      "needExp": 100000,
+      "Exponential": 7900,
+      "Lv": 26,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "27": {
+      "PlayerHp": 3620,
+      "needExp": 107900,
+      "Exponential": 8200,
+      "Lv": 27,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "28": {
+      "PlayerHp": 3740,
+      "needExp": 116100,
+      "Exponential": 8500,
+      "Lv": 28,
+      "CriPer": 5,
+      "PerAbsolute": 60,
+      "CriDMG": 5,
+      "DmgAbsolute": 150
+    },
+    "29": {
+      "PlayerHp": 3860,
+      "needExp": 124600,
+      "Exponential": 8800,
+      "Lv": 29,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "30": {
+      "PlayerHp": 3980,
+      "needExp": 133400,
+      "Exponential": 9100,
+      "Lv": 30,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "31": {
+      "PlayerHp": 4100,
+      "needExp": 142500,
+      "Exponential": 9400,
+      "Lv": 31,
+      "CriPer": 0,
+      "PerAbsolute": 60,
+      "CriDMG": 5,
+      "DmgAbsolute": 155
+    },
+    "32": {
+      "PlayerHp": 4220,
+      "needExp": 151900,
+      "Exponential": 9700,
+      "Lv": 32,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "33": {
+      "PlayerHp": 4340,
+      "needExp": 161600,
+      "Exponential": 10000,
+      "Lv": 33,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "34": {
+      "PlayerHp": 4460,
+      "needExp": 171600,
+      "Exponential": 10300,
+      "Lv": 34,
+      "CriPer": 5,
+      "PerAbsolute": 65,
+      "CriDMG": 5,
+      "DmgAbsolute": 160
+    },
+    "35": {
+      "PlayerHp": 4580,
+      "needExp": 181900,
+      "Exponential": 10600,
+      "Lv": 35,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "36": {
+      "PlayerHp": 4700,
+      "needExp": 192500,
+      "Exponential": 10900,
+      "Lv": 36,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "37": {
+      "PlayerHp": 4820,
+      "needExp": 203400,
+      "Exponential": 11200,
+      "Lv": 37,
+      "CriPer": 0,
+      "PerAbsolute": 65,
+      "CriDMG": 10,
+      "DmgAbsolute": 170
+    },
+    "38": {
+      "PlayerHp": 4940,
+      "needExp": 214600,
+      "Exponential": 11500,
+      "Lv": 38,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "39": {
+      "PlayerHp": 5060,
+      "needExp": 226100,
+      "Exponential": 11800,
+      "Lv": 39,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "40": {
+      "PlayerHp": 5180,
+      "needExp": 237900,
+      "Exponential": 12100,
+      "Lv": 40,
+      "CriPer": 5,
+      "PerAbsolute": 70,
+      "CriDMG": 10,
+      "DmgAbsolute": 180
+    },
+    "41": {
+      "PlayerHp": 5300,
+      "needExp": 250000,
+      "Exponential": 12400,
+      "Lv": 41,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "42": {
+      "PlayerHp": 5420,
+      "needExp": 262400,
+      "Exponential": 12700,
+      "Lv": 42,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "43": {
+      "PlayerHp": 5540,
+      "needExp": 275100,
+      "Exponential": 13000,
+      "Lv": 43,
+      "CriPer": 5,
+      "PerAbsolute": 75,
+      "CriDMG": 0,
+      "DmgAbsolute": 180
+    },
+    "44": {
+      "PlayerHp": 5660,
+      "needExp": 288100,
+      "Exponential": 13300,
+      "Lv": 44,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "45": {
+      "PlayerHp": 5780,
+      "needExp": 301400,
+      "Exponential": 13600,
+      "Lv": 45,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "46": {
+      "PlayerHp": 5900,
+      "needExp": 315000,
+      "Exponential": 13900,
+      "Lv": 46,
+      "CriPer": 5,
+      "PerAbsolute": 80,
+      "CriDMG": 0,
+      "DmgAbsolute": 180
+    },
+    "47": {
+      "PlayerHp": 6020,
+      "needExp": 328900,
+      "Exponential": 14200,
+      "Lv": 47,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "48": {
+      "PlayerHp": 6140,
+      "needExp": 343100,
+      "Exponential": 14500,
+      "Lv": 48,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "49": {
+      "PlayerHp": 6260,
+      "needExp": 357600,
+      "Exponential": 14800,
+      "Lv": 49,
+      "CriPer": 0,
+      "PerAbsolute": 80,
+      "CriDMG": null,
+      "DmgAbsolute": 200
+    },
+    "50": {
+      "PlayerHp": 6380,
+      "needExp": 372400,
+      "Exponential": null,
+      "Lv": 50,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    }
+  },
+  "LvDealer": {
+    "1": {
+      "PlayerHp": 500,
+      "needExp": 0,
+      "Exponential": 400,
+      "Lv": 1,
+      "CriPer": 0,
+      "PerAbsolute": 30,
+      "CriDMG": 0,
+      "DmgAbsolute": 120
+    },
+    "2": {
+      "PlayerHp": 620,
+      "needExp": 400,
+      "Exponential": 700,
+      "Lv": 2,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "3": {
+      "PlayerHp": 740,
+      "needExp": 1100,
+      "Exponential": 1000,
+      "Lv": 3,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "4": {
+      "PlayerHp": 860,
+      "needExp": 2100,
+      "Exponential": 1300,
+      "Lv": 4,
+      "CriPer": 0,
+      "PerAbsolute": 30,
+      "CriDMG": 0,
+      "DmgAbsolute": 140
+    },
+    "5": {
+      "PlayerHp": 980,
+      "needExp": 3400,
+      "Exponential": 1600,
+      "Lv": 5,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "6": {
+      "PlayerHp": 1100,
+      "needExp": 5000,
+      "Exponential": 1900,
+      "Lv": 6,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "7": {
+      "PlayerHp": 1220,
+      "needExp": 6900,
+      "Exponential": 2200,
+      "Lv": 7,
+      "CriPer": 0,
+      "PerAbsolute": 30,
+      "CriDMG": 0,
+      "DmgAbsolute": 160
+    },
+    "8": {
+      "PlayerHp": 1340,
+      "needExp": 9100,
+      "Exponential": 2500,
+      "Lv": 8,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "9": {
+      "PlayerHp": 1460,
+      "needExp": 11600,
+      "Exponential": 2800,
+      "Lv": 9,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "10": {
+      "PlayerHp": 1580,
+      "needExp": 14400,
+      "Exponential": 3100,
+      "Lv": 10,
+      "CriPer": 0,
+      "PerAbsolute": 30,
+      "CriDMG": 0,
+      "DmgAbsolute": 180
+    },
+    "11": {
+      "PlayerHp": 1700,
+      "needExp": 17500,
+      "Exponential": 3400,
+      "Lv": 11,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "12": {
+      "PlayerHp": 1820,
+      "needExp": 20900,
+      "Exponential": 3700,
+      "Lv": 12,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "13": {
+      "PlayerHp": 1940,
+      "needExp": 24600,
+      "Exponential": 4000,
+      "Lv": 13,
+      "CriPer": 10,
+      "PerAbsolute": 40,
+      "CriDMG": 0,
+      "DmgAbsolute": 200
+    },
+    "14": {
+      "PlayerHp": 2060,
+      "needExp": 28600,
+      "Exponential": 4300,
+      "Lv": 14,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "15": {
+      "PlayerHp": 2180,
+      "needExp": 32900,
+      "Exponential": 4600,
+      "Lv": 15,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "16": {
+      "PlayerHp": 2300,
+      "needExp": 37500,
+      "Exponential": 4900,
+      "Lv": 16,
+      "CriPer": 10,
+      "PerAbsolute": 50,
+      "CriDMG": 0,
+      "DmgAbsolute": 200
+    },
+    "17": {
+      "PlayerHp": 2420,
+      "needExp": 42400,
+      "Exponential": 5200,
+      "Lv": 17,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "18": {
+      "PlayerHp": 2540,
+      "needExp": 47600,
+      "Exponential": 5500,
+      "Lv": 18,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "19": {
+      "PlayerHp": 2660,
+      "needExp": 53100,
+      "Exponential": 5800,
+      "Lv": 19,
+      "CriPer": 0,
+      "PerAbsolute": 50,
+      "CriDMG": 0,
+      "DmgAbsolute": 200
+    },
+    "20": {
+      "PlayerHp": 2780,
+      "needExp": 58900,
+      "Exponential": 6100,
+      "Lv": 20,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "21": {
+      "PlayerHp": 2900,
+      "needExp": 65000,
+      "Exponential": 6400,
+      "Lv": 21,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "22": {
+      "PlayerHp": 3020,
+      "needExp": 71400,
+      "Exponential": 6700,
+      "Lv": 22,
+      "CriPer": 5,
+      "PerAbsolute": 55,
+      "CriDMG": 0,
+      "DmgAbsolute": 200
+    },
+    "23": {
+      "PlayerHp": 3140,
+      "needExp": 78100,
+      "Exponential": 7000,
+      "Lv": 23,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "24": {
+      "PlayerHp": 3260,
+      "needExp": 85100,
+      "Exponential": 7300,
+      "Lv": 24,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "25": {
+      "PlayerHp": 3380,
+      "needExp": 92400,
+      "Exponential": 7600,
+      "Lv": 25,
+      "CriPer": 0,
+      "PerAbsolute": 55,
+      "CriDMG": 20,
+      "DmgAbsolute": 220
+    },
+    "26": {
+      "PlayerHp": 3500,
+      "needExp": 100000,
+      "Exponential": 7900,
+      "Lv": 26,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "27": {
+      "PlayerHp": 3620,
+      "needExp": 107900,
+      "Exponential": 8200,
+      "Lv": 27,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "28": {
+      "PlayerHp": 3740,
+      "needExp": 116100,
+      "Exponential": 8500,
+      "Lv": 28,
+      "CriPer": 10,
+      "PerAbsolute": 65,
+      "CriDMG": 20,
+      "DmgAbsolute": 240
+    },
+    "29": {
+      "PlayerHp": 3860,
+      "needExp": 124600,
+      "Exponential": 8800,
+      "Lv": 29,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "30": {
+      "PlayerHp": 3980,
+      "needExp": 133400,
+      "Exponential": 9100,
+      "Lv": 30,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "31": {
+      "PlayerHp": 4100,
+      "needExp": 142500,
+      "Exponential": 9400,
+      "Lv": 31,
+      "CriPer": 0,
+      "PerAbsolute": 65,
+      "CriDMG": 20,
+      "DmgAbsolute": 260
+    },
+    "32": {
+      "PlayerHp": 4220,
+      "needExp": 151900,
+      "Exponential": 9700,
+      "Lv": 32,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "33": {
+      "PlayerHp": 4340,
+      "needExp": 161600,
+      "Exponential": 10000,
+      "Lv": 33,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "34": {
+      "PlayerHp": 4460,
+      "needExp": 171600,
+      "Exponential": 10300,
+      "Lv": 34,
+      "CriPer": 8,
+      "PerAbsolute": 73,
+      "CriDMG": 20,
+      "DmgAbsolute": 280
+    },
+    "35": {
+      "PlayerHp": 4580,
+      "needExp": 181900,
+      "Exponential": 10600,
+      "Lv": 35,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "36": {
+      "PlayerHp": 4700,
+      "needExp": 192500,
+      "Exponential": 10900,
+      "Lv": 36,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "37": {
+      "PlayerHp": 4820,
+      "needExp": 203400,
+      "Exponential": 11200,
+      "Lv": 37,
+      "CriPer": 0,
+      "PerAbsolute": 73,
+      "CriDMG": 20,
+      "DmgAbsolute": 300
+    },
+    "38": {
+      "PlayerHp": 4940,
+      "needExp": 214600,
+      "Exponential": 11500,
+      "Lv": 38,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "39": {
+      "PlayerHp": 5060,
+      "needExp": 226100,
+      "Exponential": 11800,
+      "Lv": 39,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "40": {
+      "PlayerHp": 5180,
+      "needExp": 237900,
+      "Exponential": 12100,
+      "Lv": 40,
+      "CriPer": 4,
+      "PerAbsolute": 77,
+      "CriDMG": 20,
+      "DmgAbsolute": 320
+    },
+    "41": {
+      "PlayerHp": 5300,
+      "needExp": 250000,
+      "Exponential": 12400,
+      "Lv": 41,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "42": {
+      "PlayerHp": 5420,
+      "needExp": 262400,
+      "Exponential": 12700,
+      "Lv": 42,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "43": {
+      "PlayerHp": 5540,
+      "needExp": 275100,
+      "Exponential": 13000,
+      "Lv": 43,
+      "CriPer": 0,
+      "PerAbsolute": 77,
+      "CriDMG": 20,
+      "DmgAbsolute": 360
+    },
+    "44": {
+      "PlayerHp": 5660,
+      "needExp": 288100,
+      "Exponential": 13300,
+      "Lv": 44,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "45": {
+      "PlayerHp": 5780,
+      "needExp": 301400,
+      "Exponential": 13600,
+      "Lv": 45,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "46": {
+      "PlayerHp": 5900,
+      "needExp": 315000,
+      "Exponential": 13900,
+      "Lv": 46,
+      "CriPer": 13,
+      "PerAbsolute": 90,
+      "CriDMG": 20,
+      "DmgAbsolute": 380
+    },
+    "47": {
+      "PlayerHp": 6020,
+      "needExp": 328900,
+      "Exponential": 14200,
+      "Lv": 47,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "48": {
+      "PlayerHp": 6140,
+      "needExp": 343100,
+      "Exponential": 14500,
+      "Lv": 48,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "49": {
+      "PlayerHp": 6260,
+      "needExp": 357600,
+      "Exponential": 14800,
+      "Lv": 49,
+      "CriPer": 10,
+      "PerAbsolute": 100,
+      "CriDMG": 20,
+      "DmgAbsolute": 400
+    },
+    "50": {
+      "PlayerHp": 6380,
+      "needExp": 372400,
+      "Exponential": null,
+      "Lv": 50,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    }
+  },
+  "LvSupport": {
+    "1": {
+      "PlayerHp": 500,
+      "needExp": 0,
+      "Exponential": 400,
+      "Lv": 1,
+      "CriPer": 0,
+      "PerAbsolute": 30,
+      "CriDMG": 0,
+      "DmgAbsolute": 120
+    },
+    "2": {
+      "PlayerHp": 620,
+      "needExp": 400,
+      "Exponential": 700,
+      "Lv": 2,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "3": {
+      "PlayerHp": 740,
+      "needExp": 1100,
+      "Exponential": 1000,
+      "Lv": 3,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "4": {
+      "PlayerHp": 860,
+      "needExp": 2100,
+      "Exponential": 1300,
+      "Lv": 4,
+      "CriPer": 0,
+      "PerAbsolute": 30,
+      "CriDMG": 0,
+      "DmgAbsolute": 140
+    },
+    "5": {
+      "PlayerHp": 980,
+      "needExp": 3400,
+      "Exponential": 1600,
+      "Lv": 5,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "6": {
+      "PlayerHp": 1100,
+      "needExp": 5000,
+      "Exponential": 1900,
+      "Lv": 6,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "7": {
+      "PlayerHp": 1220,
+      "needExp": 6900,
+      "Exponential": 2200,
+      "Lv": 7,
+      "CriPer": 0,
+      "PerAbsolute": 30,
+      "CriDMG": 0,
+      "DmgAbsolute": 160
+    },
+    "8": {
+      "PlayerHp": 1340,
+      "needExp": 9100,
+      "Exponential": 2500,
+      "Lv": 8,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "9": {
+      "PlayerHp": 1460,
+      "needExp": 11600,
+      "Exponential": 2800,
+      "Lv": 9,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "10": {
+      "PlayerHp": 1580,
+      "needExp": 14400,
+      "Exponential": 3100,
+      "Lv": 10,
+      "CriPer": 0,
+      "PerAbsolute": 30,
+      "CriDMG": 0,
+      "DmgAbsolute": 180
+    },
+    "11": {
+      "PlayerHp": 1700,
+      "needExp": 17500,
+      "Exponential": 3400,
+      "Lv": 11,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "12": {
+      "PlayerHp": 1820,
+      "needExp": 20900,
+      "Exponential": 3700,
+      "Lv": 12,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "13": {
+      "PlayerHp": 1940,
+      "needExp": 24600,
+      "Exponential": 4000,
+      "Lv": 13,
+      "CriPer": 10,
+      "PerAbsolute": 40,
+      "CriDMG": 0,
+      "DmgAbsolute": 200
+    },
+    "14": {
+      "PlayerHp": 2060,
+      "needExp": 28600,
+      "Exponential": 4300,
+      "Lv": 14,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "15": {
+      "PlayerHp": 2180,
+      "needExp": 32900,
+      "Exponential": 4600,
+      "Lv": 15,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "16": {
+      "PlayerHp": 2300,
+      "needExp": 37500,
+      "Exponential": 4900,
+      "Lv": 16,
+      "CriPer": 10,
+      "PerAbsolute": 50,
+      "CriDMG": 0,
+      "DmgAbsolute": 200
+    },
+    "17": {
+      "PlayerHp": 2420,
+      "needExp": 42400,
+      "Exponential": 5200,
+      "Lv": 17,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "18": {
+      "PlayerHp": 2540,
+      "needExp": 47600,
+      "Exponential": 5500,
+      "Lv": 18,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "19": {
+      "PlayerHp": 2660,
+      "needExp": 53100,
+      "Exponential": 5800,
+      "Lv": 19,
+      "CriPer": 0,
+      "PerAbsolute": 50,
+      "CriDMG": 0,
+      "DmgAbsolute": 200
+    },
+    "20": {
+      "PlayerHp": 2780,
+      "needExp": 58900,
+      "Exponential": 6100,
+      "Lv": 20,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "21": {
+      "PlayerHp": 2900,
+      "needExp": 65000,
+      "Exponential": 6400,
+      "Lv": 21,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "22": {
+      "PlayerHp": 3020,
+      "needExp": 71400,
+      "Exponential": 6700,
+      "Lv": 22,
+      "CriPer": 5,
+      "PerAbsolute": 55,
+      "CriDMG": 0,
+      "DmgAbsolute": 200
+    },
+    "23": {
+      "PlayerHp": 3140,
+      "needExp": 78100,
+      "Exponential": 7000,
+      "Lv": 23,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "24": {
+      "PlayerHp": 3260,
+      "needExp": 85100,
+      "Exponential": 7300,
+      "Lv": 24,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "25": {
+      "PlayerHp": 3380,
+      "needExp": 92400,
+      "Exponential": 7600,
+      "Lv": 25,
+      "CriPer": 0,
+      "PerAbsolute": 55,
+      "CriDMG": 20,
+      "DmgAbsolute": 220
+    },
+    "26": {
+      "PlayerHp": 3500,
+      "needExp": 100000,
+      "Exponential": 7900,
+      "Lv": 26,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "27": {
+      "PlayerHp": 3620,
+      "needExp": 107900,
+      "Exponential": 8200,
+      "Lv": 27,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "28": {
+      "PlayerHp": 3740,
+      "needExp": 116100,
+      "Exponential": 8500,
+      "Lv": 28,
+      "CriPer": 10,
+      "PerAbsolute": 65,
+      "CriDMG": 20,
+      "DmgAbsolute": 240
+    },
+    "29": {
+      "PlayerHp": 3860,
+      "needExp": 124600,
+      "Exponential": 8800,
+      "Lv": 29,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "30": {
+      "PlayerHp": 3980,
+      "needExp": 133400,
+      "Exponential": 9100,
+      "Lv": 30,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "31": {
+      "PlayerHp": 4100,
+      "needExp": 142500,
+      "Exponential": 9400,
+      "Lv": 31,
+      "CriPer": 0,
+      "PerAbsolute": 65,
+      "CriDMG": 20,
+      "DmgAbsolute": 260
+    },
+    "32": {
+      "PlayerHp": 4220,
+      "needExp": 151900,
+      "Exponential": 9700,
+      "Lv": 32,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "33": {
+      "PlayerHp": 4340,
+      "needExp": 161600,
+      "Exponential": 10000,
+      "Lv": 33,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "34": {
+      "PlayerHp": 4460,
+      "needExp": 171600,
+      "Exponential": 10300,
+      "Lv": 34,
+      "CriPer": 8,
+      "PerAbsolute": 73,
+      "CriDMG": 20,
+      "DmgAbsolute": 280
+    },
+    "35": {
+      "PlayerHp": 4580,
+      "needExp": 181900,
+      "Exponential": 10600,
+      "Lv": 35,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "36": {
+      "PlayerHp": 4700,
+      "needExp": 192500,
+      "Exponential": 10900,
+      "Lv": 36,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "37": {
+      "PlayerHp": 4820,
+      "needExp": 203400,
+      "Exponential": 11200,
+      "Lv": 37,
+      "CriPer": 0,
+      "PerAbsolute": 73,
+      "CriDMG": 20,
+      "DmgAbsolute": 300
+    },
+    "38": {
+      "PlayerHp": 4940,
+      "needExp": 214600,
+      "Exponential": 11500,
+      "Lv": 38,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "39": {
+      "PlayerHp": 5060,
+      "needExp": 226100,
+      "Exponential": 11800,
+      "Lv": 39,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "40": {
+      "PlayerHp": 5180,
+      "needExp": 237900,
+      "Exponential": 12100,
+      "Lv": 40,
+      "CriPer": 4,
+      "PerAbsolute": 77,
+      "CriDMG": 20,
+      "DmgAbsolute": 320
+    },
+    "41": {
+      "PlayerHp": 5300,
+      "needExp": 250000,
+      "Exponential": 12400,
+      "Lv": 41,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "42": {
+      "PlayerHp": 5420,
+      "needExp": 262400,
+      "Exponential": 12700,
+      "Lv": 42,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "43": {
+      "PlayerHp": 5540,
+      "needExp": 275100,
+      "Exponential": 13000,
+      "Lv": 43,
+      "CriPer": 0,
+      "PerAbsolute": 77,
+      "CriDMG": 20,
+      "DmgAbsolute": 360
+    },
+    "44": {
+      "PlayerHp": 5660,
+      "needExp": 288100,
+      "Exponential": 13300,
+      "Lv": 44,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "45": {
+      "PlayerHp": 5780,
+      "needExp": 301400,
+      "Exponential": 13600,
+      "Lv": 45,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "46": {
+      "PlayerHp": 5900,
+      "needExp": 315000,
+      "Exponential": 13900,
+      "Lv": 46,
+      "CriPer": 13,
+      "PerAbsolute": 90,
+      "CriDMG": 20,
+      "DmgAbsolute": 380
+    },
+    "47": {
+      "PlayerHp": 6020,
+      "needExp": 328900,
+      "Exponential": 14200,
+      "Lv": 47,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "48": {
+      "PlayerHp": 6140,
+      "needExp": 343100,
+      "Exponential": 14500,
+      "Lv": 48,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    },
+    "49": {
+      "PlayerHp": 6260,
+      "needExp": 357600,
+      "Exponential": 14800,
+      "Lv": 49,
+      "CriPer": 10,
+      "PerAbsolute": 100,
+      "CriDMG": 20,
+      "DmgAbsolute": 400
+    },
+    "50": {
+      "PlayerHp": 6380,
+      "needExp": 372400,
+      "Exponential": null,
+      "Lv": 50,
+      "CriPer": null,
+      "PerAbsolute": null,
+      "CriDMG": null,
+      "DmgAbsolute": null
+    }
+  },
+  "LvUpInfo": {
+    "1": {
+      "hp": 500,
+      "upper": 120,
+      "needExp": 0,
+      "Ex": 400,
+      "Lv": 1
+    },
+    "2": {
+      "hp": 620,
+      "upper": 120,
+      "needExp": 400,
+      "Ex": 700,
+      "Lv": 2
+    },
+    "3": {
+      "hp": 740,
+      "upper": 120,
+      "needExp": 1100,
+      "Ex": 1000,
+      "Lv": 3
+    },
+    "4": {
+      "hp": 860,
+      "upper": 120,
+      "needExp": 2100,
+      "Ex": 1300,
+      "Lv": 4
+    },
+    "5": {
+      "hp": 980,
+      "upper": 120,
+      "needExp": 3400,
+      "Ex": 1600,
+      "Lv": 5
+    },
+    "6": {
+      "hp": 1100,
+      "upper": 120,
+      "needExp": 5000,
+      "Ex": 1900,
+      "Lv": 6
+    },
+    "7": {
+      "hp": 1220,
+      "upper": 120,
+      "needExp": 6900,
+      "Ex": 2200,
+      "Lv": 7
+    },
+    "8": {
+      "hp": 1340,
+      "upper": 120,
+      "needExp": 9100,
+      "Ex": 2500,
+      "Lv": 8
+    },
+    "9": {
+      "hp": 1460,
+      "upper": 120,
+      "needExp": 11600,
+      "Ex": 2800,
+      "Lv": 9
+    },
+    "10": {
+      "hp": 1580,
+      "upper": 120,
+      "needExp": 14400,
+      "Ex": 3100,
+      "Lv": 10
+    },
+    "11": {
+      "hp": 1700,
+      "upper": 120,
+      "needExp": 17500,
+      "Ex": 3400,
+      "Lv": 11
+    },
+    "12": {
+      "hp": 1820,
+      "upper": 120,
+      "needExp": 20900,
+      "Ex": 3700,
+      "Lv": 12
+    },
+    "13": {
+      "hp": 1940,
+      "upper": 120,
+      "needExp": 24600,
+      "Ex": 4000,
+      "Lv": 13
+    },
+    "14": {
+      "hp": 2060,
+      "upper": 120,
+      "needExp": 28600,
+      "Ex": 4300,
+      "Lv": 14
+    },
+    "15": {
+      "hp": 2180,
+      "upper": 120,
+      "needExp": 32900,
+      "Ex": 4600,
+      "Lv": 15
+    },
+    "16": {
+      "hp": 2300,
+      "upper": 120,
+      "needExp": 37500,
+      "Ex": 4900,
+      "Lv": 16
+    },
+    "17": {
+      "hp": 2420,
+      "upper": 120,
+      "needExp": 42400,
+      "Ex": 5200,
+      "Lv": 17
+    },
+    "18": {
+      "hp": 2540,
+      "upper": 120,
+      "needExp": 47600,
+      "Ex": 5500,
+      "Lv": 18
+    },
+    "19": {
+      "hp": 2660,
+      "upper": 120,
+      "needExp": 53100,
+      "Ex": 5800,
+      "Lv": 19
+    },
+    "20": {
+      "hp": 2780,
+      "upper": 120,
+      "needExp": 58900,
+      "Ex": 6100,
+      "Lv": 20
+    },
+    "21": {
+      "hp": 2900,
+      "upper": 120,
+      "needExp": 65000,
+      "Ex": 6400,
+      "Lv": 21
+    },
+    "22": {
+      "hp": 3020,
+      "upper": 120,
+      "needExp": 71400,
+      "Ex": 6700,
+      "Lv": 22
+    },
+    "23": {
+      "hp": 3140,
+      "upper": 120,
+      "needExp": 78100,
+      "Ex": 7000,
+      "Lv": 23
+    },
+    "24": {
+      "hp": 3260,
+      "upper": 120,
+      "needExp": 85100,
+      "Ex": 7300,
+      "Lv": 24
+    },
+    "25": {
+      "hp": 3380,
+      "upper": 120,
+      "needExp": 92400,
+      "Ex": 7600,
+      "Lv": 25
+    },
+    "26": {
+      "hp": 3500,
+      "upper": 120,
+      "needExp": 100000,
+      "Ex": 7900,
+      "Lv": 26
+    },
+    "27": {
+      "hp": 3620,
+      "upper": 120,
+      "needExp": 107900,
+      "Ex": 8200,
+      "Lv": 27
+    },
+    "28": {
+      "hp": 3740,
+      "upper": 120,
+      "needExp": 116100,
+      "Ex": 8500,
+      "Lv": 28
+    },
+    "29": {
+      "hp": 3860,
+      "upper": 120,
+      "needExp": 124600,
+      "Ex": 8800,
+      "Lv": 29
+    },
+    "30": {
+      "hp": 3980,
+      "upper": 120,
+      "needExp": 133400,
+      "Ex": 9100,
+      "Lv": 30
+    },
+    "31": {
+      "hp": 4100,
+      "upper": 120,
+      "needExp": 142500,
+      "Ex": 9400,
+      "Lv": 31
+    },
+    "32": {
+      "hp": 4220,
+      "upper": 120,
+      "needExp": 151900,
+      "Ex": 9700,
+      "Lv": 32
+    },
+    "33": {
+      "hp": 4340,
+      "upper": 120,
+      "needExp": 161600,
+      "Ex": 10000,
+      "Lv": 33
+    },
+    "34": {
+      "hp": 4460,
+      "upper": 120,
+      "needExp": 171600,
+      "Ex": 10300,
+      "Lv": 34
+    },
+    "35": {
+      "hp": 4580,
+      "upper": 120,
+      "needExp": 181900,
+      "Ex": 10600,
+      "Lv": 35
+    },
+    "36": {
+      "hp": 4700,
+      "upper": 120,
+      "needExp": 192500,
+      "Ex": 10900,
+      "Lv": 36
+    },
+    "37": {
+      "hp": 4820,
+      "upper": 120,
+      "needExp": 203400,
+      "Ex": 11200,
+      "Lv": 37
+    },
+    "38": {
+      "hp": 4940,
+      "upper": 120,
+      "needExp": 214600,
+      "Ex": 11500,
+      "Lv": 38
+    },
+    "39": {
+      "hp": 5060,
+      "upper": 120,
+      "needExp": 226100,
+      "Ex": 11800,
+      "Lv": 39
+    },
+    "40": {
+      "hp": 5180,
+      "upper": 120,
+      "needExp": 237900,
+      "Ex": 12100,
+      "Lv": 40
+    },
+    "41": {
+      "hp": 5300,
+      "upper": 120,
+      "needExp": 250000,
+      "Ex": 12400,
+      "Lv": 41
+    },
+    "42": {
+      "hp": 5420,
+      "upper": 120,
+      "needExp": 262400,
+      "Ex": 12700,
+      "Lv": 42
+    },
+    "43": {
+      "hp": 5540,
+      "upper": 120,
+      "needExp": 275100,
+      "Ex": 13000,
+      "Lv": 43
+    },
+    "44": {
+      "hp": 5660,
+      "upper": 120,
+      "needExp": 288100,
+      "Ex": 13300,
+      "Lv": 44
+    },
+    "45": {
+      "hp": 5780,
+      "upper": 120,
+      "needExp": 301400,
+      "Ex": 13600,
+      "Lv": 45
+    },
+    "46": {
+      "hp": 5900,
+      "upper": 120,
+      "needExp": 315000,
+      "Ex": 13900,
+      "Lv": 46
+    },
+    "47": {
+      "hp": 6020,
+      "upper": 120,
+      "needExp": 328900,
+      "Ex": 14200,
+      "Lv": 47
+    },
+    "48": {
+      "hp": 6140,
+      "upper": 120,
+      "needExp": 343100,
+      "Ex": 14500,
+      "Lv": 48
+    },
+    "49": {
+      "hp": 6260,
+      "upper": 120,
+      "needExp": 357600,
+      "Ex": 14800,
+      "Lv": 49
+    },
+    "50": {
+      "hp": 6380,
+      "upper": 120,
+      "needExp": 372400,
+      "Ex": null,
+      "Lv": 50
+    }
+  }
+}

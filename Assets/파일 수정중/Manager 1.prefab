@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2626380403529792864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2711164740361123972}
+  - component: {fileID: 4481394635427167670}
+  m_Layer: 0
+  m_Name: LevelupMgr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2711164740361123972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2626380403529792864}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 802.6865, y: 527.96936, z: -36.8525}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1062191456539013124}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4481394635427167670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2626380403529792864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ced50b77b0197247a5f3540598dca3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leveltxtFile: {fileID: 0}
+  stateMgr: {fileID: 0}
+  inventoryMgr: {fileID: 0}
+  lvupPanel: {fileID: 0}
+  playerlv: 0
+  classNum: 0
+  playerExp: 0
+  upMaxExp: 0
+  playerLvTxt: {fileID: 0}
+  expSlideImg: {fileID: 0}
+  expChartTxt: {fileID: 0}
+  playerHaveExpTxt: {fileID: 0}
+  beforeHealth: {fileID: 0}
+  afterHealth: {fileID: 0}
+  beforeCriPer: {fileID: 0}
+  afterCriPer: {fileID: 0}
+  beforeCriDmg: {fileID: 0}
+  afterCriDmg: {fileID: 0}
+--- !u!1 &5712131418873466739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 531226651579182444}
+  - component: {fileID: 6139714147657322046}
+  m_Layer: 0
+  m_Name: EnforceMgr
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &531226651579182444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5712131418873466739}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.4940392, y: -17.15189, z: -37.75628}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1062191456539013124}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6139714147657322046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5712131418873466739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb690c196c48914eabd7bcf7dd6eba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forcetxtFile: {fileID: 0}
+  inventoryMgr: {fileID: 0}
+  rewardMgr: {fileID: 0}
+  trophyMgr: {fileID: 0}
+  stateMgr: {fileID: 0}
+  enBtn: {fileID: 0}
+  enforcePanel: {fileID: 0}
+  weaponNowTxt: {fileID: 0}
+  weaponAftTxt: {fileID: 0}
+  wantEnforceTxt: {fileID: 0}
+  needMaterial: {fileID: 0}
+  needGold: {fileID: 0}
+  enforceEffect: {fileID: 0}
+  lessTween: {fileID: 0}
+  successPanel: {fileID: 0}
+  successweaponNowTxt: {fileID: 0}
+  beforeAtk: {fileID: 0}
+  afterAtk: {fileID: 0}
+  failedPanel: {fileID: 0}
+  failweaponNowTxt: {fileID: 0}
+  beforeAtkF: {fileID: 0}
+  afterAtkF: {fileID: 0}
+  failEnforceCount: 0
+  playerWeaponLv: 0
+--- !u!1 &8954905414580067565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1062191456539013124}
+  m_Layer: 0
+  m_Name: Manager 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1062191456539013124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8954905414580067565}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.3722439, y: 17.309067, z: 36.51629}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 531226651579182444}
+  - {fileID: 2711164740361123972}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
