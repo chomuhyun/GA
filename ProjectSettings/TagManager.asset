@@ -21,6 +21,15 @@ TagManager:
   - Exp
   - Material
   - Heal
+  - Enemy
+  - StartStage
+  - Golem
+  - NPCQ
+  - NPCA
+  - NPCW
+  - NPCL
+  - NPCC
+  - NPCP
   layers:
   - Default
   - TransparentFX

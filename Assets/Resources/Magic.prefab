@@ -8973,7 +8973,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4099242668333204363}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.6600003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9083,16 +9083,7 @@ MonoBehaviour:
   turn: 0
   Desh: 0
   isDeshInvincible: 0
-  characterController: {fileID: 0}
-  rigid: {fileID: 0}
-  CameraArm: {fileID: 0}
-  trailRenderer: {fileID: 0}
-  weapons: {fileID: 5926032621641576396}
   Ta: []
-  stateManager: {fileID: 2845939988517761448}
-  hudManager: {fileID: 0}
-  magition: {fileID: 0}
-  cvc: {fileID: 0}
   isAttack: 0
   isAttack1: 0
   isAttack2: 0
@@ -9129,7 +9120,16 @@ MonoBehaviour:
   curRskillcool: 18
   chargingSlider: {fileID: 0}
   originalTimeScale: 1
-  itMe: 0
+  sPlayer: 0
+  aPlayer: 0
+  mPlayer: 1
+  getNPC:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  isInven: 0
   rotCamXAxisSpeed: 500
   rotCamYAxisSpeed: 3
 --- !u!114 &2845939988517761448

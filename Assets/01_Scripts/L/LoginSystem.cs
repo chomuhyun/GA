@@ -39,7 +39,7 @@ public class LoginSystem : MonoBehaviour
         {
             if (PlayerPrefs.HasKey("UserID"))
             {
-                SceneManager.LoadScene("Lobby_test");
+                SceneManager.LoadScene("ChSelect");
             }
             else
             {

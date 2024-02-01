@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Character/FreeCharacter/Materials.meta
+guid: 9bf57c25544458844a59df7dbcd88d17
+========
 guid: 99f7be233a77871479d2945b09f04861
+>>>>>>>> DEV:Assets/파일 수정중.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

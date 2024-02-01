@@ -43,24 +43,22 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
     private Vector3 hitPosition;
 
     [Header("Component")]
-    public CharacterController characterController;
-    public Rigidbody rigid;
-    public Transform CameraArm;
+    CharacterController characterController;
+    Rigidbody rigid;
     Animator animator;
-    public TrailRenderer trailRenderer;
-    public Weapons weapons;
+    TrailRenderer trailRenderer;
+    Weapons weapons;
     private PlayableDirector PD;
     public TimelineAsset[] Ta;
     Boss boss;
-    
-    public StateManager stateManager;
+    StateManager stateManager;
     MeshRenderTail meshRenderTail;
-    public HUDManager hudManager;
+    HUDManager hudManager;
     private new Camera camera;
-    public GameObject magition;
     PhotonView pv;
     PhotonAnimatorView pav;
-    public CinemachineVirtualCamera cvc;
+    CinemachineVirtualCamera cvc;
+     UIMgr uimgr;
     [Header("CamBat")]
     public bool isAttack;
     public bool isAttack1;
@@ -82,7 +80,6 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
 
     [Header("Skill CoolTime")]
     public Image[] skillIcon;
-
     public bool skillUse;
     public bool qisReady;
     public bool eisReady;
@@ -95,14 +92,22 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
     public float curQskillcool;
     public float curEskillcool;
     public float curRskillcool;
-
     public Slider chargingSlider;
     public float originalTimeScale;
-    public int itMe;
+    public bool sPlayer;
+    public bool aPlayer;
+    public bool mPlayer;
+
+    [Header("NPC")]
+    public GameObject[] getNPC;
+
+    [Header("UIctrl")]
+    public bool isInven;
     [SerializeField] private float rotCamXAxisSpeed = 500f;
     [SerializeField] private float rotCamYAxisSpeed = 3f;
     internal string NickName;
 
+    
     void Awake()
     {
         camera = Camera.main;
@@ -111,13 +116,9 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
         rigid = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
-        if (boss != null)
-        {
-            boss = GameObject.FindGameObjectWithTag("Boss").GetComponent<Boss>();
-        }
-        
         stateManager = GetComponent<StateManager>();
         hudManager = GetComponent<HUDManager>();
+        uimgr = GameObject.Find("UIMgr").GetComponent<UIMgr>();
         chargingSlider = GameObject.FindGameObjectWithTag("Heal").GetComponent<Slider>();
         cvc = GameObject.Find("Virtual Camera").GetComponent<CinemachineVirtualCamera>();
         if (PhotonNetwork.IsConnected && photonView.IsMine)
@@ -130,6 +131,10 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
             skillIcon[0] = GameObject.Find("CoolTimeBGQ").GetComponent<Image>();
             skillIcon[1] = GameObject.Find("CoolTimeBGE").GetComponent<Image>();
             skillIcon[2] = GameObject.Find("CoolTimeBGR").GetComponent<Image>();
+        }
+        if (boss != null)
+        {
+            boss = GameObject.FindGameObjectWithTag("Boss").GetComponent<Boss>();
         }
     }
 
@@ -146,12 +151,13 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
         skillIcon[0].fillAmount = 0;
         skillIcon[1].fillAmount = 0;
         skillIcon[2].fillAmount = 0;
-        if(pv.IsMine)
+        
+        if (pv.IsMine)
         {
-            //cvc.Follow = transform;
-            //cvc.LookAt = transform;
+            cvc.Follow = transform;
+            cvc.LookAt = transform;
+            SKilliconOn();
         }
-        // ob[6] = GameObject.FindGameObjectWithTag("Heal").GetComponent<GameObject>();
         //chatManager.StartCoroutine(chatManager.CheckEnterKey());
     }
 
@@ -186,37 +192,7 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
             characterController.Move(moveDir * 5f);
         }
     }
-    void lookAround()
-    {
-        Vector2 mouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
-        Vector3 camAngle = cvc.transform.rotation.eulerAngles;
-        float x = camAngle.x - mouseDelta.y;
-        if (x <= 180f)
-        {
-            x = Mathf.Clamp(x, -1f, 70f);
-        }
-        else
-        {
-            x = Mathf.Clamp(x, -90f, 90f);
-        }
-        cvc.transform.rotation = Quaternion.Euler(15, camAngle.y + mouseDelta.x, camAngle.z);
-    }
-    void check()
-    {
-        cvc.transform.position = new Vector3(transform.position.x, transform.position.y + 3f, transform.position.z - 3.5f);
-       //cvc.transform.rotation = Quaternion.Euler(15, transform.rotation.y,transform.rotation.z);
-        Vector3 direction = (transform.position - cvc.transform.position).normalized;
-        RaycastHit[] hits = Physics.RaycastAll(transform.position, direction, Mathf.Infinity, 1 << LayerMask.NameToLayer("Filed"));
-        for (int i = 0; i < hits.Length; i++)
-        {
-            TransparentObject[] obj = hits[i].transform.GetComponentsInChildren<TransparentObject>();
-
-            for (int j = 0; j < obj.Length; j++)
-            {
-                obj[j]?.BecomeTransparent();
-            }
-        }
-    }
+    
     void Interation()
     {
         if (Input.GetKeyDown(KeyCode.LeftAlt) && nearObject != null && nearObject.tag == "Shop")
@@ -229,7 +205,7 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
         }
     }
     // Update is called once per frame
-    void Update() // 원래 FixedUpdate였음
+    void FixedUpdate() // 원래 FixedUpdate였음
     {
        
         if (pv.IsMine)
@@ -246,16 +222,13 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
                 {
                     GetinPut();
                     moves();
-                    //lookAround();
-                    //GetinPut();
                     Attack();
-                    //check();
                     SkillOn();
                     Death();
                     Deshs();
                     Interation();
                     SkillCoolTime();
-                    //Turn();
+                    UIctrl();
                 }
             }
         }
@@ -264,19 +237,6 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
             nickNameTxt.text = pv.Owner.NickName;
             nickNameTxt.color = Color.red;
         }
-    }
-
-    void Turn()
-    {
-        ray = camera.ScreenPointToRay(Input.mousePosition);
-        float enter = 0;
-
-        plane.Raycast(ray, out enter);
-        hitPosition = ray.GetPoint(enter);
-
-        Vector3 lookDir = hitPosition - transform.position;
-        lookDir.y = 0;
-        transform.localRotation = Quaternion.LookRotation(lookDir);
     }
 
     void GetinPut()
@@ -446,26 +406,27 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
         }
         if (onMagic)
         {
+            ob[0] = GameObject.FindGameObjectWithTag("Heal").GetComponent<GameObject>();
             if (rischarging)
             {
                 if (Input.GetKey(KeyCode.R))
                 {
                     animator.SetTrigger("SkillR");
                     Skill[2].SetActive(true);
-                    ob[6].SetActive(true);
+                    ob[0].SetActive(true);
                     chargingSlider.value += Time.deltaTime * 0.35f;
 
                     if (chargingSlider.value == 1)
                     {
                         Skill[2].SetActive(false);
-                        ob[6].SetActive(false);
+                        ob[0].SetActive(false);
                         rischarging = false;
                     }
                 }
                 else
                 {
                 Skill[2].SetActive(false);
-                //ob[6].SetActive(false);
+                ob[0].SetActive(false);
                 
                 rischarging = false;
                 chargingSlider.value = 0;
@@ -481,15 +442,22 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
         {
             if (isDeshInvincible == true)
                 return;
-
             animator.SetTrigger("Down");
             StartCoroutine(DownDelay());
         }
-
         if (other.CompareTag("SaveZone"))
-        {
             isDeshInvincible = true;
-        }
+        if (other.CompareTag("NPCQ"))
+            uimgr.npcPanel[0].SetActive(true);
+        if (other.CompareTag("NPCW"))
+            uimgr.npcPanel[1].SetActive(true);
+        if (other.CompareTag("NPCL"))
+            uimgr.npcPanel[2].SetActive(true);
+        //if (other.CompareTag("NPCP"))
+        //uimgr.npcPanel[5].SetActive(true);
+        //if (other.CompareTag("NPCA"))
+        //uimgr.npcPanel[1].SetActive(true);
+
 
     }
 
@@ -521,11 +489,54 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
             shop.Exit();
             nearObject = null;
         }
-        if(other.CompareTag("TimeSlow"))
+        if (other.CompareTag("NPCQ"))
+            uimgr.npcPanel[0].SetActive(false);
+        if (other.CompareTag("NPCW"))
+            uimgr.npcPanel[1].SetActive(false);
+        if (other.CompareTag("NPCL"))
+            uimgr.npcPanel[2].SetActive(false);
+    }
+
+    void UIctrl()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
         {
-            
+            if (!isInven)
+            {
+                uimgr.npcPanel[3].SetActive(true);
+                isInven = true;
+            }
+            else
+            {
+                uimgr.npcPanel[3].SetActive(false);
+                isInven = false;
+            }
         }
     }
+    void SKilliconOn()
+    {
+        if (sPlayer)
+        {
+            uimgr.playerSkillIcon[0].SetActive(true);
+            uimgr.playerSkillIcon[1].SetActive(false);
+            uimgr.playerSkillIcon[2].SetActive(false);
+        }
+        if(aPlayer)
+        {
+            uimgr.playerSkillIcon[0].SetActive(false);
+            uimgr.playerSkillIcon[1].SetActive(true);
+            uimgr.playerSkillIcon[2].SetActive(false);
+        }
+        if(mPlayer)
+        {
+            uimgr.playerSkillIcon[0].SetActive(false);
+            uimgr.playerSkillIcon[1].SetActive(false);
+            uimgr.playerSkillIcon[2].SetActive(true);
+        }
+            
+    }    
+
+
 
     void SkillUsing()
     {
@@ -565,13 +576,13 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
 
     void A_LfireAttack()
     {
-        Vector3 spawnRotation = new Vector3 (-90, 0, 0);
-        Instantiate(Skill[4], Point[5].transform.position, Quaternion.Euler(spawnRotation));
+        Vector3 spawnRotation = new Vector3 (0, 90, 0);
+        Instantiate(Skill[4], Point[5].transform.position, Point[5].transform.rotation);
     }
       void A_RfireAttack()
     {
-        Vector3 spawnRotation = new Vector3(-90, 0, 0);
-        Instantiate(Skill[4], Point[5].transform.position, Quaternion.Euler(spawnRotation));
+        Vector3 spawnRotation = new Vector3(0, 90, 0);
+        Instantiate(Skill[4], Point[5].transform.position, Point[5].transform.rotation);
     }
 
     void A_SkillQ()

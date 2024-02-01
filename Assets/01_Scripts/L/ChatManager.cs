@@ -28,9 +28,11 @@ public class ChatManager : MonoBehaviourPunCallbacks, IPunObservable
         player = GetComponent<Player>();
         // 여기 위에가 추가한것. 현창
 
-        GameObject canvasObj = GameObject.Find("LoginIntroCanvas");
-        GameObject chattingBox = canvasObj.transform.Find("ChattingBox").gameObject;
+        GameObject canvasObj = GameObject.Find("WorldCanvas");
+        GameObject backChSelect = canvasObj.transform.Find("BackChSelect_Chat").gameObject;
+        GameObject chattingBox = backChSelect.transform.Find("ChattingBox").gameObject;
         scrollRect = chattingBox.GetComponentInChildren<ScrollRect>();
+
         //chatterList = chattingBox.GetComponentInChildren<Text>();
         inputChat = chattingBox.GetComponentInChildren<InputField>();
         chatLog = scrollRect.content.GetComponentInChildren<Text>();
