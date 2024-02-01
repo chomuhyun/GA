@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Polygonal Metalon/Prefabs.meta
+guid: 8bf17f2746d472b4aba5d057f2c64d67
+========
 guid: bfde9c50e17408e45a1ab7287faff515
+>>>>>>>> DEV:Assets/01_Scripts/P/Conversation.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

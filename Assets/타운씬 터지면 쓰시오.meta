@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Polygonal Metalon/FBX.meta
+guid: 2c93230623b20a74294d3d84e5f2616b
+========
 guid: 7d85b2fc86266ec4c882ef4dbc3446b1
+>>>>>>>> DEV:Assets/타운씬 터지면 쓰시오.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

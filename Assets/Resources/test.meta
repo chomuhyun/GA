@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Character.meta
+guid: 5b7f05b00359371458ab1eb8090ac888
+========
 guid: 3667d83c4da6c4b49a3ed397f1aeb5f0
+>>>>>>>> DEV:Assets/Resources/test.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Character.meta
+guid: c9fe7af05e5044148bbdb4dca1e346e0
+========
+guid: 3667d83c4da6c4b49a3ed397f1aeb5f0
+>>>>>>>> DEV:Assets/Resources/test.meta
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
