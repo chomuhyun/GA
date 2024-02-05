@@ -59,8 +59,6 @@ public class QuestManager : MonoBehaviour
 
 
     [Header("퀘스트 보상")]
-    public GameObject rewardPanel;
-    public RewardMgr rewardMgr;
     public int expPotionReward;
     public int materialReward;
     public int goldReward;
@@ -77,16 +75,14 @@ public class QuestManager : MonoBehaviour
 
         int item = n - 1; //매개변수
 
-        rewardMgr = GameObject.Find("RewardMgr").GetComponent<RewardMgr>();
         expPotionReward=(jsonData["Quest"][item]["RewardExp"]);
         materialReward=(jsonData["Quest"][item]["RewardMat"]);
         goldReward=(jsonData["Quest"][item]["RewardGold"]);
-        expPotionReward = dataMgrDontDestroy.dungeonNumIdx;
-        materialReward = dataMgrDontDestroy.dungeonNumIdx;
-        goldReward *= dataMgrDontDestroy.dungeonNumIdx;
-        rewardMgr.InstExp(expPotionReward);
-        rewardMgr.InstMaterial(materialReward);
-        rewardMgr.InstGold(goldReward);
+
+        //이때 퀘스트 보상 수령.
+        dataMgrDontDestroy.UserExpPotion += expPotionReward;
+        dataMgrDontDestroy.UserMaterial += materialReward;
+        dataMgrDontDestroy.UserGold += goldReward;
     }
 
     private void Awake()
@@ -161,7 +157,7 @@ public class QuestManager : MonoBehaviour
         questNameTxt.text = (jsonData["Quest"][item]["QuestName"]);
         goalTxt.text = (jsonData["Quest"][item]["Goal"]);
         rewardExp.text = (jsonData["Quest"][item]["RewardExp"]);
-        rewardMat.text = (jsonData["Quest"][item]["RewardMaterial"]);
+        rewardMat.text = (jsonData["Quest"][item]["RewardMat"]);
         rewardGold.text = (jsonData["Quest"][item]["RewardGold"]);
         Debug.Log("Json 데이터 불러옴");
         
@@ -220,6 +216,7 @@ public class QuestManager : MonoBehaviour
         {
             // 보상 지급 및 처리
             // (보상 관련 코드 추가 필요)
+            
 
             // 퀘스트 버튼 비활성화
             acceptBtn.SetActive(false);
@@ -231,6 +228,9 @@ public class QuestManager : MonoBehaviour
             //ingImg.SetActive(false);
             //completedBtn.SetActive(false); 
 
+            //퀘스트 보상 수령하는 함수
+            QuestClearReward(dataMgrDontDestroy.questIdx);
+
             // 퀘스트 인덱스 증가 및 데이터 매니저 갱신
             dataMgrDontDestroy.questIdx++;
             dataMgrDontDestroy.QuestIdx = questPopUpManager.questIdx;
@@ -238,9 +238,7 @@ public class QuestManager : MonoBehaviour
             // 퀘스트 팝업 패널 비활성화
             questPopUpPanel.SetActive(false);
 
-            //퀘스트 보상 팝업 활성화
-            rewardPanel.SetActive(true);
-            QuestClearReward(dataMgrDontDestroy.questIdx);
+            
             //퀘스트 완료시 동작
             //if (questCurCnt >= questMaxCnt)
             //{

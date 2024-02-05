@@ -62,7 +62,7 @@ public class RewardMgr : MonoBehaviour
         character.GetComponentInChildren<Text>().text = expPotionReward.ToString();
         //character.tag = "Exp";
         character.transform.SetParent(rewardContent.transform);
-        dataMgrDontDestroy.UserExpPotion += expPotionReward;
+        //dataMgrDontDestroy.UserExpPotion += expPotionReward;
     }
 
     // 재료소환 함수
@@ -74,7 +74,7 @@ public class RewardMgr : MonoBehaviour
         character.GetComponentInChildren<Text>().text = materialReward.ToString();
         //character.tag = "Material";
         character.transform.SetParent(rewardContent.transform);
-        dataMgrDontDestroy.UserMaterial += materialReward;
+        //dataMgrDontDestroy.UserMaterial += materialReward;
     }
 
     // 골드 소환 함수
@@ -86,6 +86,6 @@ public class RewardMgr : MonoBehaviour
         character.GetComponentInChildren<Text>().text = goldReward.ToString();
         //character.tag = "Gold";
         character.transform.SetParent(rewardContent.transform);
-        dataMgrDontDestroy.UserGold += goldReward;
+        //dataMgrDontDestroy.UserGold += goldReward;
     }
 }
