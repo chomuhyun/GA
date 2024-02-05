@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-using UnityEngine.Events;
 
 public class CharacterCreate : MonoBehaviour
 {
@@ -18,11 +16,9 @@ public class CharacterCreate : MonoBehaviour
 
     public static int currentClassNum;
     public static int currentSlotNum;
-    public Texture[] sprites;
-    public Button[] slots;
 
     public LoadPlayerInfo loadPlayerInfo;
-    private int classNum;
+    public Button[] slots;
 
     void Start()
     {
@@ -72,13 +68,13 @@ public class CharacterCreate : MonoBehaviour
         switch (currentCharacterClass) //Warrior, Gunner, Magician
         {
             case "Warrior":
-                classNum = 0;
+                currentClassNum = 0;
                 break;
             case "Gunner":
-                classNum = 1;
+                currentClassNum = 1;
                 break;
             case "Magician":
-                classNum = 2;
+                currentClassNum = 2;
                 break;
             default:
                 break;
@@ -87,9 +83,6 @@ public class CharacterCreate : MonoBehaviour
         StartCoroutine(CreateCharacter(currentSlotNum, characterNickName, currentCharacterClass, currentClassNum));
         Debug.Log("닉네임, 캐릭터생성 완료");
         loadPlayerInfo.LoadEverySlotData();
-
-        // 나중에 이부분(슬롯에 sprite넣기) 게임로딩하고 슬롯에도 넣게끔 추가해보기
-        slots[currentSlotNum].GetComponent<RawImage>().texture = sprites[currentClassNum];
         selectPanel.SetActive(false);
         nickNamePanel.SetActive(false);
     }
@@ -104,6 +97,7 @@ public class CharacterCreate : MonoBehaviour
         PlayerPrefs.SetString($"{slotNum}_Class", className);
         PlayerPrefs.SetInt($"{slotNum}_ClassNum", classNum);
         PlayerPrefs.SetInt($"{slotNum}_Level", 1);
+        PlayerPrefs.SetInt($"{slotNum}_Exp", 0);
         PlayerPrefs.SetFloat($"{slotNum}_MaxHp", 500);
         PlayerPrefs.SetFloat($"{slotNum}_Hp", 500);
         PlayerPrefs.SetInt($"{slotNum}_WeaponLevel", 1);
@@ -118,11 +112,6 @@ public class CharacterCreate : MonoBehaviour
         PlayerPrefs.SetInt($"{slotNum}_QuestCurCnt", 0);
         PlayerPrefs.SetInt($"{slotNum}_QuestMaxCnt", 0);
 
-        PlayerPrefs.SetInt($"{slotNum}_QuestIdx", 0);
-        PlayerPrefs.SetString($"{slotNum}_GoalTxt", "");
-        PlayerPrefs.SetInt($"{slotNum}_QuestCurCnt", 0);
-        PlayerPrefs.SetInt($"{slotNum}_QuestMaxCnt", 0);
-
         PlayerPrefs.Save();
 
         yield return null;
@@ -132,7 +121,7 @@ public class CharacterCreate : MonoBehaviour
     {
         int slotNum = SelectSlot.slotNum;
         Debug.Log(slotNum);
-
+        slots[slotNum].GetComponent<RawImage>().texture = null;
         if (PlayerPrefs.HasKey($"SlotNum_{slotNum}"))
         {
             PlayerPrefs.DeleteKey($"{slotNum}_NickName");
@@ -148,11 +137,6 @@ public class CharacterCreate : MonoBehaviour
             PlayerPrefs.DeleteKey($"{slotNum}_UserGold");
             PlayerPrefs.DeleteKey($"{slotNum}_Material");
             PlayerPrefs.DeleteKey($"{slotNum}_ExpPotion");
-            PlayerPrefs.DeleteKey($"{slotNum}_QuestIdx");
-            PlayerPrefs.DeleteKey($"{slotNum}_GoalTxt");
-            PlayerPrefs.DeleteKey($"{slotNum}_QuestCurCnt");
-            PlayerPrefs.DeleteKey($"{slotNum}_QuestMaxCnt");
-
             PlayerPrefs.DeleteKey($"{slotNum}_QuestIdx");
             PlayerPrefs.DeleteKey($"{slotNum}_GoalTxt");
             PlayerPrefs.DeleteKey($"{slotNum}_QuestCurCnt");

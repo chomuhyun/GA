@@ -85,20 +85,33 @@ public class Tboss : MonoBehaviourPunCallbacks, IPunObservable
     
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        targetPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         pv = GetComponent<PhotonView>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        targetPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        testGameMgr someComponent = GameObject.FindWithTag("Player").GetComponent<testGameMgr>();
+        //if (someComponent != null)
+        //{
+        //someComponent.Starts();
+        //}
+        tBOSS = TBOSS.IDLE;
+        characterController = GetComponent<CharacterController>();
+        tbanim = GetComponent<Animator>();
+        stateManager = GetComponent<StateManager>();
         if (pv.IsMine)
         {
-            player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-            targetPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-            testGameMgr someComponent = GameObject.FindWithTag("Player").GetComponent<testGameMgr>();
-            //if (someComponent != null)
-            //{
-                //someComponent.Starts();
-            //}
-            tBOSS = TBOSS.IDLE;
-            characterController = GetComponent<CharacterController>();
-            tbanim = GetComponent<Animator>();
-            stateManager = GetComponent<StateManager>();
+            //player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+            //targetPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+            //testGameMgr someComponent = GameObject.FindWithTag("Player").GetComponent<testGameMgr>();
+            ////if (someComponent != null)
+            ////{
+            //    //someComponent.Starts();
+            ////}
+            //tBOSS = TBOSS.IDLE;
+            //characterController = GetComponent<CharacterController>();
+            //tbanim = GetComponent<Animator>();
+            //stateManager = GetComponent<StateManager>();
         }
     }
     //테스트 용
@@ -114,8 +127,8 @@ public class Tboss : MonoBehaviourPunCallbacks, IPunObservable
     }
     void Update()
     {
-        if(pv.IsMine)
-        {
+        //if(pv.IsMine)
+        //{
             if (!die)
             {
                 NearByPlayer();
@@ -270,7 +283,7 @@ public class Tboss : MonoBehaviourPunCallbacks, IPunObservable
                             
                             break;
                     }
-            }
+            // }
         }
         void MoveTowardsTarget(bool stop)
         {

@@ -29,8 +29,8 @@ public class RewardMgr : MonoBehaviour
 
         expPotionReward *= dataMgrDontDestroy.dungeonNumIdx;
         materialReward *= dataMgrDontDestroy.dungeonNumIdx;
-        InstExp(expPotionReward);
-        InstMaterial(materialReward);
+        //InstExp(expPotionReward); 클리어 패널이 열렸을때 호출
+        //InstMaterial(materialReward); ""
     }
     public void ChaosClearReward()
     {

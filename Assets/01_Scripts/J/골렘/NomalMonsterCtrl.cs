@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class NomalMonsterCtrl : MonoBehaviour
 {
+    public ChaosDungeonMgr cDunMgr;
+
     public enum GOLEM
     {
         IDLE = 0,
@@ -130,6 +132,11 @@ public class NomalMonsterCtrl : MonoBehaviour
                     break;
                 case GOLEM.DIE:
                     StartCoroutine(DeadProcess(5f));
+                    if (GameObject.Find("ChaosDungeonMgr") !=null)
+                    {
+                        cDunMgr = GameObject.Find("ChaosDungeonMgr").GetComponent<ChaosDungeonMgr>();
+                        cDunMgr.bossKilled++;
+                    }
                     navAgent.enabled = false;
                     break;
                 case GOLEM.NULL:
