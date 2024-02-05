@@ -72,6 +72,7 @@ public class LoadPlayerInfo : MonoBehaviour
                 switch (slotNum)
                 {
                     case 0:
+                        Debug.Log("닉네임 : " + nickName);
                         slot1Text[0].text = nickName;
                         slot1Text[1].text = className;
                         slot1Text[2].text = level.ToString();
@@ -115,6 +116,7 @@ public class LoadPlayerInfo : MonoBehaviour
         #endregion
 
         #region 캐릭터정보. 변수의 값을 싱글톤에 보내주기
+        dataMgrDontDestroy.NickName = nickName;
         dataMgrDontDestroy.Level = level;
         dataMgrDontDestroy.Exp = exp;
         dataMgrDontDestroy.MaxHp = maxhp;

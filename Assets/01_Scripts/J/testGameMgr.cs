@@ -20,7 +20,7 @@ public class testGameMgr : MonoBehaviour
     {
         raidBoss.player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         raidBoss.targetPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        tboss.player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        tboss.player = GameObject.FindGameObjectWithTag("Player").GetComponent<ChaosPlayerCtlr>();
         tboss.targetPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 }

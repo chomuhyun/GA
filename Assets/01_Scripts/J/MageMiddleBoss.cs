@@ -30,7 +30,7 @@ public class MageMiddleBoss : MonoBehaviour
     public MAGEBOSS mageBoss;
     public Animator mageAnim;
     public StateManager stateManager;
-    public Player player;
+    public ChaosPlayerCtlr player;
     
     [Header("AttackPattern")]
 
@@ -45,7 +45,7 @@ public class MageMiddleBoss : MonoBehaviour
     public GameObject[] patternSkillActive;
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<ChaosPlayerCtlr>();
         targetPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         mageBoss = MAGEBOSS.IDLE;
         characterController = GetComponent<CharacterController>();

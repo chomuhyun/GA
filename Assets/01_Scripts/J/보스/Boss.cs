@@ -7,7 +7,7 @@ using Photon.Realtime;
 using System.Linq;
 using Cinemachine;
 
-public class Boss : MonoBehaviour
+public class Boss : MonoBehaviourPunCallbacks, IPunObservable
 {
     public enum BOSSSTATE
     {
@@ -20,6 +20,8 @@ public class Boss : MonoBehaviour
         NEM2,
         NEM3
     }
+    private Vector3 currPos;
+    private Quaternion currRot;
 
     [Header("Com")]
     public BOSSSTATE bossState;
@@ -352,5 +354,21 @@ public class Boss : MonoBehaviour
     {
         yield return new WaitForSeconds(4.5f);
         patternTime = 0;
+    }
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        //통신을 보내는 
+        if (stream.IsWriting)
+        {
+            stream.SendNext(transform.position);
+            stream.SendNext(transform.rotation);
+        }
+
+        //클론이 통신을 받는 
+        else
+        {
+            currPos = (Vector3)stream.ReceiveNext();
+            currRot = (Quaternion)stream.ReceiveNext();
+        }
     }
 }

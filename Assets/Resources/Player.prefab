@@ -7252,6 +7252,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   Ta:
   - {fileID: 0}
+  cvc: {fileID: 0}
   isAttack: 0
   isAttack1: 0
   isAttack2: 0
@@ -7527,6 +7528,7 @@ MonoBehaviour:
   - {fileID: 5347200951780422228}
   - {fileID: 1591994687526925375}
   - {fileID: 8805825440080824226}
+  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -7578,6 +7580,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   componentA: {fileID: 8805825440080824226}
+  componentB: {fileID: 0}
+  chaosPlayer: {fileID: 0}
 --- !u!114 &3335774154478160707
 MonoBehaviour:
   m_ObjectHideFlags: 0

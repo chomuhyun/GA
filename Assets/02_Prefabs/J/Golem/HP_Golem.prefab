@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b9f2e1cb7d23704b90d7326f557ce57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sm: {fileID: 2833858967993700546}
+  sm: {fileID: 0}
   atkPer: 30
   player: {fileID: 0}
 --- !u!1 &1201649603328734
@@ -339,6 +339,7 @@ GameObject:
   - component: {fileID: 2578111672907054991}
   - component: {fileID: 1017721975173032575}
   - component: {fileID: 1424722792941314532}
+  - component: {fileID: -2121018131738798206}
   m_Layer: 0
   m_Name: HP_Golem
   m_TagString: NomalMonster
@@ -424,6 +425,8 @@ MonoBehaviour:
   rhitBox: {fileID: 0}
   lhitBox: {fileID: 0}
   golemStateManager: {fileID: 0}
+  originMesh: {fileID: 0}
+  dieMesh: {fileID: 0}
   golemspeed: 3
   golemrange: 20
   golemattackRange: 2
@@ -474,6 +477,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-2121018131738798206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438169871030806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cb11ef703274c946bf1a25f293b3dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  render: {fileID: 0}
+  col: {fileID: 0}
 --- !u!1 &1457912190622302
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,7 +917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b9f2e1cb7d23704b90d7326f557ce57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sm: {fileID: 2833858967993700546}
+  sm: {fileID: 0}
   atkPer: 30
   player: {fileID: 0}
 --- !u!1 &1992321068002108

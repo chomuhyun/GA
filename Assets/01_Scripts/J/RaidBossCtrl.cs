@@ -73,11 +73,17 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks, IPunObservable
     public GameObject DownPattern;
     public float breakTime;
     public float breakCheck;
+    public GameObject[] allDownPattern;
+    private List<GameObject> gameObjects = new List<GameObject>();
+    public BoxCollider allDownArea;
+    public float page1;
+    public float page1check;
     public bool breakOn;
     public bool die;
     public bool healthUpCheck;
 
     [Header("Ettect")]
+    public BoxCollider weapons;
     public GameObject p5PatternE;
     public GameObject downPatterE;
     public GameObject p2EttectE;
@@ -106,8 +112,6 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks, IPunObservable
 
     void FixedUpdate()
     {
-        if (PhotonNetwork.IsMasterClient)
-        {
             if (pv.IsMine)
             {
                 if (!die)
@@ -117,9 +121,12 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks, IPunObservable
                         BreakTime();
                         PatternTimeCheck();
                         Dieing();
+                NEM1();
                         pv.RPC("DieNowPatternt", RpcTarget.AllBuffered);
                         //DieNowPatternt();
                         pv.RPC("healthUpPattern", RpcTarget.AllBuffered);
+                pv.RPC("NEM1", RpcTarget.AllBuffered);
+                
                         //healthUpPattern();
                         switch (raidBoss)
                         {
@@ -253,10 +260,13 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks, IPunObservable
                                  anim.SetTrigger("Die");
                                 break;
                             case RAIDBOSS.PAGE1:
-                                break;
+                        isActivating = true;
+                        page1 = 0;
+                        InvokeRepeating("Spawn", 0.01f, 0.2f);
+                        StartCoroutine(Page1Start());
+                        break;
                         }
                 }
-            }
         }
     }
     void FindNearestPlayer()
@@ -418,6 +428,7 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks, IPunObservable
         if(stateManager.hp <= 0)
         {
             die = true;
+            weapons.enabled = false;
             raidBoss = RAIDBOSS.DIE;
             characterController.enabled = false;
         }
@@ -454,6 +465,59 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks, IPunObservable
                 healthUpingTime = 0;
                 StartCoroutine(EffectDelay());
             }
+        }
+    }
+    [PunRPC]
+    void NEM1()
+    {
+        page1 += Time.deltaTime;
+        if (page1 >= page1check)
+        {
+            raidBoss = RAIDBOSS.PAGE1;
+            anim.SetTrigger("PAGE1");
+        }
+    }
+    [PunRPC]
+    void Spawn()
+    {
+
+        int selection = Random.Range(0, allDownPattern.Length);
+
+        GameObject selectedPrefab = allDownPattern[selection];
+
+        Vector3 spawnPos = GetRandomPosition();
+        Quaternion spawnRot = Quaternion.Euler(0, transform.rotation.y + Random.Range(0, 360), 0);
+        GameObject instance = Instantiate(selectedPrefab, spawnPos, spawnRot);
+        gameObjects.Add(instance);
+
+        raidBoss = RAIDBOSS.IDLE;
+    }
+    private Vector3 GetRandomPosition()
+    {
+        Vector3 basePosition = allDownArea.transform.position;
+
+        Vector3 size = allDownArea.size;
+
+        float posX = basePosition.x + Random.Range(-18, 18);
+        float posY = basePosition.y + 0.1f;
+        float posZ = basePosition.z + Random.Range(-18, 18);
+
+        Vector3 spawnPos = new Vector3(posX, posY, posZ);
+
+        return spawnPos;
+    }
+    IEnumerator Page1Start()
+    {
+        yield return new WaitForSeconds(5f);
+        CancelInvoke("Spawn");
+        float distans = Vector3.Distance(targetPlayer.position, transform.position);
+        if (distans > attakRange)
+        {
+            raidBoss = RAIDBOSS.MOVE;
+        }
+        else
+        {
+            raidBoss = RAIDBOSS.ATTACK;
         }
     }
 

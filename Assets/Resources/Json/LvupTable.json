@@ -2,1060 +2,760 @@
   "0": {
     "1": {
       "PlayerHp": 500,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "2": {
       "PlayerHp": 620,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "3": {
       "PlayerHp": 740,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "4": {
       "PlayerHp": 860,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "5": {
       "PlayerHp": 980,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "6": {
       "PlayerHp": 1100,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "7": {
       "PlayerHp": 1220,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "8": {
       "PlayerHp": 1340,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "9": {
       "PlayerHp": 1460,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "10": {
       "PlayerHp": 1580,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "11": {
       "PlayerHp": 1700,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "12": {
       "PlayerHp": 1820,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "13": {
       "PlayerHp": 1940,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "14": {
       "PlayerHp": 2060,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "15": {
       "PlayerHp": 2180,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "16": {
       "PlayerHp": 2300,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "17": {
       "PlayerHp": 2420,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "18": {
       "PlayerHp": 2540,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "19": {
       "PlayerHp": 2660,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 5,
-      "DmgAbsolute": 125
+      "CriPer": 50,
+      "CriDMG": 125
     },
     "20": {
       "PlayerHp": 2780,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 125
+      "CriPer": 50,
+      "CriDMG": 125
     },
     "21": {
       "PlayerHp": 2900,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 125
+      "CriPer": 50,
+      "CriDMG": 125
     },
     "22": {
       "PlayerHp": 3020,
-      "CriPer": 5,
-      "PerAbsolute": 55,
-      "CriDMG": 15,
-      "DmgAbsolute": 140
+      "CriPer": 55,
+      "CriDMG": 140
     },
     "23": {
       "PlayerHp": 3140,
-      "CriPer": 0,
-      "PerAbsolute": 55,
-      "CriDMG": 0,
-      "DmgAbsolute": 140
+      "CriPer": 55,
+      "CriDMG": 140
     },
     "24": {
       "PlayerHp": 3260,
-      "CriPer": 0,
-      "PerAbsolute": 55,
-      "CriDMG": 0,
-      "DmgAbsolute": 140
+      "CriPer": 55,
+      "CriDMG": 140
     },
     "25": {
       "PlayerHp": 3380,
-      "CriPer": 0,
-      "PerAbsolute": 55,
-      "CriDMG": 5,
-      "DmgAbsolute": 145
+      "CriPer": 55,
+      "CriDMG": 145
     },
     "26": {
       "PlayerHp": 3500,
-      "CriPer": 0,
-      "PerAbsolute": 55,
-      "CriDMG": 0,
-      "DmgAbsolute": 145
+      "CriPer": 55,
+      "CriDMG": 145
     },
     "27": {
       "PlayerHp": 3620,
-      "CriPer": 0,
-      "PerAbsolute": 55,
-      "CriDMG": 0,
-      "DmgAbsolute": 145
+      "CriPer": 55,
+      "CriDMG": 145
     },
     "28": {
       "PlayerHp": 3740,
-      "CriPer": 5,
-      "PerAbsolute": 60,
-      "CriDMG": 5,
-      "DmgAbsolute": 150
+      "CriPer": 60,
+      "CriDMG": 150
     },
     "29": {
       "PlayerHp": 3860,
-      "CriPer": 0,
-      "PerAbsolute": 60,
-      "CriDMG": 0,
-      "DmgAbsolute": 150
+      "CriPer": 60,
+      "CriDMG": 150
     },
     "30": {
       "PlayerHp": 3980,
-      "CriPer": 0,
-      "PerAbsolute": 60,
-      "CriDMG": 0,
-      "DmgAbsolute": 150
+      "CriPer": 60,
+      "CriDMG": 150
     },
     "31": {
       "PlayerHp": 4100,
-      "CriPer": 0,
-      "PerAbsolute": 60,
-      "CriDMG": 5,
-      "DmgAbsolute": 155
+      "CriPer": 60,
+      "CriDMG": 155
     },
     "32": {
       "PlayerHp": 4220,
-      "CriPer": 0,
-      "PerAbsolute": 60,
-      "CriDMG": 0,
-      "DmgAbsolute": 155
+      "CriPer": 60,
+      "CriDMG": 155
     },
     "33": {
       "PlayerHp": 4340,
-      "CriPer": 0,
-      "PerAbsolute": 60,
-      "CriDMG": 0,
-      "DmgAbsolute": 155
+      "CriPer": 60,
+      "CriDMG": 155
     },
     "34": {
       "PlayerHp": 4460,
-      "CriPer": 5,
-      "PerAbsolute": 65,
-      "CriDMG": 5,
-      "DmgAbsolute": 160
+      "CriPer": 65,
+      "CriDMG": 160
     },
     "35": {
       "PlayerHp": 4580,
-      "CriPer": 0,
-      "PerAbsolute": 65,
-      "CriDMG": 0,
-      "DmgAbsolute": 160
+      "CriPer": 65,
+      "CriDMG": 160
     },
     "36": {
       "PlayerHp": 4700,
-      "CriPer": 0,
-      "PerAbsolute": 65,
-      "CriDMG": 0,
-      "DmgAbsolute": 160
+      "CriPer": 65,
+      "CriDMG": 160
     },
     "37": {
       "PlayerHp": 4820,
-      "CriPer": 0,
-      "PerAbsolute": 65,
-      "CriDMG": 10,
-      "DmgAbsolute": 170
+      "CriPer": 65,
+      "CriDMG": 170
     },
     "38": {
       "PlayerHp": 4940,
-      "CriPer": 0,
-      "PerAbsolute": 65,
-      "CriDMG": 0,
-      "DmgAbsolute": 170
+      "CriPer": 65,
+      "CriDMG": 170
     },
     "39": {
       "PlayerHp": 5060,
-      "CriPer": 0,
-      "PerAbsolute": 65,
-      "CriDMG": 0,
-      "DmgAbsolute": 170
+      "CriPer": 65,
+      "CriDMG": 170
     },
     "40": {
       "PlayerHp": 5180,
-      "CriPer": 5,
-      "PerAbsolute": 70,
-      "CriDMG": 10,
-      "DmgAbsolute": 180
+      "CriPer": 70,
+      "CriDMG": 180
     },
     "41": {
       "PlayerHp": 5300,
-      "CriPer": 0,
-      "PerAbsolute": 70,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 70,
+      "CriDMG": 180
     },
     "42": {
       "PlayerHp": 5420,
-      "CriPer": 0,
-      "PerAbsolute": 70,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 70,
+      "CriDMG": 180
     },
     "43": {
       "PlayerHp": 5540,
-      "CriPer": 5,
-      "PerAbsolute": 75,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 75,
+      "CriDMG": 180
     },
     "44": {
       "PlayerHp": 5660,
-      "CriPer": 0,
-      "PerAbsolute": 75,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 75,
+      "CriDMG": 180
     },
     "45": {
       "PlayerHp": 5780,
-      "CriPer": 0,
-      "PerAbsolute": 75,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 75,
+      "CriDMG": 180
     },
     "46": {
       "PlayerHp": 5900,
-      "CriPer": 5,
-      "PerAbsolute": 80,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 80,
+      "CriDMG": 180
     },
     "47": {
       "PlayerHp": 6020,
-      "CriPer": 0,
-      "PerAbsolute": 80,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 80,
+      "CriDMG": 180
     },
     "48": {
       "PlayerHp": 6140,
-      "CriPer": 0,
-      "PerAbsolute": 80,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 80,
+      "CriDMG": 180
     },
     "49": {
       "PlayerHp": 6260,
-      "CriPer": 0,
-      "PerAbsolute": 80,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 80,
+      "CriDMG": 180
     },
     "50": {
       "PlayerHp": 6380,
-      "CriPer": 0,
-      "PerAbsolute": 80,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 80,
+      "CriDMG": 180
     }
   },
   "1": {
     "1": {
       "PlayerHp": 500,
-      "CriPer": 0,
-      "PerAbsolute": 30,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 30,
+      "CriDMG": 120
     },
     "2": {
       "PlayerHp": 620,
-      "CriPer": 0,
-      "PerAbsolute": 30,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 30,
+      "CriDMG": 120
     },
     "3": {
       "PlayerHp": 740,
-      "CriPer": 0,
-      "PerAbsolute": 30,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 30,
+      "CriDMG": 120
     },
     "4": {
       "PlayerHp": 860,
-      "CriPer": 0,
-      "PerAbsolute": 30,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 30,
+      "CriDMG": 120
     },
     "5": {
       "PlayerHp": 980,
-      "CriPer": 0,
-      "PerAbsolute": 30,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 30,
+      "CriDMG": 120
     },
     "6": {
       "PlayerHp": 1100,
-      "CriPer": 0,
-      "PerAbsolute": 30,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 30,
+      "CriDMG": 120
     },
     "7": {
       "PlayerHp": 1220,
-      "CriPer": 0,
-      "PerAbsolute": 30,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 30,
+      "CriDMG": 120
     },
     "8": {
       "PlayerHp": 1340,
-      "CriPer": 0,
-      "PerAbsolute": 30,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 30,
+      "CriDMG": 120
     },
     "9": {
       "PlayerHp": 1460,
-      "CriPer": 0,
-      "PerAbsolute": 30,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 30,
+      "CriDMG": 120
     },
     "10": {
       "PlayerHp": 1580,
-      "CriPer": 0,
-      "PerAbsolute": 30,
-      "CriDMG": 60,
-      "DmgAbsolute": 180
+      "CriPer": 30,
+      "CriDMG": 180
     },
     "11": {
       "PlayerHp": 1700,
-      "CriPer": 0,
-      "PerAbsolute": 30,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 30,
+      "CriDMG": 180
     },
     "12": {
       "PlayerHp": 1820,
-      "CriPer": 0,
-      "PerAbsolute": 30,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 30,
+      "CriDMG": 180
     },
     "13": {
       "PlayerHp": 1940,
-      "CriPer": 10,
-      "PerAbsolute": 40,
-      "CriDMG": 20,
-      "DmgAbsolute": 200
+      "CriPer": 40,
+      "CriDMG": 200
     },
     "14": {
       "PlayerHp": 2060,
-      "CriPer": 0,
-      "PerAbsolute": 40,
-      "CriDMG": 0,
-      "DmgAbsolute": 200
+      "CriPer": 40,
+      "CriDMG": 200
     },
     "15": {
       "PlayerHp": 2180,
-      "CriPer": 0,
-      "PerAbsolute": 40,
-      "CriDMG": 0,
-      "DmgAbsolute": 200
+      "CriPer": 40,
+      "CriDMG": 200
     },
     "16": {
       "PlayerHp": 2300,
-      "CriPer": 10,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 200
+      "CriPer": 50,
+      "CriDMG": 200
     },
     "17": {
       "PlayerHp": 2420,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 200
+      "CriPer": 50,
+      "CriDMG": 200
     },
     "18": {
       "PlayerHp": 2540,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 200
+      "CriPer": 50,
+      "CriDMG": 200
     },
     "19": {
       "PlayerHp": 2660,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 200
+      "CriPer": 50,
+      "CriDMG": 200
     },
     "20": {
       "PlayerHp": 2780,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 200
+      "CriPer": 50,
+      "CriDMG": 200
     },
     "21": {
       "PlayerHp": 2900,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 200
+      "CriPer": 50,
+      "CriDMG": 200
     },
     "22": {
       "PlayerHp": 3020,
-      "CriPer": 5,
-      "PerAbsolute": 55,
-      "CriDMG": 0,
-      "DmgAbsolute": 200
+      "CriPer": 55,
+      "CriDMG": 200
     },
     "23": {
       "PlayerHp": 3140,
-      "CriPer": 0,
-      "PerAbsolute": 55,
-      "CriDMG": 0,
-      "DmgAbsolute": 200
+      "CriPer": 55,
+      "CriDMG": 200
     },
     "24": {
       "PlayerHp": 3260,
-      "CriPer": 0,
-      "PerAbsolute": 55,
-      "CriDMG": 0,
-      "DmgAbsolute": 200
+      "CriPer": 55,
+      "CriDMG": 200
     },
     "25": {
       "PlayerHp": 3380,
-      "CriPer": 0,
-      "PerAbsolute": 55,
-      "CriDMG": 20,
-      "DmgAbsolute": 220
+      "CriPer": 55,
+      "CriDMG": 220
     },
     "26": {
       "PlayerHp": 3500,
-      "CriPer": 0,
-      "PerAbsolute": 55,
-      "CriDMG": 0,
-      "DmgAbsolute": 220
+      "CriPer": 55,
+      "CriDMG": 220
     },
     "27": {
       "PlayerHp": 3620,
-      "CriPer": 0,
-      "PerAbsolute": 55,
-      "CriDMG": 0,
-      "DmgAbsolute": 220
+      "CriPer": 55,
+      "CriDMG": 220
     },
     "28": {
       "PlayerHp": 3740,
-      "CriPer": 10,
-      "PerAbsolute": 65,
-      "CriDMG": 20,
-      "DmgAbsolute": 240
+      "CriPer": 65,
+      "CriDMG": 240
     },
     "29": {
       "PlayerHp": 3860,
-      "CriPer": 0,
-      "PerAbsolute": 65,
-      "CriDMG": 0,
-      "DmgAbsolute": 240
+      "CriPer": 65,
+      "CriDMG": 240
     },
     "30": {
       "PlayerHp": 3980,
-      "CriPer": 0,
-      "PerAbsolute": 65,
-      "CriDMG": 0,
-      "DmgAbsolute": 240
+      "CriPer": 65,
+      "CriDMG": 240
     },
     "31": {
       "PlayerHp": 4100,
-      "CriPer": 0,
-      "PerAbsolute": 65,
-      "CriDMG": 20,
-      "DmgAbsolute": 260
+      "CriPer": 65,
+      "CriDMG": 260
     },
     "32": {
       "PlayerHp": 4220,
-      "CriPer": 0,
-      "PerAbsolute": 65,
-      "CriDMG": 0,
-      "DmgAbsolute": 260
+      "CriPer": 65,
+      "CriDMG": 260
     },
     "33": {
       "PlayerHp": 4340,
-      "CriPer": 0,
-      "PerAbsolute": 65,
-      "CriDMG": 0,
-      "DmgAbsolute": 260
+      "CriPer": 65,
+      "CriDMG": 260
     },
     "34": {
       "PlayerHp": 4460,
-      "CriPer": 8,
-      "PerAbsolute": 73,
-      "CriDMG": 20,
-      "DmgAbsolute": 280
+      "CriPer": 73,
+      "CriDMG": 280
     },
     "35": {
       "PlayerHp": 4580,
-      "CriPer": 0,
-      "PerAbsolute": 73,
-      "CriDMG": 0,
-      "DmgAbsolute": 280
+      "CriPer": 73,
+      "CriDMG": 280
     },
     "36": {
       "PlayerHp": 4700,
-      "CriPer": 0,
-      "PerAbsolute": 73,
-      "CriDMG": 0,
-      "DmgAbsolute": 280
+      "CriPer": 73,
+      "CriDMG": 280
     },
     "37": {
       "PlayerHp": 4820,
-      "CriPer": 0,
-      "PerAbsolute": 73,
-      "CriDMG": 20,
-      "DmgAbsolute": 300
+      "CriPer": 73,
+      "CriDMG": 300
     },
     "38": {
       "PlayerHp": 4940,
-      "CriPer": 0,
-      "PerAbsolute": 73,
-      "CriDMG": 0,
-      "DmgAbsolute": 300
+      "CriPer": 73,
+      "CriDMG": 300
     },
     "39": {
       "PlayerHp": 5060,
-      "CriPer": 0,
-      "PerAbsolute": 73,
-      "CriDMG": 0,
-      "DmgAbsolute": 300
+      "CriPer": 73,
+      "CriDMG": 300
     },
     "40": {
       "PlayerHp": 5180,
-      "CriPer": 4,
-      "PerAbsolute": 77,
-      "CriDMG": 20,
-      "DmgAbsolute": 320
+      "CriPer": 77,
+      "CriDMG": 320
     },
     "41": {
       "PlayerHp": 5300,
-      "CriPer": 0,
-      "PerAbsolute": 77,
-      "CriDMG": 0,
-      "DmgAbsolute": 320
+      "CriPer": 77,
+      "CriDMG": 320
     },
     "42": {
       "PlayerHp": 5420,
-      "CriPer": 0,
-      "PerAbsolute": 77,
-      "CriDMG": 0,
-      "DmgAbsolute": 320
+      "CriPer": 77,
+      "CriDMG": 320
     },
     "43": {
       "PlayerHp": 5540,
-      "CriPer": 0,
-      "PerAbsolute": 77,
-      "CriDMG": 20,
-      "DmgAbsolute": 340
+      "CriPer": 77,
+      "CriDMG": 340
     },
     "44": {
       "PlayerHp": 5660,
-      "CriPer": 0,
-      "PerAbsolute": 77,
-      "CriDMG": 0,
-      "DmgAbsolute": 340
+      "CriPer": 77,
+      "CriDMG": 340
     },
     "45": {
       "PlayerHp": 5780,
-      "CriPer": 0,
-      "PerAbsolute": 77,
-      "CriDMG": 0,
-      "DmgAbsolute": 340
+      "CriPer": 77,
+      "CriDMG": 340
     },
     "46": {
       "PlayerHp": 5900,
-      "CriPer": 13,
-      "PerAbsolute": 90,
-      "CriDMG": 20,
-      "DmgAbsolute": 360
+      "CriPer": 90,
+      "CriDMG": 360
     },
     "47": {
       "PlayerHp": 6020,
-      "CriPer": 0,
-      "PerAbsolute": 90,
-      "CriDMG": 0,
-      "DmgAbsolute": 360
+      "CriPer": 90,
+      "CriDMG": 360
     },
     "48": {
       "PlayerHp": 6140,
-      "CriPer": 0,
-      "PerAbsolute": 90,
-      "CriDMG": 0,
-      "DmgAbsolute": 360
+      "CriPer": 90,
+      "CriDMG": 360
     },
     "49": {
       "PlayerHp": 6260,
-      "CriPer": 10,
-      "PerAbsolute": 100,
-      "CriDMG": 20,
-      "DmgAbsolute": 380
+      "CriPer": 100,
+      "CriDMG": 380
     },
     "50": {
       "PlayerHp": 6380,
-      "CriPer": 0,
-      "PerAbsolute": 100,
-      "CriDMG": 20,
-      "DmgAbsolute": 400
+      "CriPer": 100,
+      "CriDMG": 400
     }
   },
   "2": {
     "1": {
       "PlayerHp": 500,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "2": {
       "PlayerHp": 620,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "3": {
       "PlayerHp": 740,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "4": {
       "PlayerHp": 860,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "5": {
       "PlayerHp": 980,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "6": {
       "PlayerHp": 1100,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "7": {
       "PlayerHp": 1220,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "8": {
       "PlayerHp": 1340,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "9": {
       "PlayerHp": 1460,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "10": {
       "PlayerHp": 1580,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "11": {
       "PlayerHp": 1700,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "12": {
       "PlayerHp": 1820,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "13": {
       "PlayerHp": 1940,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "14": {
       "PlayerHp": 2060,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "15": {
       "PlayerHp": 2180,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "16": {
       "PlayerHp": 2300,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "17": {
       "PlayerHp": 2420,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "18": {
       "PlayerHp": 2540,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 120
+      "CriPer": 50,
+      "CriDMG": 120
     },
     "19": {
       "PlayerHp": 2660,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 5,
-      "DmgAbsolute": 125
+      "CriPer": 50,
+      "CriDMG": 125
     },
     "20": {
       "PlayerHp": 2780,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 125
+      "CriPer": 50,
+      "CriDMG": 125
     },
     "21": {
       "PlayerHp": 2900,
-      "CriPer": 0,
-      "PerAbsolute": 50,
-      "CriDMG": 0,
-      "DmgAbsolute": 125
+      "CriPer": 50,
+      "CriDMG": 125
     },
     "22": {
       "PlayerHp": 3020,
-      "CriPer": 5,
-      "PerAbsolute": 55,
-      "CriDMG": 15,
-      "DmgAbsolute": 140
+      "CriPer": 55,
+      "CriDMG": 140
     },
     "23": {
       "PlayerHp": 3140,
-      "CriPer": 0,
-      "PerAbsolute": 55,
-      "CriDMG": 0,
-      "DmgAbsolute": 140
+      "CriPer": 55,
+      "CriDMG": 140
     },
     "24": {
       "PlayerHp": 3260,
-      "CriPer": 0,
-      "PerAbsolute": 55,
-      "CriDMG": 0,
-      "DmgAbsolute": 140
+      "CriPer": 55,
+      "CriDMG": 140
     },
     "25": {
       "PlayerHp": 3380,
-      "CriPer": 0,
-      "PerAbsolute": 55,
-      "CriDMG": 5,
-      "DmgAbsolute": 145
+      "CriPer": 55,
+      "CriDMG": 145
     },
     "26": {
       "PlayerHp": 3500,
-      "CriPer": 0,
-      "PerAbsolute": 55,
-      "CriDMG": 0,
-      "DmgAbsolute": 145
+      "CriPer": 55,
+      "CriDMG": 145
     },
     "27": {
       "PlayerHp": 3620,
-      "CriPer": 0,
-      "PerAbsolute": 55,
-      "CriDMG": 0,
-      "DmgAbsolute": 145
+      "CriPer": 55,
+      "CriDMG": 145
     },
     "28": {
       "PlayerHp": 3740,
-      "CriPer": 5,
-      "PerAbsolute": 60,
-      "CriDMG": 5,
-      "DmgAbsolute": 150
+      "CriPer": 60,
+      "CriDMG": 150
     },
     "29": {
       "PlayerHp": 3860,
-      "CriPer": 0,
-      "PerAbsolute": 60,
-      "CriDMG": 0,
-      "DmgAbsolute": 150
+      "CriPer": 60,
+      "CriDMG": 150
     },
     "30": {
       "PlayerHp": 3980,
-      "CriPer": 0,
-      "PerAbsolute": 60,
-      "CriDMG": 0,
-      "DmgAbsolute": 150
+      "CriPer": 60,
+      "CriDMG": 150
     },
     "31": {
       "PlayerHp": 4100,
-      "CriPer": 0,
-      "PerAbsolute": 60,
-      "CriDMG": 5,
-      "DmgAbsolute": 155
+      "CriPer": 60,
+      "CriDMG": 155
     },
     "32": {
       "PlayerHp": 4220,
-      "CriPer": 0,
-      "PerAbsolute": 60,
-      "CriDMG": 0,
-      "DmgAbsolute": 155
+      "CriPer": 60,
+      "CriDMG": 155
     },
     "33": {
       "PlayerHp": 4340,
-      "CriPer": 0,
-      "PerAbsolute": 60,
-      "CriDMG": 0,
-      "DmgAbsolute": 155
+      "CriPer": 60,
+      "CriDMG": 155
     },
     "34": {
       "PlayerHp": 4460,
-      "CriPer": 5,
-      "PerAbsolute": 65,
-      "CriDMG": 5,
-      "DmgAbsolute": 160
+      "CriPer": 65,
+      "CriDMG": 160
     },
     "35": {
       "PlayerHp": 4580,
-      "CriPer": 0,
-      "PerAbsolute": 65,
-      "CriDMG": 0,
-      "DmgAbsolute": 160
+      "CriPer": 65,
+      "CriDMG": 160
     },
     "36": {
       "PlayerHp": 4700,
-      "CriPer": 0,
-      "PerAbsolute": 65,
-      "CriDMG": 0,
-      "DmgAbsolute": 160
+      "CriPer": 65,
+      "CriDMG": 160
     },
     "37": {
       "PlayerHp": 4820,
-      "CriPer": 0,
-      "PerAbsolute": 65,
-      "CriDMG": 10,
-      "DmgAbsolute": 170
+      "CriPer": 65,
+      "CriDMG": 170
     },
     "38": {
       "PlayerHp": 4940,
-      "CriPer": 0,
-      "PerAbsolute": 65,
-      "CriDMG": 0,
-      "DmgAbsolute": 170
+      "CriPer": 65,
+      "CriDMG": 170
     },
     "39": {
       "PlayerHp": 5060,
-      "CriPer": 0,
-      "PerAbsolute": 65,
-      "CriDMG": 0,
-      "DmgAbsolute": 170
+      "CriPer": 65,
+      "CriDMG": 170
     },
     "40": {
       "PlayerHp": 5180,
-      "CriPer": 5,
-      "PerAbsolute": 70,
-      "CriDMG": 10,
-      "DmgAbsolute": 180
+      "CriPer": 70,
+      "CriDMG": 180
     },
     "41": {
       "PlayerHp": 5300,
-      "CriPer": 0,
-      "PerAbsolute": 70,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 70,
+      "CriDMG": 180
     },
     "42": {
       "PlayerHp": 5420,
-      "CriPer": 0,
-      "PerAbsolute": 70,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 70,
+      "CriDMG": 180
     },
     "43": {
       "PlayerHp": 5540,
-      "CriPer": 5,
-      "PerAbsolute": 75,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 75,
+      "CriDMG": 180
     },
     "44": {
       "PlayerHp": 5660,
-      "CriPer": 0,
-      "PerAbsolute": 75,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 75,
+      "CriDMG": 180
     },
     "45": {
       "PlayerHp": 5780,
-      "CriPer": 0,
-      "PerAbsolute": 75,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 75,
+      "CriDMG": 180
     },
     "46": {
       "PlayerHp": 5900,
-      "CriPer": 5,
-      "PerAbsolute": 80,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 80,
+      "CriDMG": 180
     },
     "47": {
       "PlayerHp": 6020,
-      "CriPer": 0,
-      "PerAbsolute": 80,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 80,
+      "CriDMG": 180
     },
     "48": {
       "PlayerHp": 6140,
-      "CriPer": 0,
-      "PerAbsolute": 80,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 80,
+      "CriDMG": 180
     },
     "49": {
       "PlayerHp": 6260,
-      "CriPer": 0,
-      "PerAbsolute": 80,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 80,
+      "CriDMG": 180
     },
     "50": {
       "PlayerHp": 6380,
-      "CriPer": 0,
-      "PerAbsolute": 80,
-      "CriDMG": 0,
-      "DmgAbsolute": 180
+      "CriPer": 80,
+      "CriDMG": 180
     }
   },
-  "ExpRequirTable": {
+  "ExpRequireTable": {
     "1": {
       "needExp": 0,
       "Exponential": 400

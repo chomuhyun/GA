@@ -35,20 +35,8 @@ public class StateManager : MonoBehaviourPunCallbacks
         hudManager = gameObject.GetComponent<HUDManager>();
         pv = GetComponent<PhotonView>();
         dataMgrDontDestroy = DataMgrDontDestroy.Instance;
-
-        level = dataMgrDontDestroy.Level;
-        exp = dataMgrDontDestroy.Exp;
-        maxhp = dataMgrDontDestroy.MaxHp;
-        hp = dataMgrDontDestroy.Hp;
-        weaponLevel = dataMgrDontDestroy.WeaponLevel;
-        attackPower = dataMgrDontDestroy.AttackPower;
-        criChance = dataMgrDontDestroy.CriChance;
-        criDamage = dataMgrDontDestroy.CriDamage;
-        userGold = dataMgrDontDestroy.UserGold;
-        userMaterial = dataMgrDontDestroy.UserMaterial;
-        userExpPotion = dataMgrDontDestroy.UserExpPotion;
-
         hp = maxhp;
+
     }
 
 

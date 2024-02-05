@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PhotonServerSettings
   m_EditorClassIdentifier: 
   AppSettings:
-    AppIdRealtime: f3faa369-3429-481b-b9a2-841c456a9b72
+    AppIdRealtime: 3c218b82-d1e9-461b-9730-78d32aafac8d
     AppIdFusion: 
     AppIdChat: 
     AppIdVoice: 
@@ -57,6 +57,8 @@ MonoBehaviour:
   - Dieing
   - MoveTowardsTarget
   - PatternTimeCheck
+  - NEM1
+  - Spawn
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

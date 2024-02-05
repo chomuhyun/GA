@@ -44,7 +44,8 @@ public class ThirdPersonOrbitCamBasicA : MonoBehaviour
 	{
 
 		//thiscam = gameObject.GetComponent<CinemachineVirtualCamera>();
-
+		
+		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
 		// Reference to the camera transform.
 		if (player != null)
@@ -145,8 +146,6 @@ public class ThirdPersonOrbitCamBasicA : MonoBehaviour
 
 			cam.position = player.position + camYRotation * smoothPivotOffset + aimRotation * smoothCamOffset;
 		}
-			
-		
 	}
 	// Set camera offsets to custom values.
 	public void SetTargetOffsets(Vector3 newPivotOffset, Vector3 newCamOffset)

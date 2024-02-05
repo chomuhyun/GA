@@ -6574,6 +6574,59 @@ Transform:
   - {fileID: 2050179677911550342}
   m_Father: {fileID: 1610022252801020217}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8336230886430687341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8804773707450403543}
+  - component: {fileID: 8821188965738105768}
+  m_Layer: 0
+  m_Name: allPattern
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8804773707450403543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8336230886430687341}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2518597920440154029}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8821188965738105768
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8336230886430687341}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20, y: 0.5, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8379343367419696492
 GameObject:
   m_ObjectHideFlags: 0
@@ -6931,6 +6984,7 @@ Transform:
   - {fileID: 6547015513480182389}
   - {fileID: 4726608863859409520}
   - {fileID: 8038418617302087111}
+  - {fileID: 8804773707450403543}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &37384138396196218
@@ -6992,6 +7046,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebede63c47adfc949b82924e9eec2475, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detectionRadius: 10
+  playerTag: Player
   speed: 2.5
   rotSpeed: 5
   range: 8
@@ -7032,9 +7088,34 @@ MonoBehaviour:
   DownPattern: {fileID: 1286664782529946363}
   breakTime: 0
   breakCheck: 32
+  allDownPattern:
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
+  allDownArea: {fileID: 8821188965738105768}
+  page1: 0
+  page1check: 76
   breakOn: 0
   die: 0
   healthUpCheck: 0
+  weapons: {fileID: 0}
   p5PatternE: {fileID: 6810067018939647671}
   downPatterE: {fileID: 1858839583088856774}
   p2EttectE: {fileID: 2579152407155664761}
@@ -7079,17 +7160,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2b234d65ba7b84485082702a4067fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhp: 100000
-  hp: 100000
-  atk: 20
+  dataMgrDontDestroy: {fileID: 0}
   level: 1
   exp: 0
-  classNum: 0
+  maxhp: 100000
+  hp: 100000
+  weaponLevel: 0
+  attackPower: 0
   criChance: 50
   criDamage: 1.5
-  def: 0
-  gageTime: 0
+  userGold: 0
+  userMaterial: 0
+  userExpPotion: 0
   hudManager: {fileID: 0}
+  pv: {fileID: 0}
 --- !u!114 &2104592536116756750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7160,6 +7244,9 @@ MonoBehaviour:
   - Type: 1
     SynchronizeType: 1
     Name: Blend
+  - Type: 9
+    SynchronizeType: 0
+    Name: PAGE1
   m_SynchronizeLayers:
   - SynchronizeType: 1
     LayerIndex: 0

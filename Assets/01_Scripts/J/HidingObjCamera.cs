@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HidingObjCamera : MonoBehaviour
 {
-    Transform target = null; // 카메라가 바라보는 대상
+    public Transform target = null; // 카메라가 바라보는 대상
     [SerializeField]
     public float castRadius = 1f; //물체확인용 반원 캐스트
     RaycastHit[] hitBuffer = new RaycastHit[32]; //반환되는 충돌정보
@@ -12,7 +12,7 @@ public class HidingObjCamera : MonoBehaviour
     List<HidingObj> hiddenObjects = new List<HidingObj>();
     List<HidingObj> previouslyHiddenObjects = new List<HidingObj>();
 
-    GameObject targetPlayer;
+    public GameObject targetPlayer;
 
     void LateUpdate()
     {
@@ -21,14 +21,16 @@ public class HidingObjCamera : MonoBehaviour
 
     public void RefreshHiddenObjects()
     {
-        if(targetPlayer == null)
+        testGameMgr someComponent = GameObject.FindWithTag("Player").GetComponent<testGameMgr>();
+        if (someComponent != null)
         {
-            targetPlayer = GameObject.FindWithTag("Player");
+            someComponent.Starts();
+        }
+        targetPlayer = GameObject.FindWithTag("Player");
 
-            if (targetPlayer != null)
-            {
-                target = targetPlayer.transform;
-            }
+        if (targetPlayer != null)
+        {
+            target = targetPlayer.transform;
         }
         Vector3 toTarget = (target.position - transform.position);
         float targetDistance = toTarget.magnitude;

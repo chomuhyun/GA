@@ -35,13 +35,17 @@ public class LevelUpMgr : MonoBehaviourPunCallbacks
     public Text beforeCriDmg;
     public Text afterCriDmg;
 
+    [Header("afterExp, ExpPotion(실반영안됨)")]
+    public int afterExp;
+    public int afterExpPotionCnt;
+
     private void Awake()
     {
         var jsonitemFile = Resources.Load<TextAsset>("Json/LvupTable");
         leveltxtFile = jsonitemFile;
 
         dataMgrDontDestroy = DataMgrDontDestroy.Instance;
-
+        lvupPanel.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -66,6 +70,12 @@ public class LevelUpMgr : MonoBehaviourPunCallbacks
             {
                 SyncDataMgr();
                 // 레벨업창 껐으니까 플레이어의 정보에 반영
+                StateManager stateManager = other.gameObject.GetComponent<StateManager>();
+                stateManager.level = playerlv;
+                stateManager.criChance = playerCriChance;
+                stateManager.criDamage = playerCriDamage;
+                stateManager.exp = playerExp;
+                stateManager.userExpPotion = playerExpPotion;
                 lvupPanel.SetActive(false);
             }
         }
@@ -73,44 +83,52 @@ public class LevelUpMgr : MonoBehaviourPunCallbacks
 
     public void OnClickOneBtn()
     {
-        Debug.Log("현재 플레이어의 경험치는 : " + playerExp);
-        if (playerExpPotion == 0) // 포션이 0개라면
+        if (afterExpPotionCnt == 0) // 포션이 0개라면
         {
             Debug.Log("포션이 부족합니다.");
         }
         else // 포션이 0개가 아니라면
         {
-            if (playerExp == expRequire) // 경험치가 최대로 모여있었다면
+            if (afterExp == expRequire) // 경험치가 최대로 모여있었다면
             {
                 Debug.Log("if문 경험치 최대로 모였음");
                 Debug.Log("레벨업 가능");
             }
             else // 경험치가 최대로 모여있지않으니 else문 실행
             {
-                playerExpPotion -= 1;
-                playerExp += 100;
+                afterExpPotionCnt -= 1;
+                afterExp += 100;
                 UpdateUiData(classNum);
             }
         }
     }
     public void OnClickMaxBtn()
     {
-        Debug.Log("현재 플레이어의 경험치는 : " + playerExp);
-        if (playerExpPotion == 0) // 포션이 0개라면
+        if (afterExpPotionCnt == 0) // 포션이 0개라면
         {
             Debug.Log("포션이 부족합니다.");
         }
         else // 포션이 0개가 아니라면
         {
-            if (playerExp == expRequire) // 경험치가 최대로 모여있었다면
+            if (afterExp == expRequire) // 경험치가 최대로 모여있었다면
             {
                 Debug.Log("if문 경험치 최대로 모였음");
                 Debug.Log("레벨업 가능");
             }
             else // 경험치가 최대로 모여있지않으니 else문 실행
             {
-                playerExpPotion -= 1;
-                playerExp += 100;
+                int n = (expRequire - afterExp) / 100;
+                Debug.Log("한번에 사용할 개수 : " + n);
+                if (n > afterExpPotionCnt)
+                {
+                    afterExp += afterExpPotionCnt * 100;
+                    afterExpPotionCnt = 0;
+                }
+                else
+                {
+                    afterExpPotionCnt -= n;
+                    afterExp += n * 100;
+                }
                 UpdateUiData(classNum);
             }
         }
@@ -121,14 +139,31 @@ public class LevelUpMgr : MonoBehaviourPunCallbacks
         string json = leveltxtFile.text;
         var jsonData = JSON.Parse(json);
 
-        playerExp = 0;
-        playerlv++;
-        UpdateUiData(classNum);
+        if (afterExp==expRequire)
+        {
+            playerExpPotion = afterExpPotionCnt;
+            playerExp = 0;
+            playerlv++;
 
-        playerHp = (jsonData[classNum][playerlv]["PlayerHp"]);
-        playerCriDamage = (jsonData[classNum][playerlv]["CriDMG"]);
-        playerCriChance = (jsonData[classNum][playerlv]["CriPer"]);
+            playerHp = (jsonData[classNum][playerlv]["PlayerHp"]);
+            playerCriDamage = (jsonData[classNum][playerlv]["CriDMG"]);
+            playerCriChance = (jsonData[classNum][playerlv]["CriPer"]);
+            expRequire = jsonData["ExpRequireTable"][playerlv]["needExp"];
+            UpdateUiData(classNum);
+        }
 
+        else
+        {
+            playerExpPotion = afterExpPotionCnt;
+            playerExp = afterExp;
+
+            playerHp = (jsonData[classNum][playerlv]["PlayerHp"]);
+            playerCriDamage = (jsonData[classNum][playerlv]["CriDMG"]);
+            playerCriChance = (jsonData[classNum][playerlv]["CriPer"]);
+            expRequire = jsonData["ExpRequireTable"][playerlv]["needExp"];
+            UpdateUiData(classNum);
+        }
+        
         // DataMgrDontDestroy에도 정보를 보내준다.
         dataMgrDontDestroy.Level = playerlv;
         dataMgrDontDestroy.Exp = playerExp;
@@ -148,10 +183,15 @@ public class LevelUpMgr : MonoBehaviourPunCallbacks
         playerCriChance = dataMgrDontDestroy.CriChance;
         classNum = dataMgrDontDestroy.ClassNum;
 
+        afterExpPotionCnt = playerExpPotion;
+        afterExp = playerExp;
+
+        //playerExpPotion = afterExpPotionCnt;
+        //playerExp = afterExp;
+
         string json = leveltxtFile.text;
         var jsonData = JSON.Parse(json);
-
-        expRequire = jsonData["ExpRequireTable"][playerlv + 1]["needExp"];
+        expRequire = jsonData["ExpRequireTable"][playerlv]["needExp"];
     }
     public void UpdateUiData(int classNumber)
     {
@@ -167,8 +207,8 @@ public class LevelUpMgr : MonoBehaviourPunCallbacks
         afterCriDmg.text = (jsonData[classNumber][playerlv + 1]["CriDMG"]);
         beforeCriPer.text = playerCriChance.ToString();
         afterCriPer.text = (jsonData[classNumber][playerlv + 1]["CriPer"]);
-        curExpPotionTxt.text = playerExpPotion.ToString();
-        expRequireTxt.text = $"{playerExp} / {expRequire}";
+        curExpPotionTxt.text = afterExpPotionCnt.ToString();
+        expRequireTxt.text = $"{afterExp} / {expRequire}";
     }
 
     public void SyncDataMgr()

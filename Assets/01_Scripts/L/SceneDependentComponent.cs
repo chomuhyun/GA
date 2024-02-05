@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class SceneDependentComponent : MonoBehaviour
 {
     public ChatManager componentA;
-    //public PlayerScript componentB;
 
     void Awake()
     {
@@ -16,17 +15,17 @@ public class SceneDependentComponent : MonoBehaviour
         Debug.Log("현재 씬 이름 : "+currentSceneName);
 
         // 현재 씬에 따라 컴포넌트 A와 B를 활성화 또는 비활성화
-        if (currentSceneName == "Town")
+        if (currentSceneName == "Town" || currentSceneName == "Raid")
         {
             // 씬 A에서는 컴포넌트 A 활성화, 컴포넌트 B 비활성화
             componentA.enabled = true;
-            //componentB.enabled = false;
+
         }
         else // 홈이 아닐때, 솔로던전이나 레이드던전일때
         {
             // 씬 B에서는 컴포넌트 A 비활성화, 컴포넌트 B 활성화
             componentA.enabled = false;
-            //componentB.enabled = true;
+
         }
     }
 }

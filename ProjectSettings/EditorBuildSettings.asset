@@ -13,15 +13,12 @@ EditorBuildSettings:
     guid: 8d43c77f2519b274ba1de6d04a1675f3
   - enabled: 1
     path: "Assets/00_Scenes/MainFile\uC5EC\uAE30\uAC00 \uCC10\uD0F1\uC784/Town.unity"
-    guid: 8a753b46d21137c46907bc080fdcf9ef
+    guid: 0a294ace8ac6fd54fb196f9be44c0843
   - enabled: 1
-    path: Assets/00_Scenes/L/Dungeon_1.unity
-    guid: 21902ccc77335c84fb6ee47597ea3cae
+    path: "Assets/00_Scenes/MainFile\uC5EC\uAE30\uAC00 \uCC10\uD0F1\uC784/ChaosD.unity"
+    guid: 89d4eb3a7a918ab41aeb9e8262bfbb9f
   - enabled: 1
-    path: Assets/00_Scenes/L/Dungeon_2.unity
-    guid: 44e87d95f6c615b4293e28337a95ed10
-  - enabled: 1
-    path: Assets/00_Scenes/L/DungeonLoadingScene.unity
+    path: "Assets/00_Scenes/MainFile\uC5EC\uAE30\uAC00 \uCC10\uD0F1\uC784/DungeonLoadingScene.unity"
     guid: 654a614fce6b5cf4f8ce23d08d543623
   - enabled: 1
     path: Assets/00_Scenes/L/RaidDungeon.unity

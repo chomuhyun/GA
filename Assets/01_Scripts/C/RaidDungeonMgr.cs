@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RaidDungeonMgr : MonoBehaviour
 {
+    public int Count = 0;
     public Transform[] spawnPoint;
     public GameObject bossPrefab;
     public GameObject bossMakeEffect;
@@ -12,11 +13,17 @@ public class RaidDungeonMgr : MonoBehaviour
     public GameObject ground_1f;
 
 
-    public void OnTriggerEnter(Collider other)
+    public void MakeBoss()
     {
-        if (other.CompareTag("Player"))
+        Count++; //몬스터 스크립에서 죽을때마다 카운트 증가 필요.
+
+        Debug.Log("잔몹 " + Count + "마리 잡음.");
+        Debug.Log("보스까지 " + (10 - Count) + "마리 남음.");
+
+        if (Count >= 10)
         {
             Instantiate(bossPrefab, spawnPoint[0]);
+            Instantiate(bossMakeEffect, spawnPoint[0]);
         }
     }
 
@@ -32,8 +39,8 @@ public class RaidDungeonMgr : MonoBehaviour
         Instantiate(bossPhaseEffect, spawnPoint[1]);
     }
 
-    public void Panel()
+    public void ClearEndBoss()
     {
-
+        //clearPanel.SetActive(true);
     }
 }

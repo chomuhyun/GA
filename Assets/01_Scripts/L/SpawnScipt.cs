@@ -19,7 +19,7 @@ public class SpawnScipt : MonoBehaviourPunCallbacks
     }
     IEnumerator SpawnPlayer()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.01f);
         CreatePlayer();
     }
     public void CreatePlayer()

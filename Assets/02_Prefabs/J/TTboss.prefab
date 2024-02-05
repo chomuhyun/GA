@@ -1767,10 +1767,10 @@ GameObject:
   - component: {fileID: 7043984812613865300}
   - component: {fileID: 5497541540588093291}
   - component: {fileID: 218581855180538384}
-  - component: {fileID: 2141470366600064136}
   - component: {fileID: 5857983573371230617}
   - component: {fileID: 2719020260001729072}
   - component: {fileID: 6294311814710889917}
+  - component: {fileID: 5567452353469448382}
   m_Layer: 0
   m_Name: TTboss
   m_TagString: Boss
@@ -1788,7 +1788,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -10.95}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5630188835048229642}
@@ -1835,6 +1835,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178e506cb56fb9b46bb851526935cfcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  detectionRadius: 10
+  playerTag: Player
+  nearbyPlayer: []
   speed: 3
   rotSpeed: 5
   range: 8
@@ -1960,29 +1963,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 90
   m_CollisionDetection: 0
---- !u!114 &2141470366600064136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2542026107897127785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f2b234d65ba7b84485082702a4067fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxhp: 10000
-  hp: 10000
-  atk: 123
-  level: 1
-  exp: 0
-  classNum: 0
-  criChance: 50
-  criDamage: 120
-  def: 0
-  gageTime: 0
-  hudManager: {fileID: 0}
 --- !u!114 &5857983573371230617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2081,6 +2061,32 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &5567452353469448382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2542026107897127785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2b234d65ba7b84485082702a4067fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataMgrDontDestroy: {fileID: 0}
+  level: 1
+  exp: 0
+  maxhp: 20000
+  hp: 20000
+  weaponLevel: 0
+  attackPower: 80
+  criChance: 35
+  criDamage: 130
+  userGold: 0
+  userMaterial: 0
+  userExpPotion: 0
+  hudManager: {fileID: 0}
+  pv: {fileID: 0}
 --- !u!1 &2553146903761872142
 GameObject:
   m_ObjectHideFlags: 0
@@ -6776,7 +6782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac9142f96420c3419eb34712cacc9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sm: {fileID: 2141470366600064136}
+  sm: {fileID: 5567452353469448382}
   atkPer: 123
   player: {fileID: 0}
 --- !u!54 &2728713104683872261
@@ -6852,7 +6858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7423791380503199998, guid: 666caa110d61694448b721b5d9f915c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.08
+      value: -2.32
       objectReference: {fileID: 0}
     - target: {fileID: 7423791380503199998, guid: 666caa110d61694448b721b5d9f915c1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6860,7 +6866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7423791380503199998, guid: 666caa110d61694448b721b5d9f915c1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.8
+      value: 4.08
       objectReference: {fileID: 0}
     - target: {fileID: 7423791380503199998, guid: 666caa110d61694448b721b5d9f915c1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6939,7 +6945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac9142f96420c3419eb34712cacc9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sm: {fileID: 2141470366600064136}
+  sm: {fileID: 0}
   atkPer: 0
   player: {fileID: 0}
 --- !u!4 &8141892138508379036 stripped
@@ -7074,7 +7080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac9142f96420c3419eb34712cacc9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sm: {fileID: 2141470366600064136}
+  sm: {fileID: 5567452353469448382}
   atkPer: 123
   player: {fileID: 0}
 --- !u!54 &325599327161041527
@@ -7242,7 +7248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac9142f96420c3419eb34712cacc9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sm: {fileID: 2141470366600064136}
+  sm: {fileID: 5567452353469448382}
   atkPer: 123
   player: {fileID: 0}
 --- !u!54 &5305299757843077839
@@ -7396,7 +7402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac9142f96420c3419eb34712cacc9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sm: {fileID: 2141470366600064136}
+  sm: {fileID: 5567452353469448382}
   atkPer: 123
   player: {fileID: 0}
 --- !u!54 &7484759389888596370

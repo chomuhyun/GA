@@ -964,6 +964,7 @@ GameObject:
   - component: {fileID: 4322827643372645959}
   - component: {fileID: 1623073359549118250}
   - component: {fileID: 6151240354205897080}
+  - component: {fileID: 8947672692521633660}
   m_Layer: 0
   m_Name: em_Golem
   m_TagString: NomalMonster
@@ -980,7 +981,7 @@ Transform:
   m_GameObject: {fileID: 8496072146620496068}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.65, y: -1.8, z: 60.4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.79999995, y: 0.79999995, z: 0.79999995}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1094,14 +1095,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2b234d65ba7b84485082702a4067fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataMgrDontDestroy: {fileID: 0}
+  level: 1
+  exp: 0
   maxhp: 4000
   hp: 4000
-  atk: 30
+  weaponLevel: 0
+  attackPower: 0
   criChance: 20
   criDamage: 1.5
-  def: 0
-  gageTime: 0
-  asdf: 0
+  userGold: 0
+  userMaterial: 0
+  userExpPotion: 0
+  hudManager: {fileID: 0}
+  pv: {fileID: 0}
 --- !u!114 &6151240354205897080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1114,6 +1121,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d920476fea175f34dac90092aef48a8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8947672692521633660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8496072146620496068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cb11ef703274c946bf1a25f293b3dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  render: {fileID: 0}
+  col: {fileID: 0}
 --- !u!1 &9134125065793842625
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -367,7 +367,7 @@ Transform:
   m_GameObject: {fileID: 295019171}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.6, y: -6.1, z: -13.5}
+  m_LocalPosition: {x: -6.6, y: -1.6999998, z: -13.5}
   m_LocalScale: {x: 115, y: 12.8651, z: 105}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -631,9 +631,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 690cd081294f68a448be6fa498ac5d28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Count: 0
   spawnPoint:
-  - {fileID: 1277729285}
   - {fileID: 1951383378}
+<<<<<<< Updated upstream
+=======
+  - {fileID: 1277729285}
+>>>>>>> Stashed changes
   bossPrefab: {fileID: 0}
   bossMakeEffect: {fileID: 1000011945391522, guid: 78b71003e8b357d4bbf89c8b5e5e4f0e, type: 3}
   bossPhaseEffect: {fileID: 0}
@@ -964,7 +968,7 @@ Transform:
   m_GameObject: {fileID: 2103574586}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.6, y: 3.4, z: -13.5}
+  m_LocalPosition: {x: -6.6, y: 7.8, z: -13.5}
   m_LocalScale: {x: 115, y: 12.8651, z: 105}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1049,6 +1053,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 760753683861024254, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027763706842790179, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516120374068553778, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346195826348462301, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2908598724216010375, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2978466309046366940, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3659366541879470605, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1089,6 +1117,74 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3694889019382648567, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3726339211881325634, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757752364973825316, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998208024950384835, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066947997051578859, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142161292931688304, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153828740451139457, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210600041570888385, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623844171946370964, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4955304785198374887, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5024397103738275532, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5036572619887743246, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5083186260871183526, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5382345638409255869, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502148338186049418, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887978042867509283, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460034905490767903, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
     - target: {fileID: 6629029660543873472, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
       propertyPath: m_Name
       value: Map
@@ -1096,6 +1192,10 @@ PrefabInstance:
     - target: {fileID: 6629029660543873472, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768715675396128902, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
       objectReference: {fileID: 0}
     - target: {fileID: 7254951205767203363, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
       propertyPath: m_LocalScale.x
@@ -1113,6 +1213,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -13.9
       objectReference: {fileID: 0}
+    - target: {fileID: 7824855165966031438, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
     - target: {fileID: 8361136090838556649, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1125,6 +1229,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f86dc6f3bbfd0864eb4d861465cc94d2, type: 2}
+    - target: {fileID: 9109405198437915178, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8361136090838556649, guid: 36bffe2b5fae85e41b7548c726a27060, type: 3}
@@ -1147,8 +1255,11 @@ SceneRoots:
   - {fileID: 8920615294436043748}
   - {fileID: 103262413}
   - {fileID: 1600187662}
-  - {fileID: 897289984}
   - {fileID: 1951383378}
   - {fileID: 1277729285}
   - {fileID: 342704520}
+<<<<<<< Updated upstream
   - {fileID: 2044428163}
+=======
+  - {fileID: 897289984}
+>>>>>>> Stashed changes
