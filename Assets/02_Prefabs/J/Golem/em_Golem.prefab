@@ -1023,6 +1023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6088a66944fada4a972cf8e16ff1aa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cDunMgr: {fileID: 0}
   golem: 0
   golemAnim: {fileID: 0}
   targetPlayer: {fileID: 0}

@@ -22,6 +22,13 @@ public class LoadPlayerInfo : MonoBehaviour
     public int userMaterial;
     public int userExpPotion;
 
+    public int questIdx;
+    public int questCurCnt;
+    public int questMaxCnt;
+    public string goalTxt;
+
+    public Button[] slots;
+    public Texture[] textures;
     public Text[] slot1Text;
     public Text[] slot2Text;
     public Text[] slot3Text;
@@ -31,20 +38,7 @@ public class LoadPlayerInfo : MonoBehaviour
     private void Start()
     {
         characterCreate = GameObject.Find("CharacterCreate").GetComponent<CharacterCreate>();
-        // DataMgr의 인스턴스 가져오기
         dataMgrDontDestroy = DataMgrDontDestroy.Instance;
-        //nickName = dataMgrDontDestroy.NickName;
-        //level = dataMgrDontDestroy.Level;
-        //exp = dataMgrDontDestroy.Exp;
-        //maxhp = dataMgrDontDestroy.MaxHp;
-        //hp = dataMgrDontDestroy.Hp;
-        //attackPower = dataMgrDontDestroy.AttackPower;
-        //criChance = dataMgrDontDestroy.CriChance;
-        //criDamage = dataMgrDontDestroy.CriDamage;
-        //weaponLevel = dataMgrDontDestroy.WeaponLevel;
-        //userGold = dataMgrDontDestroy.UserGold;
-        //userMaterial = dataMgrDontDestroy.UserMaterial;
-        //userExpPotion = dataMgrDontDestroy.UserExpPotion;
 
         LoadEverySlotData();
     }
@@ -59,33 +53,48 @@ public class LoadPlayerInfo : MonoBehaviour
             {
                 string nickName = PlayerPrefs.GetString($"{slotNum}_NickName");
                 string className = PlayerPrefs.GetString($"{slotNum}_Class");
-                
                 int level = PlayerPrefs.GetInt($"{slotNum}_Level");
-                PlayerPrefs.GetInt($"{slotNum}_MaxHp");
-                PlayerPrefs.GetInt($"{slotNum}_WeaponLevel");
-                PlayerPrefs.GetInt($"{slotNum}_ATK");
-                PlayerPrefs.GetInt($"{slotNum}_CriticalPer");
-                PlayerPrefs.GetInt($"{slotNum}_UserGold");
-                PlayerPrefs.GetInt($"{slotNum}_Material");
-                PlayerPrefs.GetInt($"{slotNum}_ExpPotion");
 
                 switch (slotNum)
                 {
                     case 0:
-                        Debug.Log("닉네임 : " + nickName);
+                        LoadTextrues(0, className);
                         slot1Text[0].text = nickName;
                         slot1Text[1].text = className;
-                        slot1Text[2].text = level.ToString();
+                        if (level == 0)
+                        {
+                            slot1Text[2].text = "";
+                        }
+                        else
+                        {
+                            slot1Text[2].text = level.ToString();
+                        }
                         break;
                     case 1:
+                        LoadTextrues(1, className);
                         slot2Text[0].text = nickName;
                         slot2Text[1].text = className;
-                        slot2Text[2].text = level.ToString();
+                        if (level == 0)
+                        {
+                            slot2Text[2].text = "";
+                        }
+                        else
+                        {
+                            slot2Text[2].text = level.ToString();
+                        }
                         break;
                     case 2:
+                        LoadTextrues(2, className);
                         slot3Text[0].text = nickName;
                         slot3Text[1].text = className;
-                        slot3Text[2].text = level.ToString();
+                        if (level == 0)
+                        {
+                            slot3Text[2].text = "";
+                        }
+                        else
+                        {
+                            slot3Text[2].text = level.ToString();
+                        }
                         break;
                     default:
                         break;
@@ -94,6 +103,23 @@ public class LoadPlayerInfo : MonoBehaviour
         }
     }
 
+    public void LoadTextrues(int slotNum, string className)
+    {
+        switch (className)
+        {
+            case "Warrior":
+                slots[slotNum].GetComponent<RawImage>().texture = textures[0];
+                break;
+            case "Gunner":
+                slots[slotNum].GetComponent<RawImage>().texture = textures[1];
+                break;
+            case "Magician":
+                slots[slotNum].GetComponent<RawImage>().texture = textures[2];
+                break;
+            default:
+                break;
+        }
+    }
 
     public void LoadCurrnetPlayerData()
     {
@@ -129,6 +155,19 @@ public class LoadPlayerInfo : MonoBehaviour
         dataMgrDontDestroy.UserMaterial = userMaterial;
         dataMgrDontDestroy.UserExpPotion = userExpPotion;
         #endregion
-    }
 
+        #region 퀘스트 정보 변수에 담기
+        questIdx = PlayerPrefs.GetInt($"{currentSlotNum}_QuestIdx");
+        questCurCnt = PlayerPrefs.GetInt($"{currentSlotNum}_QuestCurCnt");
+        questMaxCnt = PlayerPrefs.GetInt($"{currentSlotNum}_QuestMaxCnt");
+        goalTxt = PlayerPrefs.GetString($"{currentSlotNum}_GoalTxt");
+        #endregion
+
+        #region 퀘스트정보. 변수의 값을 싱글톤에 보내주기
+        dataMgrDontDestroy.QuestIdx = questIdx;
+        dataMgrDontDestroy.QuestCurCnt = questCurCnt;
+        dataMgrDontDestroy.QuestMaxCnt = questMaxCnt;
+        dataMgrDontDestroy.GoalTxt = goalTxt;
+        #endregion
+    }
 }

@@ -32,6 +32,7 @@ TagManager:
   - NPCP
   - UImgr
   - NPC
+  - CVC
   layers:
   - Default
   - TransparentFX

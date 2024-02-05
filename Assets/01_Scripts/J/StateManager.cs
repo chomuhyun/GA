@@ -10,13 +10,14 @@ public class StateManager : MonoBehaviourPunCallbacks
     [Header("Stet")]
     // 플레이어의 스텟!!!!
     public int level = 1;
-    public int exp;
     public float maxhp;
-    public float hp;
     public int weaponLevel;
+    public float hp;
     public int attackPower;
     public int criChance;
     public float criDamage;
+    public int exp;
+    public bool ONPlayer;
     //public int classNum; // 클래스 변경시, 이 부분도 신경써주세요 1전사 2원딜 3마법
 
     [Space(10)]
@@ -37,6 +38,15 @@ public class StateManager : MonoBehaviourPunCallbacks
         dataMgrDontDestroy = DataMgrDontDestroy.Instance;
         hp = maxhp;
 
+        if(ONPlayer)
+        {
+            level = dataMgrDontDestroy.Level;
+            maxhp = dataMgrDontDestroy.MaxHp;
+            attackPower = dataMgrDontDestroy.AttackPower;
+            criChance = dataMgrDontDestroy.CriChance;
+            criDamage = dataMgrDontDestroy.CriDamage;
+            hp = maxhp;
+        }
     }
 
 

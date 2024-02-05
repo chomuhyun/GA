@@ -1054,7 +1054,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1369.9042, y: -26.1228}
+  m_AnchoredPosition: {x: -1369.9042, y: -98}
   m_SizeDelta: {x: 75.525, y: 35.4277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &614929800
@@ -1153,8 +1153,8 @@ MonoBehaviour:
     _minTime: 0
     _maxTime: 1
     _isLocal: 1
-    _fromVector: {x: -30, y: -37.96813, z: 0}
-    _toVector: {x: 21, y: -37.96813, z: 0}
+    _fromVector: {x: -30, y: -98, z: 0}
+    _toVector: {x: 21, y: -98, z: 0}
     _fromColor: {r: 1, g: 1, b: 1, a: 1}
     _toColor: {r: 1, g: 1, b: 1, a: 1}
     _fromFloat: 0
@@ -1915,7 +1915,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 21.000374, y: 200.00006}
+  m_AnchoredPosition: {x: 21.000488, y: 200}
   m_SizeDelta: {x: -1781.2667, y: -987.852}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1322975109

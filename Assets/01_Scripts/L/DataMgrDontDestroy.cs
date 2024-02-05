@@ -212,22 +212,16 @@ public class DataMgrDontDestroy : MonoBehaviour
         int slotNum = SelectSlot.slotNum;
         Debug.Log("현재 슬롯넘버는 : "+slotNum);
         //PlayerPrefs.SetString($"SlotNum_{slotNum}", slotNum.ToString());
-
-
         // 주석부분은 필요없을거같은데 게임내에서 변하는 정보가 아님
         //PlayerPrefs.SetString($"{slotNum}_Class", className);
         //PlayerPrefs.SetInt($"{slotNum}_ClassNum", classNum);
         #region 캐릭터 정보 저장
         PlayerPrefs.SetString($"{slotNum}_NickName", NickName);
-        Debug.Log($"저장하려는 Level은 : {Level}");
         PlayerPrefs.SetInt($"{slotNum}_Level", Level);
-        Debug.Log($"저장하려는 MaxHp은 : {MaxHp}");
+        PlayerPrefs.SetInt($"{slotNum}_Exp", Exp);
         PlayerPrefs.SetFloat($"{slotNum}_MaxHp", MaxHp);
-        Debug.Log($"저장하려는 Hp는 : {Hp}");
         PlayerPrefs.SetFloat($"{slotNum}_Hp", Hp);
-        Debug.Log($"저장하려는 WeaponLevel은 : {WeaponLevel}");
         PlayerPrefs.SetInt($"{slotNum}_WeaponLevel", WeaponLevel);
-        Debug.Log($"저장하려는 AttackPower은 : {AttackPower}");
         PlayerPrefs.SetInt($"{slotNum}_AttackPower", AttackPower);
         PlayerPrefs.SetInt($"{slotNum}_CriChance", CriChance);
         PlayerPrefs.SetFloat($"{slotNum}_CriDamage", CriDamage);
@@ -237,7 +231,10 @@ public class DataMgrDontDestroy : MonoBehaviour
         #endregion
 
         #region 퀘스트 정보 저장
-
+        PlayerPrefs.SetInt($"{slotNum}_QuestIdx", questIdx);
+        PlayerPrefs.SetInt($"{slotNum}_QuestCurCnt", questCurCnt);
+        PlayerPrefs.SetInt($"{slotNum}_QuestMaxCnt", questMaxCnt);
+        PlayerPrefs.SetString($"{slotNum}_GoalTxt", goalTxt);
         #endregion
 
         PlayerPrefs.Save();

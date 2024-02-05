@@ -55,17 +55,16 @@ public class InventoryManager : MonoBehaviourPunCallbacks
     {
         if (pv.IsMine)
         {
+            InitInventory();
             if (Input.GetKeyDown(KeyCode.I))
             {
                 if (!isInven)
                 {
                     inventoryPanel.SetActive(true);
-                    InitInventory();
                     isInven = true;
                 }
                 else
                 {
-                    InitInventory();
                     inventoryPanel.SetActive(false);
                     isInven = false;
                 }

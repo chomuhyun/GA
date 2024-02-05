@@ -9,9 +9,8 @@ public class LevelUpMgr : MonoBehaviourPunCallbacks
 {
     public DataMgrDontDestroy dataMgrDontDestroy;
     public TextAsset leveltxtFile; //Jsonfile
-
-    public StateManager stateMgr;
     public GameObject lvupPanel;
+    public Slider expSlider;
     public int classNum; //0:전사, 1:거너, 2:법사
     public int playerlv;
     public float playerHp;
@@ -62,6 +61,26 @@ public class LevelUpMgr : MonoBehaviourPunCallbacks
             }
         }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (other.GetComponent<PhotonView>().IsMine)
+            {
+                SyncDataMgr();
+                StateManager stateManager = other.gameObject.GetComponent<StateManager>();
+                stateManager.level = playerlv;
+                stateManager.maxhp = playerHp;
+                stateManager.hp = playerHp;
+                stateManager.criChance = playerCriChance;
+                stateManager.criDamage = playerCriDamage;
+                stateManager.exp = playerExp;
+                stateManager.userExpPotion = playerExpPotion;
+            }
+        }
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -69,13 +88,6 @@ public class LevelUpMgr : MonoBehaviourPunCallbacks
             if (other.GetComponent<PhotonView>().IsMine)
             {
                 SyncDataMgr();
-                // 레벨업창 껐으니까 플레이어의 정보에 반영
-                StateManager stateManager = other.gameObject.GetComponent<StateManager>();
-                stateManager.level = playerlv;
-                stateManager.criChance = playerCriChance;
-                stateManager.criDamage = playerCriDamage;
-                stateManager.exp = playerExp;
-                stateManager.userExpPotion = playerExpPotion;
                 lvupPanel.SetActive(false);
             }
         }
@@ -143,6 +155,7 @@ public class LevelUpMgr : MonoBehaviourPunCallbacks
         {
             playerExpPotion = afterExpPotionCnt;
             playerExp = 0;
+            afterExp = 0;
             playerlv++;
 
             playerHp = (jsonData[classNum][playerlv]["PlayerHp"]);
@@ -151,7 +164,6 @@ public class LevelUpMgr : MonoBehaviourPunCallbacks
             expRequire = jsonData["ExpRequireTable"][playerlv]["needExp"];
             UpdateUiData(classNum);
         }
-
         else
         {
             playerExpPotion = afterExpPotionCnt;
@@ -163,7 +175,7 @@ public class LevelUpMgr : MonoBehaviourPunCallbacks
             expRequire = jsonData["ExpRequireTable"][playerlv]["needExp"];
             UpdateUiData(classNum);
         }
-        
+
         // DataMgrDontDestroy에도 정보를 보내준다.
         dataMgrDontDestroy.Level = playerlv;
         dataMgrDontDestroy.Exp = playerExp;
@@ -209,6 +221,7 @@ public class LevelUpMgr : MonoBehaviourPunCallbacks
         afterCriPer.text = (jsonData[classNumber][playerlv + 1]["CriPer"]);
         curExpPotionTxt.text = afterExpPotionCnt.ToString();
         expRequireTxt.text = $"{afterExp} / {expRequire}";
+        expSlider.value = ((float)afterExp / expRequire);
     }
 
     public void SyncDataMgr()

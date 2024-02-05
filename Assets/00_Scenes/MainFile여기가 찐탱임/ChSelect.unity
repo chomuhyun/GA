@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.10496814, g: 0.13481407, b: 0.13442673, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -333,6 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e6cc345c97705541b410c1181a34e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentSlotNum: 0
   nickName: 
   level: 0
   exp: 0
@@ -345,7 +346,14 @@ MonoBehaviour:
   userGold: 0
   userMaterial: 0
   userExpPotion: 0
-  currentSlotNum: 0
+  slots:
+  - {fileID: 997102000}
+  - {fileID: 2107641726}
+  - {fileID: 446471810}
+  textures:
+  - {fileID: 8400000, guid: df6c113da25d1d44594e96955454353f, type: 2}
+  - {fileID: 8400000, guid: 7e30e6d1dadfc9f43847048020716c10, type: 2}
+  - {fileID: 8400000, guid: e0e49435518ce0143a28cc93cf9e8db6, type: 2}
   slot1Text:
   - {fileID: 1838937866}
   - {fileID: 1891901141}
@@ -5192,15 +5200,11 @@ MonoBehaviour:
   nickNamePanel: {fileID: 404800891}
   nickNameIF: {fileID: 795844905}
   characterNickName: 
-  sprites:
-  - {fileID: 8400000, guid: df6c113da25d1d44594e96955454353f, type: 2}
-  - {fileID: 8400000, guid: 7e30e6d1dadfc9f43847048020716c10, type: 2}
-  - {fileID: 8400000, guid: e0e49435518ce0143a28cc93cf9e8db6, type: 2}
+  loadPlayerInfo: {fileID: 143646752}
   slots:
   - {fileID: 997102000}
   - {fileID: 2107641726}
   - {fileID: 446471810}
-  loadPlayerInfo: {fileID: 0}
 --- !u!4 &1811083771
 Transform:
   m_ObjectHideFlags: 0
@@ -5490,7 +5494,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7e0e469e73fb3464182e9ccb1aa6eb6e, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5720,7 +5724,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4990c1ec828ff884d80b11da65faf92a, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6119,7 +6123,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 017439f317400da46a71deb0ffb4c883, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15970,6 +15974,10 @@ PrefabInstance:
     - target: {fileID: 5078102925578321789, guid: fdb1fee07e6050540ac77565df8a096d, type: 3}
       propertyPath: m_Name
       value: FakeLoading
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078102925578321789, guid: fdb1fee07e6050540ac77565df8a096d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
