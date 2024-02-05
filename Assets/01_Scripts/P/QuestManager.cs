@@ -41,9 +41,7 @@ public class QuestManager : MonoBehaviour
     Queue<string> naming = new Queue<string>();
     Queue<string> sentence = new Queue<string>();
 
-    public Text rewardExp;
-    public Text rewardMat;
-    public Text rewardGold;
+    public bool isFirst;
 
     [Header("퀘스트 진행버튼")]
     public GameObject acceptBtn;
@@ -67,7 +65,11 @@ public class QuestManager : MonoBehaviour
     public int materialReward;
     public int goldReward;
 
-    public bool isFirst;
+    public Text rewardExp;
+    public Text rewardMat;
+    public Text rewardGold;
+
+    
     public void QuestClearReward(int n)
     {
         string json = txtFile.text;
@@ -122,7 +124,7 @@ public class QuestManager : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (other.GetComponent<PhotonView>().IsMine)
+            if (other.GetComponent<PhotonView>().IsMine && isFirst)
             {
                 Debug.Log("충돌일어남");
                 questPanel.SetActive(true);
@@ -138,7 +140,6 @@ public class QuestManager : MonoBehaviour
         {
             if (other.GetComponent<PhotonView>().IsMine)
             {
-                // 강화창 껐으니까 플레이어의 정보에 반영
                 questPanel.SetActive(false);
             }
         }

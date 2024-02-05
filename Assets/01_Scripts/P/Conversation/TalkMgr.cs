@@ -19,7 +19,7 @@ public class TalkMgr : MonoBehaviour
     public void Begin(Dialogue info)
     {
         currentDialogue = info;
-        nPCConversation.SetActive(true); //만들어야함
+        nPCConversation.SetActive(true);
         naming.Clear();
         sentences.Clear();
         textName.text = null;
