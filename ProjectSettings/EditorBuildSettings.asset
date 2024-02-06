@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: "Assets/00_Scenes/MainFile\uC5EC\uAE30\uAC00 \uCC10\uD0F1\uC784/ChSelect.unity"
     guid: 8d43c77f2519b274ba1de6d04a1675f3
   - enabled: 1
-    path: "Assets/00_Scenes/MainFile\uC5EC\uAE30\uAC00 \uCC10\uD0F1\uC784/Town.unity"
-    guid: 0a294ace8ac6fd54fb196f9be44c0843
+    path: Assets/00_Scenes/P/Town 1.unity
+    guid: 46e3b4cb00f7afa468e15d5a5141bded
   - enabled: 1
     path: Assets/00_Scenes/P/Town 1.unity
     guid: 724d63c109610a54cab8a5a515d45334
