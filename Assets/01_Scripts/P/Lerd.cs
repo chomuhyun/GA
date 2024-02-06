@@ -6,6 +6,7 @@ using UnityEngine;
 public class Lerd : MonoBehaviour
 {
     public QuestPopUpManager questPopUpManager;
+    public DataMgrDontDestroy dataMgrDontDestroy;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,14 +14,15 @@ public class Lerd : MonoBehaviour
         {
             if (other.GetComponent<PhotonView>().IsMine)
             {
-                questPopUpManager.QuestIndexUp(1);                
+                dataMgrDontDestroy.QuestCurCnt++;
+                questPopUpManager.UpdateQuestStatus();
                 Debug.Log("·¯µå");
             }
         }
     }
     void Start()
     {
-        
+        dataMgrDontDestroy = DataMgrDontDestroy.Instance;
     }
 
     void Update()

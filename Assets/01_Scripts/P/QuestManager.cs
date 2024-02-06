@@ -59,7 +59,6 @@ public class QuestManager : MonoBehaviour
 
     [Header("퀘스트 현재 진행도 창")]
     public GameObject questPopUpPanel;
-    //public bool questPopUpPanelVisible;
     public Text questDescriptionGoalTxt; //이 텍스트에 questGoalTxt 의 문자가 들어감
     public string questGoalTxt; 
     public int questCurCnt;
@@ -75,9 +74,6 @@ public class QuestManager : MonoBehaviour
     public Text rewardMat;
     public Text rewardGold;
 
-    
-    
-
     private void Awake()
     {
         dataMgrDontDestroy = DataMgrDontDestroy.Instance;
@@ -86,10 +82,8 @@ public class QuestManager : MonoBehaviour
     }
     private void Start()
     {
-        //ingBtn.SetActive(false);
         completedBtn.SetActive(false);
         ingImg.SetActive(false);
-        //endBtn.SetActive(false);
 
         questPanel.SetActive(false);
         questPopUpPanel.SetActive(false);
@@ -100,15 +94,6 @@ public class QuestManager : MonoBehaviour
         //nPCConversation.SetActive(false);
     }
 
-    public void Update()
-    {
-        //if(Input.GetKeyDown(KeyCode.LeftShift))
-        //{
-        //    Debug.Log("정상동작");
-        //    nextBtn.GetComponent<TalkMgr>();
-        //    Debug.Log("### TalkMgr 정상동작 ###");
-        //}
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -117,13 +102,6 @@ public class QuestManager : MonoBehaviour
             {
                 Debug.Log("충돌일어남");
                 questPanel.SetActive(true);
-                //QuestCompletedCheck();
-                //nPCConversation.SetActive(true);
-
-                //if (isFirst)
-                //{
-                //    dialogueTrigger.Trigger();
-                //}
             }
         }
     }
@@ -146,7 +124,6 @@ public class QuestManager : MonoBehaviour
         var jsonData = JSON.Parse(json); //var의 의미: Unity외의 파일을 다가져온다.
 
         int item = n - 1; //매개변수
-
         
         questNameTxt.text = (jsonData["Quest"][item]["QuestName"]);
         goalTxt.text = (jsonData["Quest"][item]["Goal"]);
@@ -154,63 +131,64 @@ public class QuestManager : MonoBehaviour
         rewardMat.text = (jsonData["Quest"][item]["RewardMat"]);
         rewardGold.text = (jsonData["Quest"][item]["RewardGold"]);
         Debug.Log("Json 데이터 불러옴");
-
-        
-        #region
-            //character.transform.name = (jsonData["시트1"][n]["QuestName"]);
-            //character.GetComponent<QuestData>().charname = (jsonData["시트1"][n]["QuestName"]);
-            //character.GetComponent<QuestData>().atk = (int)(jsonData["시트1"][n]["Count"]);
-            ////character.GetComponent<QuestData>().count++; //QuestData의 카운트 증가
-
-            //character.tag = "Player"; //prefab에 태그를 달거야.
-
-            //character.transform.SetParent(questCanvas.transform); //나는 questCanvas를 부모로 두고 응애하고 Prefab이 태어남.
-            #endregion
     }
 
     public void CompleteFirst(int n) //수락이냐 아니냐, "먼저 진행하고 오세요" 기능
-    {        
-        if(n - dataMgrDontDestroy.QuestIdx == 1) 
+    {
+        if (n == dataMgrDontDestroy.QuestIdx)
         {
-            acceptBtn.SetActive(true);
-            clearfowardQuestImg.SetActive(false);
-            ingImg.SetActive(false);
-            completedBtn.SetActive(false);
-            endBtn.SetActive(false);
+            if (questPopUpManager.isCompleted != true)
+            {
+                acceptBtn.SetActive(false);
+                clearfowardQuestImg.SetActive(false);
+                ingImg.SetActive(true);
+                completedBtn.SetActive(false);
+                endBtn.SetActive(false);
+            }
+            else
+            {
+                acceptBtn.SetActive(false);
+                clearfowardQuestImg.SetActive(false);
+                ingImg.SetActive(false);
+                completedBtn.SetActive(true);
+                endBtn.SetActive(false);
+            }
         }
-        else if(n - dataMgrDontDestroy.QuestIdx == 0)
+        else if (n > dataMgrDontDestroy.QuestIdx)
         {
-            acceptBtn.SetActive(false);
-            clearfowardQuestImg.SetActive(false);
-            ingImg.SetActive(true);
-            completedBtn.SetActive(false);
-            endBtn.SetActive(false);
+            if (n == 1 && dataMgrDontDestroy.QuestIdx == 0)
+            {
+                acceptBtn.SetActive(true);
+                clearfowardQuestImg.SetActive(false);
+                ingImg.SetActive(false);
+                completedBtn.SetActive(false);
+                endBtn.SetActive(false);
+            }
+            else
+            {
+                acceptBtn.SetActive(false);
+                clearfowardQuestImg.SetActive(true);
+                ingImg.SetActive(false);
+                completedBtn.SetActive(false);
+                endBtn.SetActive(false);
+            }
         }
         else
         {
             acceptBtn.SetActive(false);
-            clearfowardQuestImg.SetActive(true);
+            clearfowardQuestImg.SetActive(false);
             ingImg.SetActive(false);
             completedBtn.SetActive(false);
-            endBtn.SetActive(false);
+            endBtn.SetActive(true);
         }
     }
     public void AcceptBtn()
     {
-        ReceiveQuest(dataMgrDontDestroy.QuestIdx);
-        
-        //isFirst = true;
-        //uIMgr.UpdateQuestPopUpInfo(questPopUpManager.questGoalTxt.text, questPopUpManager.questCountTxt.text);
-    }
-
-    public void ReceiveQuest(int n)
-    {
+        dataMgrDontDestroy.QuestIdx++;
 
         string json = txtFile.text;
         var jsonData = JSON.Parse(json);
-        int item = n - 1;
-
-        dataMgrDontDestroy.QuestIdx = n;
+        int item = dataMgrDontDestroy.QuestIdx - 1;        
 
         if (jsonData["Quest"][item]["Goal"] != null)
         {
@@ -222,78 +200,19 @@ public class QuestManager : MonoBehaviour
             dataMgrDontDestroy.GoalTxt = "Default Goal Text";
         }
         dataMgrDontDestroy.QuestMaxCnt = (int)(jsonData["Quest"][item]["Count"]);
-        dataMgrDontDestroy.QuestIdx = (int)(jsonData["Quest"][item]["QuestNum"]);
 
-        questPopUpManager.UpdateQuestStatus(dataMgrDontDestroy.GoalTxt, dataMgrDontDestroy.QuestCurCnt, dataMgrDontDestroy.QuestMaxCnt);
+        questPopUpManager.UpdateQuestStatus();
 
-        //questPopUpPanelVisible
         acceptBtn.SetActive(false);
         questPopUpPanel.SetActive(true);
         ingImg.SetActive(true);
-        
     }
 
     public void CompletedBtn()
     {
-        questPopUpManager.InitCurQuest();
-
-        if (questPopUpManager.isCompleted)
-        {
-            // 보상 지급 및 처리
-            // (보상 관련 코드 추가 필요)
-            
-
-            // 퀘스트 버튼 비활성화
-            if(dataMgrDontDestroy.QuestIdx > 1)
-            {
-                acceptBtn.SetActive(false);
-                ingImg.SetActive(false);
-                completedBtn.SetActive(false);
-                endBtn.SetActive(true);
-            }            
-
-            // 다음 퀘스트를 선택할 때 수락 버튼이 나오도록 설정
-            if(dataMgrDontDestroy.QuestIdx >= 2)
-            {
-                dataMgrDontDestroy.QuestIdx++;
-                Destroy(quest_1);
-                acceptBtn.SetActive(true);
-                ingImg.SetActive(false);
-                completedBtn.SetActive(false);
-                endBtn.SetActive(false);
-            }
-            //acceptBtn.SetActive(true);
-            //ingImg.SetActive(false);
-            //completedBtn.SetActive(false); 
-
-            //퀘스트 보상 수령하는 함수
-            QuestClearReward(dataMgrDontDestroy.QuestIdx);
-
-            // 퀘스트 인덱스 증가 및 데이터 매니저 갱신            
-            dataMgrDontDestroy.QuestIdx = questPopUpManager.questIdx;
-
-            // 퀘스트 팝업 패널 비활성화
-            questPopUpPanel.SetActive(false);
-
-            
-            //퀘스트 완료시 동작
-            //if (questCurCnt >= questMaxCnt)
-            //{
-
-            //}
-            //transform.Find("IngImg").gameObject.SetActive(false);
-            //transform.Find("CompletedBtn").gameObject.SetActive(true);
-        }
-       
-
-    }
-
-    public void QuestCompletedCheck()
-    {
-        if(dataMgrDontDestroy.QuestCurCnt >= dataMgrDontDestroy.QuestMaxCnt && isFirst)
-        {
-            completedBtn.SetActive(true);
-        }
+        QuestClearReward(dataMgrDontDestroy.QuestIdx);
+        questPopUpPanel.SetActive(false);
+        endBtn.SetActive(true);   
     }
 
     public void QuestClearReward(int n)
@@ -312,10 +231,4 @@ public class QuestManager : MonoBehaviour
         dataMgrDontDestroy.UserMaterial += materialReward;
         dataMgrDontDestroy.UserGold += goldReward;
     }
-
-
-    //public void CompleteButton()
-    //{
-
-    //}
 }
