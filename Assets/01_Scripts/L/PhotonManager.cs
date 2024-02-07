@@ -79,7 +79,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsMasterClient)
         {
             Debug.Log("MasterClient is LoadLevel 실행");
-            PhotonNetwork.LoadLevel("Town");
+            PhotonNetwork.LoadLevel("Town 1");
         }
     }
     #endregion
