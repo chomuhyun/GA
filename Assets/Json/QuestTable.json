@@ -2,7 +2,7 @@
   "Quest": {
     "1": {
       "QuestName": "러드에게 말걸기",
-      "Goal": "( ) 앞에 있는 러드에게 말을 걸기",
+      "Goal": "게시판 옆에 있는 러드에게 말을 걸기",
       "Count": 1,
       "Exp": 1,
       "RewardExp": 50,
@@ -13,8 +13,8 @@
       "QuestNum": 1
     },
     "2": {
-      "QuestName": "몬스터 5마리 처치",
-      "Goal": "차원의 균열틈으로 들어온 몬스터 5마리를 잡기",
+      "QuestName": "카오스 던전 클리어하기",
+      "Goal": "포탈로 카오스 던전 이동 후 클리어하기",
       "Count": 5,
       "Exp": 1,
       "RewardExp": 60,
@@ -25,20 +25,8 @@
       "QuestNum": 2
     },
     "3": {
-      "QuestName": "장로 에게 말걸기",
-      "Goal": "( ) 앞에 있는 장로에게 말을 걸기",
-      "Count": 1,
-      "Exp": 1,
-      "RewardExp": 20,
-      "Material": 2,
-      "RewardMat": 20,
-      "Gold": 3,
-      "RewardGold": 700,
-      "QuestNum": 3
-    },
-    "4": {
       "QuestName": "분노한 기사",
-      "Goal": "던전으로 가서 보스를 처치",
+      "Goal": "레이드 던전으로 가서 보스를 처치",
       "Count": 1,
       "Exp": 1,
       "RewardExp": 100,
@@ -48,29 +36,17 @@
       "RewardGold": 2000,
       "QuestNum": 4
     },
-    "5": {
+    "4": {
       "QuestName": "골드 획득",
-      "Goal": "장로에게 100골드 얻기",
+      "Goal": "시장에게 1000골드 얻기",
       "Count": 100,
       "Exp": 1,
       "RewardExp": 20,
       "Material": 2,
       "RewardMat": 0,
       "Gold": 3,
-      "RewardGold": 100,
+      "RewardGold": 1000,
       "QuestNum": 5
-    },
-    "6": {
-      "QuestName": "( ) 구매",
-      "Goal": "상점에서 ( )를 구매",
-      "Count": 1,
-      "Exp": 1,
-      "RewardExp": 50,
-      "Material": 2,
-      "RewardMat": 0,
-      "Gold": 3,
-      "RewardGold": 0,
-      "QuestNum": 6
     }
   }
 }
