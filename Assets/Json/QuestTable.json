@@ -25,7 +25,7 @@
       "QuestNum": 2
     },
     "3": {
-      "QuestName": "분노한 기사",
+      "QuestName": "레이드 던전 클리어하기",
       "Goal": "레이드 던전으로 가서 보스를 처치",
       "Count": 1,
       "Exp": 1,
@@ -35,18 +35,6 @@
       "Gold": 3,
       "RewardGold": 2000,
       "QuestNum": 4
-    },
-    "4": {
-      "QuestName": "골드 획득",
-      "Goal": "시장에게 1000골드 얻기",
-      "Count": 100,
-      "Exp": 1,
-      "RewardExp": 20,
-      "Material": 2,
-      "RewardMat": 0,
-      "Gold": 3,
-      "RewardGold": 1000,
-      "QuestNum": 5
     }
   }
 }

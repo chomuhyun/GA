@@ -44,7 +44,7 @@ public class RewardMgr : MonoBehaviour
                 SoloClearReward();
                 break;
             case 2:
-                ChaosClearReward();
+                ChaosClearReward(); 
                 break;
             case 3:
                 RaidClearReward();

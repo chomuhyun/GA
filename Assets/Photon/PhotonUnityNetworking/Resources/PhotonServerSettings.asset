@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PhotonServerSettings
   m_EditorClassIdentifier: 
   AppSettings:
-    AppIdRealtime: 
+    AppIdRealtime: 0118ff4a-542f-4492-90a4-26bce1c44a77
     AppIdFusion: 
     AppIdChat: 
     AppIdVoice: 
@@ -28,12 +28,38 @@ MonoBehaviour:
     AuthMode: 0
     EnableLobbyStatistics: 0
     NetworkLogging: 1
-  DevRegion: 
+  DevRegion: hk
   PunLogging: 0
   EnableSupportLogger: 0
   RunInBackground: 1
   StartInOfflineMode: 0
-  RpcList: []
+  RpcList:
+  - AllClientBreakTime
+  - BreakTime
+  - breakTiming
+  - ClickRpc
+  - DestroyRpc
+  - DestroySpaceship
+  - DieAllClient
+  - Dieing
+  - DieNowAllClient
+  - DieNowPatternt
+  - DownAllClient
+  - Fire
+  - GroundCrushAllClient
+  - GroundOner
+  - HealthUPAllClient
+  - healthUpPattern
+  - KnowAnim
+  - MoveTowardsTarget
+  - NEM1
+  - NemAllClient
+  - OnBreakAllClient
+  - PatternTimeCheck
+  - ReceiveMsg
+  - RespawnSpaceship
+  - Spawn
+  - SyncBossMonsterSpawn
   DisableAutoOpenWizard: 1
   ShowSettings: 0
-  DevRegionSetOnce: 0
+  DevRegionSetOnce: 1
