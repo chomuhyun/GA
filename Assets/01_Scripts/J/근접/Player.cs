@@ -15,13 +15,14 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
     public Text nickNameTxt;
     public ChatManager chatManager;
     public bool allowMove = false;
+    public QuestPopUpManager questPopUpManager;
     // 여기 위에를 추가했음. 현창
 
     public Canvas canvas;
     private Vector3 currPos;
     private Quaternion currRot;
     private Transform tr;
-
+   
     [Header("Shop")]
     private GameObject nearObject;
     public int coin;
@@ -57,7 +58,7 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
     MeshRenderTail meshRenderTail;
     HUDManager hudManager;
     private new Camera camera;
-    PhotonView pv;
+    public PhotonView pv;
     PhotonAnimatorView pav;
     public CinemachineVirtualCamera cvc;
     UIMgr uimgr;
@@ -114,11 +115,13 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
     RaidBossCtrl raidBoss;
     Tboss tboss;
     public bool npcAttackStop;
+
     //테스팅중
 
     void Awake()
     {
-
+        questPopUpManager = GameObject.Find("WorldCanvas/UIMgr/QuestPopUp").GetComponentInChildren<QuestPopUpManager>();
+        // 위에 추가함 현창
         camera = Camera.main;
         isFireReady = true;
         weapons = GetComponentInChildren<Weapons>();
@@ -131,8 +134,9 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
         cvc = GameObject.FindGameObjectWithTag("CVC").GetComponent<CinemachineVirtualCamera>();
         if (PhotonNetwork.IsConnected && photonView.IsMine)
         {
+            cvc = GameObject.FindGameObjectWithTag("CVC").GetComponent<CinemachineVirtualCamera>();
             cvc.GetComponent<ThirdPersonOrbitCamBasicA>().player = transform;
-        }
+        } 
         if (boss != null)
         {
             boss = GameObject.FindGameObjectWithTag("Boss").GetComponent<Boss>();
@@ -143,21 +147,30 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
     }
     private void Start()
     {
-        canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
         pv = GetComponent<PhotonView>();
+        Canvas obj = transform.Find("WCan").GetComponent<Canvas>();
+        nickNameTxt = obj.GetComponentInChildren<Text>();
+
         if (pv.IsMine)
         {
-            canvas = GameObject.Find("WorldCanvas").GetComponent<Canvas>();
+            questPopUpManager.UpdateQuestStatus(); // 여기 추가했음 현창
+            nickNameTxt.text = PhotonNetwork.NickName + " (나)"; //여기 추가했음. 현창
+            nickNameTxt.color = Color.white;
+
             cvc.Follow = transform;
             cvc.LookAt = transform;
             chatManager = GetComponent<ChatManager>();
 
-            nickNameTxt = GameObject.Find("WorldCanvas/NickName").GetComponent<Text>();
             // 여기 위에를 추가했음. 현창
 
             pv = GetComponent<PhotonView>();
             pav = GetComponent<PhotonAnimatorView>();
             plane = new Plane(transform.up, transform.position);
+        }
+        else
+        {
+            nickNameTxt.text = pv.Owner.NickName;
+            nickNameTxt.color = Color.red;
         }
         skillICoolicon[0].fillAmount = 0;
         skillICoolicon[1].fillAmount = 0;
@@ -217,16 +230,14 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
 
     void FixedUpdate() // 원래 FixedUpdate였음
     {
-        
-
         if (pv.IsMine)
         {
-            nickNameTxt.text = PhotonNetwork.NickName + " (나)"; //여기 추가했음. 현창
-            nickNameTxt.color = Color.white;
-            Vector3 offset = new Vector3(0f, 2f, 0f);
-            nickNameTxt.transform.position = transform.position + offset;
+            //nickNameTxt.text = PhotonNetwork.NickName + " (나)"; //여기 추가했음. 현창
+            //nickNameTxt.color = Color.white;
+            //Vector3 offset = new Vector3(0f, 2f, 0f);
+            //nickNameTxt.transform.position = transform.position + offset;
 
-            originalTimeScale = Time.timeScale * Time.unscaledDeltaTime;
+            //originalTimeScale = Time.timeScale * Time.unscaledDeltaTime;
 
             if (!isDeath)
             {
@@ -241,15 +252,16 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
                     Deshs();
                     Interation();
                     SkillCoolTime();
+                    KnowingBoss();
                 }
             }
         }
         else
         {
-            nickNameTxt.text = pv.Owner.NickName;
-            nickNameTxt.color = Color.red;
-            Vector3 offset = new Vector3(0f, 2f, 0f);
-            nickNameTxt.transform.position = transform.position + offset;
+            //nickNameTxt.text = pv.Owner.NickName;
+            //nickNameTxt.color = Color.red;
+            //Vector3 offset = new Vector3(0f, 2f, 0f);
+            //nickNameTxt.transform.position = transform.position + offset;
         }
     }
 
@@ -505,6 +517,22 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
         }
     }
 
+    public void KnowingBoss()
+    {
+        if (raidBoss != null)
+        {
+            if (pv.IsMine)
+            {
+                testGameMgr someComponent = GameObject.FindWithTag("Player").GetComponent<testGameMgr>();
+                someComponent.Starts();
+                raidBoss.characterController = raidBoss.GetComponent<CharacterController>();
+                raidBoss.anim = raidBoss.GetComponent<Animator>();
+                stateManager = raidBoss.GetComponent<StateManager>();
+                raidBoss.player = this;
+                raidBoss.targetPlayer = transform;
+            }
+        }
+    }
     void SkillUsing()
     {
         skillUse = true;

@@ -99,6 +99,7 @@ public class DungeonMgr : MonoBehaviourPunCallbacks
 
         character.transform.SetParent(chaosContent.transform);
     }
+
     public void InstRaidDunGeon(int n)
     {
         string json = txtFile.text;
@@ -166,23 +167,18 @@ public class DungeonMgr : MonoBehaviourPunCallbacks
                 dataMgrDontDestroy.DungeonSortIdx = dungeonSort;
                 dataMgrDontDestroy.DungeonNumIdx = dungeonNum;
                 Debug.Log($"선택한 던전의 번호는 {dataMgrDontDestroy.DungeonSortIdx} / {dataMgrDontDestroy.DungeonNumIdx}");
-                PhotonNetwork.Disconnect();
-                //SceneManager.LoadScene(single);
                 break;
             case 2:
                 Debug.Log($"현재 선택한  : chaos");
                 dataMgrDontDestroy.DungeonSortIdx = dungeonSort;
                 dataMgrDontDestroy.DungeonNumIdx = dungeonNum;
                 Debug.Log($"선택한 던전의 번호는 {dataMgrDontDestroy.DungeonSortIdx} / {dataMgrDontDestroy.DungeonNumIdx}");
-                PhotonNetwork.Disconnect();
-                //SceneManager.LoadScene(chaos);
                 break;
             case 3:
                 Debug.Log($"현재 선택한  : raid");
                 dataMgrDontDestroy.DungeonSortIdx = dungeonSort;
                 dataMgrDontDestroy.DungeonNumIdx = dungeonNum;
                 Debug.Log($"선택한 던전의 번호는 {dataMgrDontDestroy.DungeonSortIdx} / {dataMgrDontDestroy.DungeonNumIdx}");
-                //SceneManager.LoadScene(raid);
                 break;
             default:
                 break;

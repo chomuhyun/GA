@@ -32,14 +32,7 @@ public class DungeonLoadManager : MonoBehaviourPunCallbacks
         }
     }
 
-    IEnumerator LoadLevelRaidDungeon()
-    {
-        yield return null;
-
-        PhotonNetwork.LoadLevel("RaidDungeon");
-        PhotonNetwork.AutomaticallySyncScene = true;
-    }
-
+    // 마을로가고싶으면  던전에서 나갈때 dataMgrDontDestroy.dungeonSortIdx를 0으로 하고나서 로딩씬에 오면된다.
     IEnumerator EnterDungeonRoom()
     {
         if (PhotonNetwork.InLobby)
@@ -56,6 +49,7 @@ public class DungeonLoadManager : MonoBehaviourPunCallbacks
                     PhotonNetwork.JoinRoom($"Room_Raid_{roomCnt}");
                     break;
                 default:
+                    PhotonNetwork.JoinRoom("Room_Home");
                     break;
             }
         }
@@ -84,6 +78,7 @@ public class DungeonLoadManager : MonoBehaviourPunCallbacks
                 CreateRaidRoom(roomCnt);
                 break;
             default:
+                CreateHome();
                 break;
             }
     }
@@ -113,6 +108,7 @@ public class DungeonLoadManager : MonoBehaviourPunCallbacks
                 case 3:
                     if (PhotonNetwork.IsMasterClient)
                     {
+                        PhotonNetwork.LoadLevel("Raid");
                         PhotonNetwork.AutomaticallySyncScene = true;
                     }
                     break;
@@ -172,6 +168,19 @@ public class DungeonLoadManager : MonoBehaviourPunCallbacks
         PhotonNetwork.CreateRoom($"Room_Raid_{Cnt}", ro);
     }
 
+    public void CreateHome()
+    {
+        Debug.Log("CreateHome 실행");
+
+        // 룸의 속성 정의
+        RoomOptions ro = new RoomOptions();
+        ro.MaxPlayers = 20;     // 룸에 입장할 수 있는 최대 접속자 수
+        ro.IsOpen = true;       // 룸의 오픈 여부
+        ro.IsVisible = true;    // 로비에서 룸 목록에 노출시킬 여부
+
+        PhotonNetwork.CreateRoom("Room_Home");
+    }
+
     // 룸 접속 정보를 출력
     void SetRoomInfo()
     {
@@ -194,35 +203,5 @@ public class DungeonLoadManager : MonoBehaviourPunCallbacks
         Debug.Log("로비 입장 완료.");
         Debug.Log("현재 inLobby : "+PhotonNetwork.InLobby);
         StartCoroutine(EnterDungeonRoom());
-    }
-
-    // 룸으로 새로운 네트워크 유저가 입장했때 호출되는 콜백함수
-    public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
-    {
-        SetRoomInfo();
-        string msg = $"\n<color=#00ff00>{newPlayer.NickName}</color> is joined room";
-        msgList.text += msg;
-
-        if (PhotonNetwork.CurrentRoom.PlayerCount == PhotonNetwork.CurrentRoom.MaxPlayers)
-        {
-            Debug.Log("CurPlayerCount==MaxPlayerCount 입니다.");
-            if (PhotonNetwork.IsMasterClient)
-            {
-                Debug.Log("마스터 클라이언트 입니다. 코루틴 실행함.");
-                StartCoroutine(LoadLevelRaidDungeon());
-            }
-            else
-            {
-                Debug.Log("마스터 클라이언트가 아닙니다. 코루틴실행안함.");
-            }
-        }
-    }
-
-    // 룸에서 네트워크 유저가 퇴장했때 호출되는 콜백함수
-    public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)
-    {
-        SetRoomInfo();
-        string msg = $"\n<color=#ff0000>{otherPlayer.NickName}</color> is left room";
-        msgList.text += msg;
     }
 }

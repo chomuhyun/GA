@@ -6,7 +6,6 @@ using Photon.Pun;
 using Photon.Realtime;
 using System.Linq;
 using Cinemachine;
-using Photon.Pun;
 
 public class HUDManager : MonoBehaviourPunCallbacks
 {

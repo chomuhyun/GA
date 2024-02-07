@@ -6,7 +6,7 @@ using System.IO;
 using SimpleJSON;
 using Photon.Pun;
 
-//###### Quest List, Quest Description UI ´ã´ç ######
+//###### Quest List, Quest Description UI ë‹´ë‹¹ ######
 
 public class QuestManager : MonoBehaviour
 {
@@ -14,15 +14,15 @@ public class QuestManager : MonoBehaviour
     public DataMgrDontDestroy dataMgrDontDestroy;
 
     public TextAsset txtFile; //Jsonfile
-    // Äù½ºÆ® ÆË¾÷Àº ½Ì±ÛÅæÀ¸·Î ´Ù¸¥ ¾ÀÀ» °¬´Ù°¡ ¿Â´Ù. ±×·¯¹Ç·Î Äù½ºÆ® NPC¿¡ »óÈ£ÀÛ¿ëÀ» ÇÒ ¶§ 
-    // ÇöÀç ÆË¾÷¿¡ ÀÖ´Â Ä«¿îÆ®¸¦ Äù½ºÆ® ¸Å´ÏÀú ½ºÅ©¸³Æ®¿¡ ÀÖ´Â ÇöÀç, ÃÖ´ë Ä«¿îÆ® °ªÀ» º¸³»Áà¾ßÇÑ´Ù
-    // ±×¸®°í »óÈ£ÀÛ¿ëÇÒ¶§ Äù½ºÆ®°¡ ¿Ï·áµÇ¾úÀ» ¶§ bool°ªÀÌ TrueÀÎÁö È®ÀÎÇØ¼­
-    // Äù½ºÆ®¿Ï·á ¹öÆ°À» SetActive = true ·Î ÇÑ´Ù.
-    // npc Ä¿¹ÔÇÏ°í ÇÒ°Í. 
+    // í€˜ìŠ¤íŠ¸ íŒì—…ì€ ì‹±ê¸€í†¤ìœ¼ë¡œ ë‹¤ë¥¸ ì”¬ì„ ê°”ë‹¤ê°€ ì˜¨ë‹¤. ê·¸ëŸ¬ë¯€ë¡œ í€˜ìŠ¤íŠ¸ NPCì— ìƒí˜¸ì‘ìš©ì„ í•  ë•Œ 
+    // í˜„ì¬ íŒì—…ì— ìˆëŠ” ì¹´ìš´íŠ¸ë¥¼ í€˜ìŠ¤íŠ¸ ë§¤ë‹ˆì € ìŠ¤í¬ë¦½íŠ¸ì— ìˆëŠ” í˜„ì¬, ìµœëŒ€ ì¹´ìš´íŠ¸ ê°’ì„ ë³´ë‚´ì¤˜ì•¼í•œë‹¤
+    // ê·¸ë¦¬ê³  ìƒí˜¸ì‘ìš©í• ë•Œ í€˜ìŠ¤íŠ¸ê°€ ì™„ë£Œë˜ì—ˆì„ ë•Œ boolê°’ì´ Trueì¸ì§€ í™•ì¸í•´ì„œ
+    // í€˜ìŠ¤íŠ¸ì™„ë£Œ ë²„íŠ¼ì„ SetActive = true ë¡œ í•œë‹¤.
+    // npc ì»¤ë°‹í•˜ê³  í• ê²ƒ. 
     [Header("Component")]
     public QuestPopUpManager questPopUpManager;
 
-    [Header("Äù½ºÆ® ¼±ÅÃÃ¢")]
+    [Header("í€˜ìŠ¤íŠ¸ ì„ íƒì°½")]
     public GameObject questPanel;
     public GameObject quest_1;
     public GameObject quest_2;
@@ -31,14 +31,14 @@ public class QuestManager : MonoBehaviour
     public GameObject quest_5;
     public GameObject quest_6;
 
-    [Header("Äù½ºÆ® ¼³¸íÃ¢")]
+    [Header("í€˜ìŠ¤íŠ¸ ì„¤ëª…ì°½")]
     public GameObject descriptionPanel;
     public Text questNameTxt;
     public Text goalTxt;
 
-    [Header("NPC ´ëÈ­")]
-    public DialogueTrigger dialogueTrigger; //´ëº»
-    public GameObject nextBtn; //´ëº» ÁøÇà
+    [Header("NPC ëŒ€í™”")]
+    public DialogueTrigger dialogueTrigger; //ëŒ€ë³¸
+    public GameObject nextBtn; //ëŒ€ë³¸ ì§„í–‰
     public GameObject nPCConversation;
 
     public Text textName;
@@ -47,9 +47,7 @@ public class QuestManager : MonoBehaviour
     Queue<string> naming = new Queue<string>();
     Queue<string> sentence = new Queue<string>();
 
-    public bool isFirst;
-
-    [Header("Äù½ºÆ® ÁøÇà¹öÆ°")]
+    [Header("í€˜ìŠ¤íŠ¸ ì§„í–‰ë²„íŠ¼")]
     public GameObject clearfowardQuestImg;
     public GameObject acceptBtn;
     public GameObject ingImg;
@@ -57,15 +55,15 @@ public class QuestManager : MonoBehaviour
     public GameObject endBtn;
 
 
-    [Header("Äù½ºÆ® ÇöÀç ÁøÇàµµ Ã¢")]
+    [Header("í€˜ìŠ¤íŠ¸ í˜„ì¬ ì§„í–‰ë„ ì°½")]
     public GameObject questPopUpPanel;
-    public Text questDescriptionGoalTxt; //ÀÌ ÅØ½ºÆ®¿¡ questGoalTxt ÀÇ ¹®ÀÚ°¡ µé¾î°¨
-    public string questGoalTxt; 
+    public Text questDescriptionGoalTxt; //ì´ í…ìŠ¤íŠ¸ì— questGoalTxt ì˜ ë¬¸ìê°€ ë“¤ì–´ê°
+    public string questGoalTxt;
     public int questCurCnt;
     public int questMaxCnt;
 
 
-    [Header("Äù½ºÆ® º¸»ó")]
+    [Header("í€˜ìŠ¤íŠ¸ ë³´ìƒ")]
     public int expPotionReward;
     public int materialReward;
     public int goldReward;
@@ -86,7 +84,7 @@ public class QuestManager : MonoBehaviour
         ingImg.SetActive(false);
 
         questPanel.SetActive(false);
-        questPopUpPanel.SetActive(false);
+        
         questPopUpManager.questIdx = dataMgrDontDestroy.QuestIdx;
         questGoalTxt = dataMgrDontDestroy.GoalTxt;
         questCurCnt = dataMgrDontDestroy.QuestCurCnt;
@@ -100,7 +98,7 @@ public class QuestManager : MonoBehaviour
         {
             if (other.GetComponent<PhotonView>().IsMine)
             {
-                Debug.Log("Ãæµ¹ÀÏ¾î³²");
+                Debug.Log("ì¶©ëŒì¼ì–´ë‚¨");
                 questPanel.SetActive(true);
             }
         }
@@ -121,22 +119,23 @@ public class QuestManager : MonoBehaviour
     public void InstQuest(int n)
     {
         string json = txtFile.text;
-        var jsonData = JSON.Parse(json); //varÀÇ ÀÇ¹Ì: Unity¿ÜÀÇ ÆÄÀÏÀ» ´Ù°¡Á®¿Â´Ù.
+        var jsonData = JSON.Parse(json); //varì˜ ì˜ë¯¸: Unityì™¸ì˜ íŒŒì¼ì„ ë‹¤ê°€ì ¸ì˜¨ë‹¤.
 
-        int item = n - 1; //¸Å°³º¯¼ö
-        
+        int item = n - 1; //ë§¤ê°œë³€ìˆ˜
+
         questNameTxt.text = (jsonData["Quest"][item]["QuestName"]);
         goalTxt.text = (jsonData["Quest"][item]["Goal"]);
         rewardExp.text = (jsonData["Quest"][item]["RewardExp"]);
         rewardMat.text = (jsonData["Quest"][item]["RewardMat"]);
         rewardGold.text = (jsonData["Quest"][item]["RewardGold"]);
-        Debug.Log("Json µ¥ÀÌÅÍ ºÒ·¯¿È");
+        Debug.Log("Json ë°ì´í„° ë¶ˆëŸ¬ì˜´");
     }
 
-    public void CompleteFirst(int n) //¼ö¶ôÀÌ³Ä ¾Æ´Ï³Ä, "¸ÕÀú ÁøÇàÇÏ°í ¿À¼¼¿ä" ±â´É
+    public void CompleteFirst(int n) //ìˆ˜ë½ì´ëƒ ì•„ë‹ˆëƒ, "ë¨¼ì € ì§„í–‰í•˜ê³  ì˜¤ì„¸ìš”" ê¸°ëŠ¥
     {
         if (n == dataMgrDontDestroy.QuestIdx)
         {
+
             if (questPopUpManager.isCompleted != true)
             {
                 acceptBtn.SetActive(false);
@@ -152,10 +151,50 @@ public class QuestManager : MonoBehaviour
                 ingImg.SetActive(false);
                 completedBtn.SetActive(true);
                 endBtn.SetActive(false);
+
+            if (dataMgrDontDestroy.IsDoing == true)
+            {
+                if (dataMgrDontDestroy.IsCompleted == true)
+                {
+                    acceptBtn.SetActive(false);
+                    clearfowardQuestImg.SetActive(false);
+                    ingImg.SetActive(false);
+                    completedBtn.SetActive(true);
+                    endBtn.SetActive(false);
+                }
+                else
+                {
+                    acceptBtn.SetActive(false);
+                    clearfowardQuestImg.SetActive(false);
+                    ingImg.SetActive(true);
+                    completedBtn.SetActive(false);
+                    endBtn.SetActive(false);
+                }
+            }
+            else
+            {
+                if (dataMgrDontDestroy.IsCompleted == true)
+                {
+                    acceptBtn.SetActive(false);
+                    clearfowardQuestImg.SetActive(false);
+                    ingImg.SetActive(false);
+                    completedBtn.SetActive(true);
+                    endBtn.SetActive(false);
+                }
+                else
+                {
+                    acceptBtn.SetActive(false);
+                    clearfowardQuestImg.SetActive(false);
+                    ingImg.SetActive(false);
+                    completedBtn.SetActive(false);
+                    endBtn.SetActive(true);
+                }
+
             }
         }
         else if (n > dataMgrDontDestroy.QuestIdx)
         {
+
             if (n == 1 && dataMgrDontDestroy.QuestIdx == 0)
             {
                 acceptBtn.SetActive(true);
@@ -163,6 +202,37 @@ public class QuestManager : MonoBehaviour
                 ingImg.SetActive(false);
                 completedBtn.SetActive(false);
                 endBtn.SetActive(false);
+
+            if (n - dataMgrDontDestroy.QuestIdx == 1)
+            {
+                if(n==1 && dataMgrDontDestroy.QuestIdx == 0)
+                {
+                    acceptBtn.SetActive(true);
+                    clearfowardQuestImg.SetActive(false);
+                    ingImg.SetActive(false);
+                    completedBtn.SetActive(false);
+                    endBtn.SetActive(false);
+                }
+                else
+                {
+                    if (dataMgrDontDestroy.IsDoing == false)
+                    {
+                        acceptBtn.SetActive(true);
+                        clearfowardQuestImg.SetActive(false);
+                        ingImg.SetActive(false);
+                        completedBtn.SetActive(false);
+                        endBtn.SetActive(false);
+                    }
+                    else
+                    {
+                        acceptBtn.SetActive(false);
+                        clearfowardQuestImg.SetActive(true);
+                        ingImg.SetActive(false);
+                        completedBtn.SetActive(false);
+                        endBtn.SetActive(false);
+                    }
+                }
+
             }
             else
             {
@@ -186,9 +256,18 @@ public class QuestManager : MonoBehaviour
     {
         dataMgrDontDestroy.QuestIdx++;
 
+
         string json = txtFile.text;
         var jsonData = JSON.Parse(json);
         int item = dataMgrDontDestroy.QuestIdx - 1;        
+
+        dataMgrDontDestroy.QuestCurCnt = 0;
+        dataMgrDontDestroy.IsDoing = true; // ë‚˜ì¤‘ì— ì‹±ê¸€í†¤ìœ¼ë¡œ ë³´ë‚´ì•¼
+
+        string json = txtFile.text;
+        var jsonData = JSON.Parse(json);
+        int item = dataMgrDontDestroy.QuestIdx - 1;
+
 
         if (jsonData["Quest"][item]["Goal"] != null)
         {
@@ -196,7 +275,7 @@ public class QuestManager : MonoBehaviour
         }
         else
         {
-            // ¿¡·¯ Ã³¸® ¶Ç´Â ±âº»°ª ÇÒ´ç
+            // ì—ëŸ¬ ì²˜ë¦¬ ë˜ëŠ” ê¸°ë³¸ê°’ í• ë‹¹
             dataMgrDontDestroy.GoalTxt = "Default Goal Text";
         }
         dataMgrDontDestroy.QuestMaxCnt = (int)(jsonData["Quest"][item]["Count"]);
@@ -204,15 +283,21 @@ public class QuestManager : MonoBehaviour
         questPopUpManager.UpdateQuestStatus();
 
         acceptBtn.SetActive(false);
-        questPopUpPanel.SetActive(true);
         ingImg.SetActive(true);
     }
 
     public void CompletedBtn()
     {
         QuestClearReward(dataMgrDontDestroy.QuestIdx);
+
         questPopUpPanel.SetActive(false);
         endBtn.SetActive(true);   
+
+        dataMgrDontDestroy.IsCompleted = false;
+        dataMgrDontDestroy.IsDoing = false;
+        questPopUpPanel.SetActive(false);
+        endBtn.SetActive(true);
+
     }
 
     public void QuestClearReward(int n)
@@ -220,13 +305,13 @@ public class QuestManager : MonoBehaviour
         string json = txtFile.text;
         var jsonData = JSON.Parse(json);
 
-        int item = n - 1; //¸Å°³º¯¼ö
+        int item = n - 1; //ë§¤ê°œë³€ìˆ˜
 
         expPotionReward = (jsonData["Quest"][item]["RewardExp"]);
         materialReward = (jsonData["Quest"][item]["RewardMat"]);
         goldReward = (jsonData["Quest"][item]["RewardGold"]);
 
-        //ÀÌ¶§ Äù½ºÆ® º¸»ó ¼ö·É
+        //ì´ë•Œ í€˜ìŠ¤íŠ¸ ë³´ìƒ ìˆ˜ë ¹
         dataMgrDontDestroy.UserExpPotion += expPotionReward;
         dataMgrDontDestroy.UserMaterial += materialReward;
         dataMgrDontDestroy.UserGold += goldReward;

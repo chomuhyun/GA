@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class TalkMgr : MonoBehaviour
 {
+    public DataMgrDontDestroy dataMgrDontDestroy;
     public Text textName; // 이름
     public Text textSentence; // 내용
     public GameObject nPCConversation;
@@ -15,6 +16,11 @@ public class TalkMgr : MonoBehaviour
     Queue<string> sentences = new Queue<string>();
 
     private Dialogue currentDialogue;
+
+    private void Start()
+    {
+        dataMgrDontDestroy = DataMgrDontDestroy.Instance;
+    }
 
     public void Begin(Dialogue info)
     {
@@ -34,8 +40,6 @@ public class TalkMgr : MonoBehaviour
         }
         Next();
     }
-
-
 
     public void Next()
     {

@@ -111,6 +111,7 @@ public class CharacterCreate : MonoBehaviour
         PlayerPrefs.SetString($"{slotNum}_GoalTxt", "");
         PlayerPrefs.SetInt($"{slotNum}_QuestCurCnt", 0);
         PlayerPrefs.SetInt($"{slotNum}_QuestMaxCnt", 0);
+        PlayerPrefs.SetInt($"{slotNum}_IsFirst", 1);
 
         PlayerPrefs.Save();
 
@@ -141,6 +142,9 @@ public class CharacterCreate : MonoBehaviour
             PlayerPrefs.DeleteKey($"{slotNum}_GoalTxt");
             PlayerPrefs.DeleteKey($"{slotNum}_QuestCurCnt");
             PlayerPrefs.DeleteKey($"{slotNum}_QuestMaxCnt");
+            PlayerPrefs.DeleteKey($"{slotNum}_IsCompleted");
+            PlayerPrefs.DeleteKey($"{slotNum}_IsDoing");
+            PlayerPrefs.DeleteKey($"{slotNum}_IsFirst");
 
             PlayerPrefs.Save();
 

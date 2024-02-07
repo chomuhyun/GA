@@ -16,7 +16,6 @@ public class DataMgrDontDestroy : MonoBehaviour
             return _instance;
         }
     }
-    public RewardMgr rewardMgr;
 
     #region 플레이어의 정보를 저장하는 변수
     [Header("플레이어의 정보")]
@@ -41,6 +40,12 @@ public class DataMgrDontDestroy : MonoBehaviour
     public string goalTxt;
     public int questCurCnt;
     public int questMaxCnt;
+    public bool isCompleted;
+    public bool isDoing;
+    public bool isFirst;
+    int completed;
+    int doing;
+    int tutoIsFirst;
     #endregion
 
     #region 던전의 정보를 저장하는 변수
@@ -52,7 +57,6 @@ public class DataMgrDontDestroy : MonoBehaviour
     // 싱글톤
     void Awake()
     {
-        rewardMgr = GetComponent<RewardMgr>();
         if (_instance == null)
         {
             _instance = this;
@@ -64,11 +68,6 @@ public class DataMgrDontDestroy : MonoBehaviour
         }
     }
 
-    // 초기화 필요하면 사용
-    void Start()
-    {
-
-    }
     #region 캐릭터의 정보관련
     // 닉네임
     public string NickName
@@ -186,6 +185,24 @@ public class DataMgrDontDestroy : MonoBehaviour
         get { return questMaxCnt; }
         set { questMaxCnt = value; }
     }
+
+    public bool IsCompleted
+    {
+        get { return isCompleted; }
+        set { isCompleted = value; }
+    }
+
+    public bool IsDoing
+    {
+        get { return isDoing; }
+        set { isDoing = value; }
+    }
+
+    public bool IsFirst
+    {
+        get { return isFirst; }
+        set { isFirst = value; }
+    }
     #endregion
 
     #region 던전 관련
@@ -201,11 +218,6 @@ public class DataMgrDontDestroy : MonoBehaviour
         set { dungeonNumIdx = value; }
     }
     #endregion
-
-    public void LoadData() // 접속했을때, 저장 <- 이건 이미 loadplayer에서 start누를때 datamgr에 저장을 함.
-    {
-
-    }
 
     public void SaveDate() // 접속종료할때 저장
     {
@@ -235,6 +247,36 @@ public class DataMgrDontDestroy : MonoBehaviour
         PlayerPrefs.SetInt($"{slotNum}_QuestCurCnt", questCurCnt);
         PlayerPrefs.SetInt($"{slotNum}_QuestMaxCnt", questMaxCnt);
         PlayerPrefs.SetString($"{slotNum}_GoalTxt", goalTxt);
+        if (isCompleted == true)
+        {
+            completed = 1;
+            PlayerPrefs.SetInt($"{slotNum}_IsCompleted", 1);
+        }
+        else
+        {
+            completed = 0;
+            PlayerPrefs.SetInt($"{slotNum}_IsCompleted", 0);
+        }
+        if (isDoing == true)
+        {
+            doing = 1;
+            PlayerPrefs.SetInt($"{slotNum}_IsDoing", 1);
+        }
+        else
+        {
+            doing = 0;
+            PlayerPrefs.SetInt($"{slotNum}_IsDoing", 0);
+        }
+        if (isFirst == true)
+        {
+            tutoIsFirst = 1;
+            PlayerPrefs.SetInt($"{slotNum}_IsFirst", 1);
+        }
+        else
+        {
+            tutoIsFirst = 0;
+            PlayerPrefs.SetInt($"{slotNum}_IsFirst", 0);
+        }
         #endregion
 
         PlayerPrefs.Save();

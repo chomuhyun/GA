@@ -8,7 +8,7 @@ using Cinemachine;
 
 public class Tboss : MonoBehaviourPunCallbacks, IPunObservable
 {
-
+    public ChaosDungeonMgr cDunMgr;
     public enum TBOSS
     {
         IDLE = 0,
@@ -85,6 +85,8 @@ public class Tboss : MonoBehaviourPunCallbacks, IPunObservable
     
     void Start()
     {
+        cDunMgr = GameObject.Find("ChaosDungeonMgr").GetComponent<ChaosDungeonMgr>();
+
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         targetPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         pv = GetComponent<PhotonView>();
@@ -269,7 +271,9 @@ public class Tboss : MonoBehaviourPunCallbacks, IPunObservable
                         case TBOSS.DIE:
                             isActivating = true;
                             speed = 0;
-                            tbanim.SetTrigger("DIE");
+                            cDunMgr.bossKilled++;
+                            cDunMgr.ClearMidBoss();
+                            tbanim.SetTrigger("DIE");           
                             break;
                         case TBOSS.PAGE1:
                             isActivating = true;

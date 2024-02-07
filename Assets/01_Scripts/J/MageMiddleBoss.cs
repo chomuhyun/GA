@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MageMiddleBoss : MonoBehaviour
 {
+
+    public ChaosDungeonMgr cDunMgr;
     public enum MAGEBOSS
     {
         IDLE = 0,
@@ -45,6 +47,7 @@ public class MageMiddleBoss : MonoBehaviour
     public GameObject[] patternSkillActive;
     void Start()
     {
+        cDunMgr = GameObject.Find("ChaosDungeonMgr").GetComponent<ChaosDungeonMgr>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<ChaosPlayerCtlr>();
         targetPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         mageBoss = MAGEBOSS.IDLE;
@@ -111,7 +114,9 @@ public class MageMiddleBoss : MonoBehaviour
                     case MAGEBOSS.DIE:
                         isActivating = true;
                         speed = 0;
-                    mageAnim.SetTrigger("DIE");
+                        mageAnim.SetTrigger("DIE");
+                        cDunMgr.bossKilled++;
+                        cDunMgr.ClearMidBoss();
                         break;
                 }
         }
