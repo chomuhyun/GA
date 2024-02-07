@@ -11,6 +11,7 @@ public class RaidDungeonMgr : MonoBehaviourPunCallbacks
     public RewardMgr rewardMgr;
     public RaidBossCtrl boss;
     public DataMgrDontDestroy dataMgrDontDestroy;
+    public RaidQuestManager raidQuestManager;
     private void Start()
     {
         dataMgrDontDestroy = DataMgrDontDestroy.Instance;
@@ -31,6 +32,7 @@ public class RaidDungeonMgr : MonoBehaviourPunCallbacks
             if (boss.GetComponent<RaidBossCtrl>().die == true)
             {
                 ClearEndBoss();
+                raidQuestManager.ClearEndBs(3);
             }
         }
     }
