@@ -604,7 +604,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dungeon Name
+  m_Text: "\uB9C8\uC744\uB85C \uB3CC\uC544\uAC00\uB294 \uC911\uC785\uB2C8\uB2E4.
+    . ."
 --- !u!1 &719968128
 GameObject:
   m_ObjectHideFlags: 0

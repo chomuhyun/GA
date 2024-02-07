@@ -28,8 +28,6 @@ public class QuestManager : MonoBehaviour
     public GameObject quest_2;
     public GameObject quest_3;
     public GameObject quest_4;
-    public GameObject quest_5;
-    public GameObject quest_6;
 
     [Header("퀘스트 설명창")]
     public GameObject descriptionPanel;

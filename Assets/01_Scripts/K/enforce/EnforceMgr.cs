@@ -79,14 +79,18 @@ public class EnforceMgr : MonoBehaviourPunCallbacks
     }
     void Start()
     {
-        playerWeaponLevel = dataMgrDontDestroy.WeaponLevel;
-        playerMaterial = dataMgrDontDestroy.UserMaterial;
-        playerGold = dataMgrDontDestroy.UserGold;
-        playerAttackPower = dataMgrDontDestroy.AttackPower;
         enforceEffect.SetActive(false);
         successPanel.SetActive(false);
         failedPanel.SetActive(false);
         enforcePanel.SetActive(false);
+    }
+
+    public void PlayerDataCheck()
+    {
+        playerWeaponLevel = dataMgrDontDestroy.WeaponLevel;
+        playerMaterial = dataMgrDontDestroy.UserMaterial;
+        playerGold = dataMgrDontDestroy.UserGold;
+        playerAttackPower = dataMgrDontDestroy.AttackPower;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -100,6 +104,7 @@ public class EnforceMgr : MonoBehaviourPunCallbacks
                 Debug.Log("충돌일어남");
                 dialogueTrigger.Trigger(); // 대본 가져옴
                 nPCConversation.SetActive(true); // 대화창 켜짐
+                PlayerDataCheck();
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
@@ -162,8 +167,6 @@ public class EnforceMgr : MonoBehaviourPunCallbacks
         //여기에 캐릭터 레벨에 맞는 강화 초기화!!!frg
         enforcePanel.SetActive(true);
     }
-
-
 
     public void EnforceBtn() 
     {

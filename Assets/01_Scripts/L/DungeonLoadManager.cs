@@ -123,6 +123,11 @@ public class DungeonLoadManager : MonoBehaviourPunCallbacks
                     }
                     break;
                 default:
+                    if (PhotonNetwork.IsMasterClient)
+                    {
+                        PhotonNetwork.LoadLevel("Town");
+                        PhotonNetwork.AutomaticallySyncScene = true;
+                    }
                     break;
             }
         }

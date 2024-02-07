@@ -220,9 +220,6 @@ public class LevelUpMgr : MonoBehaviourPunCallbacks
         afterExpPotionCnt = playerExpPotion;
         afterExp = playerExp;
 
-        //playerExpPotion = afterExpPotionCnt;
-        //playerExp = afterExp;
-
         string json = leveltxtFile.text;
         var jsonData = JSON.Parse(json);
         expRequire = jsonData["ExpRequireTable"][playerlv]["needExp"];

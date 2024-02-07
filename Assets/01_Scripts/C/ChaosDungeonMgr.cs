@@ -32,7 +32,7 @@ public class ChaosDungeonMgr : MonoBehaviourPunCallbacks
     public GameObject endBossEffect;
     public GameObject chaosEndClearEffect;
     public GameObject clearPanel;
-
+    
 
 
     private void Start()

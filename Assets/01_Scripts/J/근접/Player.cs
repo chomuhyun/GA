@@ -409,6 +409,7 @@ public class Player : MonoBehaviourPunCallbacks, IPunObservable
             isDeath = true;
             characterController.enabled = false;
             StartCoroutine(DeathDelay());
+            transform.GetComponent<StateManager>().dataMgrDontDestroy.playerDie = true;
         }
     }
 
