@@ -42,6 +42,12 @@ public class EnforceMgr : MonoBehaviourPunCallbacks
     public int playerMaterial;
     public int playerAttackPower;
 
+    [Header("NPC 대화")]
+    public DialogueTrigger dialogueTrigger; //대본
+    public GameObject nPCConversation;
+
+
+
     private void Awake()
     {
         dataMgrDontDestroy = DataMgrDontDestroy.Instance;
@@ -87,11 +93,17 @@ public class EnforceMgr : MonoBehaviourPunCallbacks
             if (other.GetComponent<PhotonView>().IsMine)
             {
                 Debug.Log("충돌일어남");
-                OnEnforcePanel();
+                dialogueTrigger.Trigger(); // 대본 가져옴
+                nPCConversation.SetActive(true); // 대화창 켜짐
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
         }
+    }
+
+    public void OnEnforcePanelBtn() // F 강화하기 버튼 눌러서 강화
+    {
+        OnEnforcePanel();
     }
 
     private void OnTriggerStay(Collider other)
