@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.VFX;
 using Photon.Pun;
 using Photon.Realtime;
@@ -45,6 +46,7 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks,IPunObservable
     public PhotonView pv;
     public PhotonAnimatorView pav;
     testGameMgr testgameMgr;
+    public Slider hud;
     [Header("AttackPattern")]
     public float p1;
     public float p2;
@@ -76,6 +78,7 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks,IPunObservable
     public float breakCheck;
     public GameObject[] allDownPattern;
     private List<GameObject> gameObjects = new List<GameObject>();
+    public GameObject[] nearbyPlayer;
     public BoxCollider allDownArea;
     public float page1;
     public float page1check;
@@ -113,7 +116,7 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks,IPunObservable
             pv.TransferOwnership(PhotonNetwork.LocalPlayer);
             if (!die)
             {
-                FindNearestPlayer();
+                NearByPlayer();
                 BreakTime();
                 PatternTimeCheck();
                 DieNowPatternt();
@@ -224,10 +227,10 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks,IPunObservable
                         }
                         break;
                     case RAIDBOSS.BREAK:
-                        isActivating = true;
-                        speed = 0f;
-                        breakTime = 0f;
-                        StartCoroutine(breakTiming());
+                        //isActivating = true;
+                        //speed = 0f;
+                        //breakTime = 0f;
+                        //StartCoroutine(breakTiming());
                         break;
                     case RAIDBOSS.DOWN:
                         isActivating = true;
@@ -254,27 +257,32 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks,IPunObservable
             }
         }
     }
-    void FindNearestPlayer()
+
+    void HUDctrl()
     {
-        Collider[] players = Physics.OverlapSphere(transform.position, detectionRadius);
-        List<Transform> playerList = new List<Transform>();
+        
+    }
+    void NearByPlayer()
+    {
+        nearbyPlayer = GameObject.FindGameObjectsWithTag("Player");
+        targetPlayer = GetNearestPlayer(nearbyPlayer);
+    }
+    Transform GetNearestPlayer(GameObject[] players)
+    {
+        Transform nearestPlayer = null;
+        float shortestDistance = float.MaxValue;
 
         foreach (var player in players)
         {
-            if (player.CompareTag(playerTag))
+            float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+            if (distanceToPlayer < shortestDistance)
             {
-                playerList.Add(player.transform);
+                shortestDistance = distanceToPlayer;
+                nearestPlayer = player.transform;
             }
         }
 
-        if (playerList.Count > 0)
-        {
-            Transform nearestPlayer = GetNearestPlayer(playerList);
-            if (nearestPlayer != null)
-            {
-                currentTarget = nearestPlayer;
-            }
-        }
+        return nearestPlayer;
     }
     [PunRPC]
    public void GroundOner()
@@ -302,23 +310,7 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks,IPunObservable
         
     }
 
-    Transform GetNearestPlayer(List<Transform> players)
-    {
-        Transform nearestPlayer = null;
-        float shortestDistance = float.MaxValue;
-
-        foreach (var player in players)
-        {
-            float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-            if (distanceToPlayer < shortestDistance)
-            {
-                shortestDistance = distanceToPlayer;
-                nearestPlayer = player;
-            }
-        }
-
-        return nearestPlayer;
-    }
+  
     [PunRPC]
     void MoveTowardsTarget(bool stop)
     {
@@ -421,6 +413,12 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks,IPunObservable
         if(breakTime >= breakCheck)
         {
             pv.RPC("OnBreakAllClient", RpcTarget.All);
+            breakOn = true;
+            breakTime = breakCheck;
+            isActivating = true;
+            speed = 0f;
+            breakTime = 0f;
+            StartCoroutine(breakTiming());
         }
     }
 
@@ -428,20 +426,12 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks,IPunObservable
     void OnBreakAllClient()
     {
         anim.SetTrigger("Break");
-        raidBoss = RAIDBOSS.BREAK;
-        breakOn = true;
-        breakTime = breakCheck;
     }
 
     [PunRPC]
     IEnumerator breakTiming()
     {
         yield return new WaitForSeconds(3f);
-        pv.RPC("AllClientBreakTime", RpcTarget.All);
-    }
-    [PunRPC]
-    IEnumerator AllClientBreakTime()
-    {
         float dista = Vector3.Distance(targetPlayer.position, transform.position);
         if (dista > attakRange)
         {
