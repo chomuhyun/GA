@@ -27,7 +27,6 @@ public class QuestManager : MonoBehaviour
     public GameObject quest_1;
     public GameObject quest_2;
     public GameObject quest_3;
-    public GameObject quest_4;
 
     [Header("퀘스트 설명창")]
     public GameObject descriptionPanel;
@@ -256,8 +255,9 @@ public class QuestManager : MonoBehaviour
         dataMgrDontDestroy.IsDoing = false;
         questPopUpPanel.SetActive(false);
         endBtn.SetActive(true);
+        dataMgrDontDestroy.QuestCurCnt = 0;
     }
-
+    
     public void QuestClearReward(int n)
     {
         string json = txtFile.text;

@@ -7,8 +7,8 @@ public class NomalMonsterCtrl : MonoBehaviour
 {
     public ChaosDungeonMgr cDunMgr;
     public GameObject bossDeathEffect;
-
-
+    public QuestManager questManager;
+    public RaidQuestManager raidQuestManager;
     public enum GOLEM
     {
         IDLE = 0,
@@ -140,6 +140,8 @@ public class NomalMonsterCtrl : MonoBehaviour
                         Instantiate(bossDeathEffect, transform);
                         cDunMgr = GameObject.Find("ChaosDungeonMgr").GetComponent<ChaosDungeonMgr>();
                         cDunMgr.ClearEndBoss();
+                        raidQuestManager = GameObject.Find("ChaosQuestManager").GetComponent<RaidQuestManager>();
+                        raidQuestManager.ClearEndBs(2);
                     }
                     break;
                 case GOLEM.NULL:

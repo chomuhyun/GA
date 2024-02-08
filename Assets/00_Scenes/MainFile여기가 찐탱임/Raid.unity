@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10496814, g: 0.13481407, b: 0.13442673, a: 1}
+  m_IndirectSpecularColor: {r: 0.10496425, g: 0.13480262, b: 0.13441858, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8002,6 +8002,7 @@ MonoBehaviour:
   rewardMgr: {fileID: 757778142}
   boss: {fileID: 799205197472062949}
   dataMgrDontDestroy: {fileID: 0}
+  questManager: {fileID: 0}
 --- !u!4 &897289984
 Transform:
   m_ObjectHideFlags: 0
@@ -8284,6 +8285,7 @@ Transform:
   - {fileID: 2131184023}
   - {fileID: 757778141}
   - {fileID: 971386455}
+  - {fileID: 2065620514}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &956563605
@@ -15949,6 +15951,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4209731392266258, guid: a990e3ac1318b834488c784d851f42a9, type: 3}
   m_PrefabInstance: {fileID: 4686621530738689184}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2065620513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2065620514}
+  - component: {fileID: 2065620515}
+  m_Layer: 0
+  m_Name: RaidQuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2065620514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065620513}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 916540971}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2065620515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065620513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f14f83a58d33649878f4b6f63a1283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataMgrDontDestroy: {fileID: 0}
+  questPopUpManager: {fileID: 42242063}
+  questPopUpPanel: {fileID: 2097999414}
 --- !u!1 &2071607885
 GameObject:
   m_ObjectHideFlags: 0
