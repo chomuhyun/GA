@@ -59,6 +59,15 @@ MonoBehaviour:
   - PatternTimeCheck
   - NEM1
   - Spawn
+  - breakTiming
+  - DieAllClient
+  - DieNowAllClient
+  - DownAllClient
+  - GroundCrushAllClient
+  - GroundOner
+  - HealthUPAllClient
+  - NemAllClient
+  - OnBreakAllClient
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
