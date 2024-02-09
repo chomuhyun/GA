@@ -18,7 +18,7 @@ public class RaidDungeonMgr : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        clear();
+     //   clear();
     }
     public void ClearEndBoss()
     {

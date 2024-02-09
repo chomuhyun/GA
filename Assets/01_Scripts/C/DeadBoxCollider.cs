@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class DeadBoxCollider : MonoBehaviour
 {
+    public ChaosDungeonMgr cDungeonMgr;
 
     public void OnTriggerStay(Collider other)
     {
         if(other.CompareTag("Player"))
         {
-            other.transform.position = new Vector3(0, 1, 0);
-            Debug.Log("SEs");
+            other.transform.position = cDungeonMgr.spawnPoint[0].position;
         }
     }
+
+
     void Start()
     {
         

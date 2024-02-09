@@ -25,6 +25,7 @@ public class DungeonLoadManager : MonoBehaviourPunCallbacks
     {
         dataMgrDontDestroy = DataMgrDontDestroy.Instance;
 
+
         if (!PhotonNetwork.IsConnected)
         {
             Debug.Log("현재 포톤네트워크 접속이 아니기에 접속합니다.");
@@ -38,7 +39,12 @@ public class DungeonLoadManager : MonoBehaviourPunCallbacks
 
         roomName.text = $"{CurDunGeonInfoMaker()}  {CurDunGeonLevelMaker()}";
 
- 
+        if (dataMgrDontDestroy.dungeonSortIdx == 0)
+        {
+            roomName.text = "마을로 돌아가는 중입니다. . .";
+        }
+
+
 
     }
 
@@ -106,7 +112,7 @@ public class DungeonLoadManager : MonoBehaviourPunCallbacks
                 case 1:
                     if (PhotonNetwork.IsMasterClient)
                     {
-                        PhotonNetwork.LoadLevel("SingleDungeon");
+                        PhotonNetwork.LoadLevel("RaidNe");
                     }
                     break;
                 case 2:
