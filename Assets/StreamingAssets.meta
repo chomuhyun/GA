@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/StreamingAssets.meta
 guid: 0835c18e3f3cd4442b613a5190b11457
+=======
+guid: 3fa863b0915f3b146a558becdfdaaf89
+>>>>>>> Stashed changes:Assets/03_MyAssets/KY_effects/MagicEffectsPackFree.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

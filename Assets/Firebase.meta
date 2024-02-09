@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Firebase/Plugins/iOS.meta
-guid: 734a656bfefec034aafa09ecc4e294a3
-========
-guid: 75b54f66383731c469cacb81cfca6229
->>>>>>>> a38a3f5b (.):Assets/Firebase.meta
+<<<<<<< Updated upstream:Assets/Firebase.meta
+guid: cd82abb3f3c881b429cbd9d0479bff00
+=======
+guid: d994655bc7dcfe346bd54b669651a127
+>>>>>>> Stashed changes:Assets/03_MyAssets/Photon/PhotonLibs/netstandard2.0.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

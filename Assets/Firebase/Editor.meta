@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Firebase/Editor.meta
+<<<<<<< Updated upstream:Assets/Firebase/Editor.meta
 guid: 8efd3bd9979058141891ebb1603c27d8
-========
-guid: c95324f10157fbf4dabea7d876d06bf6
->>>>>>>> a38a3f5b (.):Assets/ExternalDependencyManager/Editor.meta
+=======
+guid: bcacd9e11e9bd234998ff17f26510486
+>>>>>>> Stashed changes:Assets/03_MyAssets/KY_effects/MagicEffectsPackFree/Textures.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
