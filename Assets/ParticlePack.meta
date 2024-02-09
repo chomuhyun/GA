@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/ParticlePack.meta
 guid: 1e21abe95678c43cebd8369e6546b50b
+========
+guid: be333eb45bb79ba4ca8be7c88f174465
+>>>>>>>> a38a3f5b (.):Assets/ExternalDependencyManager/Editor/1.2.177.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

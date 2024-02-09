@@ -1835,7 +1835,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178e506cb56fb9b46bb851526935cfcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cDunMgr: {fileID: 0}
   detectionRadius: 10
   playerTag: Player
   nearbyPlayer: []
@@ -2076,14 +2075,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataMgrDontDestroy: {fileID: 0}
   level: 1
-  maxhp: 20000
-  weaponLevel: 0
-  hp: 20000
-  attackPower: 30
-  criChance: 28
-  criDamage: 120
   exp: 0
-  ONPlayer: 0
+  maxhp: 20000
+  hp: 20000
+  weaponLevel: 0
+  attackPower: 80
+  criChance: 35
+  criDamage: 130
   userGold: 0
   userMaterial: 0
   userExpPotion: 0
@@ -6785,7 +6783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 5567452353469448382}
-  atkPer: 80
+  atkPer: 123
   player: {fileID: 0}
 --- !u!54 &2728713104683872261
 Rigidbody:
@@ -7083,7 +7081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 5567452353469448382}
-  atkPer: 80
+  atkPer: 123
   player: {fileID: 0}
 --- !u!54 &325599327161041527
 Rigidbody:
@@ -7251,7 +7249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 5567452353469448382}
-  atkPer: 80
+  atkPer: 123
   player: {fileID: 0}
 --- !u!54 &5305299757843077839
 Rigidbody:
@@ -7405,7 +7403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 5567452353469448382}
-  atkPer: 80
+  atkPer: 123
   player: {fileID: 0}
 --- !u!54 &7484759389888596370
 Rigidbody:

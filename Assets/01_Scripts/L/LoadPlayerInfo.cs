@@ -26,9 +26,6 @@ public class LoadPlayerInfo : MonoBehaviour
     public int questCurCnt;
     public int questMaxCnt;
     public string goalTxt;
-    public int questCompleted;
-    public int questDoing;
-    public int tutoIsFirst;
 
     public Button[] slots;
     public Texture[] textures;
@@ -164,9 +161,6 @@ public class LoadPlayerInfo : MonoBehaviour
         questCurCnt = PlayerPrefs.GetInt($"{currentSlotNum}_QuestCurCnt");
         questMaxCnt = PlayerPrefs.GetInt($"{currentSlotNum}_QuestMaxCnt");
         goalTxt = PlayerPrefs.GetString($"{currentSlotNum}_GoalTxt");
-        questCompleted = PlayerPrefs.GetInt($"{currentSlotNum}_IsCompleted");
-        questDoing = PlayerPrefs.GetInt($"{currentSlotNum}_IsDoing");
-        tutoIsFirst = PlayerPrefs.GetInt($"{currentSlotNum}_IsFirst");
         #endregion
 
         #region 퀘스트정보. 변수의 값을 싱글톤에 보내주기
@@ -174,30 +168,6 @@ public class LoadPlayerInfo : MonoBehaviour
         dataMgrDontDestroy.QuestCurCnt = questCurCnt;
         dataMgrDontDestroy.QuestMaxCnt = questMaxCnt;
         dataMgrDontDestroy.GoalTxt = goalTxt;
-        if (questCompleted == 1)
-        {
-            dataMgrDontDestroy.IsCompleted = true;
-        }
-        else
-        {
-            dataMgrDontDestroy.IsCompleted = false;
-        }
-        if (questDoing == 1)
-        {
-            dataMgrDontDestroy.IsDoing = true;
-        }
-        else
-        {
-            dataMgrDontDestroy.IsDoing = false;
-        }
-        if (tutoIsFirst == 1)
-        {
-            dataMgrDontDestroy.IsFirst = true;
-        }
-        else
-        {
-            dataMgrDontDestroy.IsFirst = false;
-        }
         #endregion
     }
 }

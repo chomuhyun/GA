@@ -21,9 +21,6 @@ EditorBuildSettings:
     path: "Assets/00_Scenes/MainFile\uC5EC\uAE30\uAC00 \uCC10\uD0F1\uC784/DungeonLoadingScene.unity"
     guid: 654a614fce6b5cf4f8ce23d08d543623
   - enabled: 1
-    path: "Assets/00_Scenes/MainFile\uC5EC\uAE30\uAC00 \uCC10\uD0F1\uC784/Raid.unity"
-    guid: 1c87e31efb724f048ab1a8c1aea29ce5
-  - enabled: 1
-    path: "Assets/00_Scenes/MainFile\uC5EC\uAE30\uAC00 \uCC10\uD0F1\uC784/RaidNe.unity"
-    guid: 6499eafd124acba44a86cd814561d3f2
+    path: Assets/00_Scenes/L/RaidDungeon.unity
+    guid: c23649c3708515147b524cf0947d97ca
   m_configObjects: {}

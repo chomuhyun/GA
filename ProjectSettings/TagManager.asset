@@ -33,9 +33,6 @@ TagManager:
   - UImgr
   - NPC
   - CVC
-  - AM
-  - EnemyHUD
-  - OS
   layers:
   - Default
   - TransparentFX

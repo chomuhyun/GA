@@ -7051,7 +7051,7 @@ MonoBehaviour:
   playerTag: Player
   speed: 2.5
   rotSpeed: 5
-  range: 10
+  range: 8
   attakRange: 2.5
   targetPlayer: {fileID: 0}
   raidBoss: 0
@@ -7062,8 +7062,6 @@ MonoBehaviour:
   healthUp: {fileID: 478454655306220251}
   player: {fileID: 0}
   pv: {fileID: 2720430316280853193}
-  pav: {fileID: 0}
-  hud: {fileID: 0}
   p1: 0
   p2: 0
   p3: 0
@@ -7112,7 +7110,6 @@ MonoBehaviour:
   - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
   - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
   - {fileID: 5309087038445080835, guid: bee19df330eb5254b962757f47b7ec55, type: 3}
-  nearbyPlayer: []
   allDownArea: {fileID: 8821188965738105768}
   page1: 0
   page1check: 76
@@ -7125,7 +7122,6 @@ MonoBehaviour:
   p2EttectE: {fileID: 2579152407155664761}
   p1EttectE: {fileID: 4061143266679752696}
   healEttetE: {fileID: 7868777360446688489}
-  groundOner: {fileID: 3837433793861085572, guid: c3f1f92b850ca6e4aa555cfe220cda8e, type: 3}
 --- !u!54 &1550567346211185778
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7167,14 +7163,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataMgrDontDestroy: {fileID: 0}
   level: 1
-  maxhp: 200000
-  weaponLevel: 0
-  hp: 200000
-  attackPower: 80
-  criChance: 20
-  criDamage: 130
   exp: 0
-  ONPlayer: 0
+  maxhp: 100000
+  hp: 100000
+  weaponLevel: 0
+  attackPower: 0
+  criChance: 50
+  criDamage: 1.5
   userGold: 0
   userMaterial: 0
   userExpPotion: 0
@@ -7194,7 +7189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
+  m_SynchronizeScale: 1
   m_UseLocal: 1
 --- !u!114 &7936682812442219962
 MonoBehaviour:
@@ -7251,7 +7246,7 @@ MonoBehaviour:
     SynchronizeType: 1
     Name: Blend
   - Type: 9
-    SynchronizeType: 1
+    SynchronizeType: 0
     Name: PAGE1
   m_SynchronizeLayers:
   - SynchronizeType: 1

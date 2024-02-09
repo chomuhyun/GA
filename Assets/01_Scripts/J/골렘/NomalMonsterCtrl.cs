@@ -152,7 +152,6 @@ public class NomalMonsterCtrl : MonoBehaviour
     {
         if(golemStateManager.hp <= 0)
         {
-            golem = GOLEM.DIE;
             navAgent.speed = 0;
             golemisDeath = true;
             col.enabled = false;

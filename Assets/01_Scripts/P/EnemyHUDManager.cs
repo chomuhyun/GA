@@ -19,22 +19,25 @@ public class EnemyHUDManager : MonoBehaviour
     //여기 함수를 피격판정에서 불러온다!
     private void Start()
     {
-        stateManager = GetComponent<StateManager>();
-        InitHP();
+        stateManager = GameObject.FindGameObjectWithTag("Boss").GetComponent<StateManager>();
+
+        HpSlider = GameObject.Find("EnemyHUD").GetComponent<Slider>(); //TODO: 자기가 가진 내부 슬라이더로 적용할 것!!!
+        //HpText = GameObject.Find("EnemyHP").GetComponent<Text>();
+        DHpBar = GameObject.Find("DecreaseEBar").GetComponent<Image>();
     }
 
     public void InitHP()
     {
         DHpBar.fillAmount = 1;
         HpSlider.value = (stateManager.hp / stateManager.maxhp);
-        HpText.text = ((int)stateManager.hp + "/" + (int)stateManager.maxhp).ToString();
+        //HpText.text = ((int)stateManager.hp + "/" + (int)stateManager.maxhp).ToString();
     }
 
     public void InitHPBtn()
     {
         stateManager.hp -= 20f;
         HpSlider.value = (stateManager.hp / stateManager.maxhp);
-        HpText.text = ((int)stateManager.hp + "/" + (int)stateManager.maxhp).ToString();
+        //HpText.text = ((int)stateManager.hp + "/" + (int)stateManager.maxhp).ToString();
     }
     public void ChangeUserHUD()
     {
