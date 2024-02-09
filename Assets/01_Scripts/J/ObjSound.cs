@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObjSound : MonoBehaviour
 {
+    public GameObject os;
     public AudioClip btnSound;
     AudioSource audioSource;
     [Header("PlayerSkillSound")]

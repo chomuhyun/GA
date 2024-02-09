@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/04_Material/K/CharacterFace.meta
-guid: 9e61bbb10fb5b3b4f8cf32b23daf68f3
-========
+<<<<<<<< HEAD:Assets/02_Prefabs/K/HUD.meta
 guid: 928d3f486590f26439cc8db3243d67b8
->>>>>>>> K(new):Assets/02_Prefabs/K/HUD.meta
+========
+guid: ff62a61bdb107934fa22853aec5a5f76
+>>>>>>>> J:Assets/Frank_RPG_Gunslinger.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

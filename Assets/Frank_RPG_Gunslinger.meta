@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/02_Prefabs/K/HUD.meta
+guid: 2dfdade375e4b40438fcfd66f200bb82
+========
 guid: ff62a61bdb107934fa22853aec5a5f76
+>>>>>>>> J:Assets/Frank_RPG_Gunslinger.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

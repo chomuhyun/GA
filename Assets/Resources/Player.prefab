@@ -7197,6 +7197,7 @@ MonoBehaviour:
   swordPattern: {fileID: 0}
   healthUpPattern: {fileID: 0}
   spinPattern: {fileID: 0}
+  groundCrush: {fileID: 0}
 --- !u!1 &5680739963116089309
 GameObject:
   m_ObjectHideFlags: 0
