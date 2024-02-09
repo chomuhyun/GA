@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements.Experimental;
 
 
 public class TalkMgr : MonoBehaviour
@@ -55,17 +54,10 @@ public class TalkMgr : MonoBehaviour
 
         textName.text = string.Empty;
         textSentence.text = string.Empty;
-        
         StopAllCoroutines();
-        StartCoroutine(TypeName(naming.Dequeue()));
         StartCoroutine(TypeSentence(sentences.Dequeue()));
     }
     
-    IEnumerator TypeName(string namer)
-    {
-        textName.text = namer;
-        yield return null;
-    }
     IEnumerator TypeSentence(string sentence)
     {
         foreach (var letter in sentence)

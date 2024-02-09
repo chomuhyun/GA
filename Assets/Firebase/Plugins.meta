@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Firebase/Plugins.meta
 guid: 8893b383a045d054bb3c55a99f26ddcc
+========
+guid: 8efd3bd9979058141891ebb1603c27d8
+>>>>>>>> a38a3f5b (.):Assets/Firebase/Editor.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
