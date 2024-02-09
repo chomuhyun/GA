@@ -220,7 +220,7 @@ public class DataMgrDontDestroy : MonoBehaviour
     }
     #endregion
 
-    public void SaveDate() // 접속종료할때 저장
+    public void SaveData() // 접속종료할때 저장
     {
         int slotNum = SelectSlot.slotNum;
         Debug.Log("현재 슬롯넘버는 : "+slotNum);

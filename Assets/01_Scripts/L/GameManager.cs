@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     // 마을의 Exit 버튼을 누르면 지금까지의 정보를 저장하고 캐릭터 선택씬으로 이동.
     public void OnExitClick()
     {
-        dataMgrDontDestroy.SaveDate();
+        dataMgrDontDestroy.SaveData();
         PhotonNetwork.LeaveRoom();
         SceneManager.LoadScene("CHSelect");
     }

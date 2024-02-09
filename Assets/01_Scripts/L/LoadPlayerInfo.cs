@@ -10,6 +10,7 @@ public class LoadPlayerInfo : MonoBehaviour
 
     private DataMgrDontDestroy dataMgrDontDestroy;
     public string nickName;
+    public int classNum;
     public int level;
     public int exp;
     public float maxhp;
@@ -128,6 +129,7 @@ public class LoadPlayerInfo : MonoBehaviour
         // Start버튼을 눌렀을때, currentSlotNum에 있는 정보를 가져와서 dataMgr에 넣어준다.
         #region 캐릭터정보 변수에 담기
         nickName = PlayerPrefs.GetString($"{currentSlotNum}_NickName"); //필요하면 쓰자
+        classNum = PlayerPrefs.GetInt($"{currentSlotNum}_ClassNum");
         level = PlayerPrefs.GetInt($"{currentSlotNum}_Level");
         exp = PlayerPrefs.GetInt($"{currentSlotNum}_Exp");
         maxhp = PlayerPrefs.GetFloat($"{currentSlotNum}_MaxHp");
@@ -143,6 +145,7 @@ public class LoadPlayerInfo : MonoBehaviour
 
         #region 캐릭터정보. 변수의 값을 싱글톤에 보내주기
         dataMgrDontDestroy.NickName = nickName;
+        dataMgrDontDestroy.ClassNum = classNum;
         dataMgrDontDestroy.Level = level;
         dataMgrDontDestroy.Exp = exp;
         dataMgrDontDestroy.MaxHp = maxhp;

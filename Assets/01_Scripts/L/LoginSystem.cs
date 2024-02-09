@@ -13,6 +13,10 @@ public class LoginSystem : MonoBehaviour
 
     public Text outputText;
 
+    private void Start()
+    {
+        Screen.SetResolution(1920, 1080, true);
+    }
     public void OnClickCreateBtn()
     {
         Debug.Log("회원가입버튼 누름");
