@@ -4,23 +4,31 @@ using UnityEngine;
 
 public class DungeonTrap : MonoBehaviour
 {
-    public int damage = 10;
     private bool playerInside = false;
     private float timer = 0f;
-
+    
     public GameObject trappedPlayer;
+    public StateManager sm;
 
+
+    private void Start()
+    {
+        sm = GetComponent<StateManager>();
+    }
 
     private void Update()
     {
         if (playerInside)
         {
             timer += Time.deltaTime;
-            if (timer >= 1f)
+            if (timer >= 0.5f)
             {
-                trappedPlayer.GetComponent<StateManager>().hp -= 10;
-                Debug.Log("장판 밟으면 초당 체력 10씩 까임.");
                 trappedPlayer.GetComponent<HUDManager>().ChangeUserHUD();
+
+                if (trappedPlayer.gameObject.CompareTag("Player"))
+                {
+                    sm.DealDamage(trappedPlayer.GetComponent<StateManager>().gameObject, 100);
+                }
                 timer = 0f;
             }
         }
@@ -30,8 +38,11 @@ public class DungeonTrap : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+
             trappedPlayer = other.gameObject;
+            
             playerInside = true;
+
         }
     }
 
