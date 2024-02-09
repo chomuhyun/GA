@@ -5,6 +5,8 @@ using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
 using TMPro;
+using System;
+using JetBrains.Annotations;
 
 public class DungeonLoadManager : MonoBehaviourPunCallbacks
 {
@@ -12,9 +14,12 @@ public class DungeonLoadManager : MonoBehaviourPunCallbacks
 
     public int roomCnt = 0;
 
-    public TMP_Text roomName;
-    public TMP_Text connectInfo;
-    public TMP_Text msgList;
+    public Text roomName;
+    public Text connectInfo;
+    public Text msgList;
+    public Image bgImage;
+    public Sprite[] bgImages;
+
 
     private void Awake()
     {
@@ -30,16 +35,15 @@ public class DungeonLoadManager : MonoBehaviourPunCallbacks
             Debug.Log("현재 로비에 없기에 로비에 입장합니다.");
             PhotonNetwork.JoinLobby();
         }
+
+        roomName.text = $"{CurDunGeonInfoMaker()}  {CurDunGeonLevelMaker()}";
+        if (dataMgrDontDestroy.DungeonSortIdx == 0)
+            roomName.text = "마을로 돌아가는 중입니다 . . .";
+ 
+
     }
 
-    IEnumerator LoadLevelRaidDungeon()
-    {
-        yield return null;
-
-        PhotonNetwork.LoadLevel("RaidDungeon");
-        PhotonNetwork.AutomaticallySyncScene = true;
-    }
-
+    // 마을로가고싶으면  던전에서 나갈때 dataMgrDontDestroy.dungeonSortIdx를 0으로 하고나서 로딩씬에 오면된다.
     IEnumerator EnterDungeonRoom()
     {
         if (PhotonNetwork.InLobby)
@@ -56,6 +60,7 @@ public class DungeonLoadManager : MonoBehaviourPunCallbacks
                     PhotonNetwork.JoinRoom($"Room_Raid_{roomCnt}");
                     break;
                 default:
+                    PhotonNetwork.JoinRoom("Room_Home");
                     break;
             }
         }
@@ -84,6 +89,7 @@ public class DungeonLoadManager : MonoBehaviourPunCallbacks
                 CreateRaidRoom(roomCnt);
                 break;
             default:
+                CreateHome();
                 break;
             }
     }
@@ -113,10 +119,16 @@ public class DungeonLoadManager : MonoBehaviourPunCallbacks
                 case 3:
                     if (PhotonNetwork.IsMasterClient)
                     {
+                        PhotonNetwork.LoadLevel("Raid");
                         PhotonNetwork.AutomaticallySyncScene = true;
                     }
                     break;
                 default:
+                    if (PhotonNetwork.IsMasterClient)
+                    {
+                        PhotonNetwork.LoadLevel("Town");
+                        PhotonNetwork.AutomaticallySyncScene = true;
+                    }
                     break;
             }
         }
@@ -172,13 +184,71 @@ public class DungeonLoadManager : MonoBehaviourPunCallbacks
         PhotonNetwork.CreateRoom($"Room_Raid_{Cnt}", ro);
     }
 
+    public void CreateHome()
+    {
+        Debug.Log("CreateHome 실행");
+
+        // 룸의 속성 정의
+        RoomOptions ro = new RoomOptions();
+        ro.MaxPlayers = 20;     // 룸에 입장할 수 있는 최대 접속자 수
+        ro.IsOpen = true;       // 룸의 오픈 여부
+        ro.IsVisible = true;    // 로비에서 룸 목록에 노출시킬 여부
+
+        PhotonNetwork.CreateRoom("Room_Home");
+    }
+
     // 룸 접속 정보를 출력
     void SetRoomInfo()
     {
         Room room = PhotonNetwork.CurrentRoom;
-        roomName.text = room.Name;
+        //roomName.text = room.Name;
+
+
         connectInfo.text = $"({room.PlayerCount}/{room.MaxPlayers})";
     }
+
+
+    public string CurDunGeonInfoMaker()
+    {
+        string sortDungeon = "";
+
+        dataMgrDontDestroy = DataMgrDontDestroy.Instance;
+        if (dataMgrDontDestroy.DungeonSortIdx == 1)
+        {
+            sortDungeon = "Single Dungeon";
+            bgImage.sprite = bgImages[1];
+            roomName.color = Color.yellow;
+        }
+        else if (dataMgrDontDestroy.DungeonSortIdx == 2)
+        {
+            sortDungeon = "Chaos Dungeon";
+            bgImage.sprite = bgImages[2];
+            roomName.color = Color.cyan;
+        }
+        else if (dataMgrDontDestroy.DungeonSortIdx == 3)
+        {
+            sortDungeon = "Raid";
+            bgImage.sprite = bgImages[3];
+            roomName.color = Color.red;
+        }
+
+        return sortDungeon;
+
+
+
+
+    }
+    public string CurDunGeonLevelMaker()
+    {
+        string dungeonLV = "";
+
+        dataMgrDontDestroy = DataMgrDontDestroy.Instance;
+
+        dungeonLV = dataMgrDontDestroy.DungeonNumIdx.ToString();
+
+        return dungeonLV;
+    }
+
 
     public override void OnConnectedToMaster()
     {
@@ -194,35 +264,5 @@ public class DungeonLoadManager : MonoBehaviourPunCallbacks
         Debug.Log("로비 입장 완료.");
         Debug.Log("현재 inLobby : "+PhotonNetwork.InLobby);
         StartCoroutine(EnterDungeonRoom());
-    }
-
-    // 룸으로 새로운 네트워크 유저가 입장했때 호출되는 콜백함수
-    public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
-    {
-        SetRoomInfo();
-        string msg = $"\n<color=#00ff00>{newPlayer.NickName}</color> is joined room";
-        msgList.text += msg;
-
-        if (PhotonNetwork.CurrentRoom.PlayerCount == PhotonNetwork.CurrentRoom.MaxPlayers)
-        {
-            Debug.Log("CurPlayerCount==MaxPlayerCount 입니다.");
-            if (PhotonNetwork.IsMasterClient)
-            {
-                Debug.Log("마스터 클라이언트 입니다. 코루틴 실행함.");
-                StartCoroutine(LoadLevelRaidDungeon());
-            }
-            else
-            {
-                Debug.Log("마스터 클라이언트가 아닙니다. 코루틴실행안함.");
-            }
-        }
-    }
-
-    // 룸에서 네트워크 유저가 퇴장했때 호출되는 콜백함수
-    public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)
-    {
-        SetRoomInfo();
-        string msg = $"\n<color=#ff0000>{otherPlayer.NickName}</color> is left room";
-        msgList.text += msg;
     }
 }

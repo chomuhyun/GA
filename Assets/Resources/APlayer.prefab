@@ -9330,6 +9330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d036e4551422a7a4eb1984a9720154bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  os: {fileID: 0}
   btnSound: {fileID: 0}
   aP_qSound: {fileID: 8300000, guid: 2c7158131b641fd4da2061200dcb7d93, type: 3}
   aP_eSound: {fileID: 8300000, guid: c9bb4171cafd3dd47829336ea4c8d988, type: 3}

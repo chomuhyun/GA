@@ -450,14 +450,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16e49e9aeca8f304fb674feebf69c83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataMgrDonDestroy: {fileID: 0}
+  dataMgr: {fileID: 0}
+  questIndex: 0
   questCountTxt: {fileID: 527037713}
   goalTxt: {fileID: 1009573661}
-  questPopUpPanel: {fileID: 2097999414}
   goalInfo: 
-  questIdx: 0
   curCnt: 0
   maxCnt: 0
+  isCompleted: 0
 --- !u!1 &43288056
 GameObject:
   m_ObjectHideFlags: 0
@@ -9356,6 +9356,7 @@ MonoBehaviour:
   - {fileID: 5600084692600214261, guid: 54e8e1c297dcd49479f028fd55554eee, type: 3}
   - {fileID: 7298343793582599029, guid: bb2f0ab5169daa14ea73e6d136111c66, type: 3}
   - {fileID: 4099242668333204363, guid: 85c6353c80a670a46a674ba50ad489a6, type: 3}
+  classNum: 0
 --- !u!4 &971386455
 Transform:
   m_ObjectHideFlags: 0
@@ -16347,6 +16348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d036e4551422a7a4eb1984a9720154bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  os: {fileID: 0}
   btnSound: {fileID: 8300000, guid: 93873ba005ba08d458453d67ffaa878c, type: 3}
   aP_qSound: {fileID: 8300000, guid: 0bd05763df902854a80475577a26666a, type: 3}
   aP_eSound: {fileID: 8300000, guid: c9bb4171cafd3dd47829336ea4c8d988, type: 3}
@@ -17782,7 +17784,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataMgrDontDestroy: {fileID: 0}
-  mouseOnOff: 0
 --- !u!1 &2142445587
 GameObject:
   m_ObjectHideFlags: 0
@@ -26000,6 +26001,7 @@ MonoBehaviour:
   dissol: {fileID: 1325020594192546290}
   Effect: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}
   os: {fileID: 0}
+  sound: 1
 --- !u!4 &6105876049711044098
 Transform:
   m_ObjectHideFlags: 0
@@ -28679,6 +28681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d036e4551422a7a4eb1984a9720154bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  os: {fileID: 0}
   btnSound: {fileID: 0}
   aP_qSound: {fileID: 0}
   aP_eSound: {fileID: 0}
@@ -29456,7 +29459,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ExecuteInEditor: 1
-  m_Bindings: []
+  m_Bindings:
+  - {fileID: 8267238937937835228}
+  - {fileID: 8931613366664094389}
+  - {fileID: 8466429302272670597}
   m_VisualEffect: {fileID: 452301879852907157}
 --- !u!4 &8028540396887477641
 Transform:
@@ -31359,6 +31365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d036e4551422a7a4eb1984a9720154bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  os: {fileID: 0}
   btnSound: {fileID: 8300000, guid: 93873ba005ba08d458453d67ffaa878c, type: 3}
   aP_qSound: {fileID: 8300000, guid: 0bd05763df902854a80475577a26666a, type: 3}
   aP_eSound: {fileID: 8300000, guid: c9bb4171cafd3dd47829336ea4c8d988, type: 3}
