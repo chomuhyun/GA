@@ -71,6 +71,11 @@ MonoBehaviour:
   - HealthUPAllClient
   - NemAllClient
   - DownAllClient
+  - Nem2
+  - SaveBallPosition
+  - Spawns
+  - Nem2Start
+  - NemStart
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

@@ -831,9 +831,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataMgrDontDestroy: {fileID: 0}
   roomCnt: 0
-  roomName: {fileID: 0}
-  connectInfo: {fileID: 0}
-  msgList: {fileID: 0}
+  roomName: {fileID: 702972122}
+  connectInfo: {fileID: 1248618026}
+  msgList: {fileID: 637393394}
+  bgImage: {fileID: 719968130}
+  bgImages:
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 8cab242909fcfbe42bb1e029141285b4, type: 3}
+  - {fileID: 21300000, guid: ce7208a4810581449b452bdc1e16fd39, type: 3}
+  - {fileID: 21300000, guid: 68b5e53a28c61bb419fea7d267939f0f, type: 3}
 --- !u!1 &1248618022
 GameObject:
   m_ObjectHideFlags: 0

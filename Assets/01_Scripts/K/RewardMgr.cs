@@ -86,8 +86,8 @@ public class RewardMgr : MonoBehaviour
 
     public void ChaosClearReward()
     {
-        expPotionReward = 5;
-        materialReward = 200;
+        expPotionReward = 500;
+        materialReward = 300;
 
         expPotionReward *= dataMgrDontDestroy.dungeonNumIdx;
         materialReward *= dataMgrDontDestroy.dungeonNumIdx;
@@ -97,8 +97,8 @@ public class RewardMgr : MonoBehaviour
 
     public void RaidClearReward()
     {
-        expPotionReward = 10;
-        goldReward = 1000;
+        expPotionReward = 1000;
+        goldReward = 15000;
 
         expPotionReward *= dataMgrDontDestroy.dungeonNumIdx;
         goldReward *= dataMgrDontDestroy.dungeonNumIdx;

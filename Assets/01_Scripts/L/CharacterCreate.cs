@@ -96,17 +96,34 @@ public class CharacterCreate : MonoBehaviour
         PlayerPrefs.SetString($"{slotNum}_NickName", nickName);
         PlayerPrefs.SetString($"{slotNum}_Class", className);
         PlayerPrefs.SetInt($"{slotNum}_ClassNum", classNum);
+        switch (classNum)
+        {
+            case 0:
+                PlayerPrefs.SetFloat($"{slotNum}_MaxHp", 1500);
+                PlayerPrefs.SetFloat($"{slotNum}_Hp", 1500);
+                PlayerPrefs.SetInt($"{slotNum}_CriChance", 50);
+                break;
+            case 1:
+                PlayerPrefs.SetFloat($"{slotNum}_MaxHp", 1000);
+                PlayerPrefs.SetFloat($"{slotNum}_Hp", 1000);
+                PlayerPrefs.SetInt($"{slotNum}_CriChance", 30);
+                break;
+            case 2:
+                PlayerPrefs.SetFloat($"{slotNum}_MaxHp", 1000);
+                PlayerPrefs.SetFloat($"{slotNum}_Hp", 1000);
+                PlayerPrefs.SetInt($"{slotNum}_CriChance", 50);
+                break;
+            default:
+                break;
+        }
         PlayerPrefs.SetInt($"{slotNum}_Level", 1);
         PlayerPrefs.SetInt($"{slotNum}_Exp", 0);
-        PlayerPrefs.SetFloat($"{slotNum}_MaxHp", 500);
-        PlayerPrefs.SetFloat($"{slotNum}_Hp", 500);
         PlayerPrefs.SetInt($"{slotNum}_WeaponLevel", 1);
-        PlayerPrefs.SetInt($"{slotNum}_AttackPower", 50);
-        PlayerPrefs.SetInt($"{slotNum}_CriChance", 50);
+        PlayerPrefs.SetInt($"{slotNum}_AttackPower", 150);
         PlayerPrefs.SetFloat($"{slotNum}_CriDamage", 120f);
         PlayerPrefs.SetInt($"{slotNum}_UserGold", 10000);
-        PlayerPrefs.SetInt($"{slotNum}_Material", 10000);
-        PlayerPrefs.SetInt($"{slotNum}_ExpPotion", 3000);
+        PlayerPrefs.SetInt($"{slotNum}_Material", 100);
+        PlayerPrefs.SetInt($"{slotNum}_ExpPotion", 1000);
         PlayerPrefs.SetInt($"{slotNum}_QusetIdx", 0);
         PlayerPrefs.SetString($"{slotNum}_GoalTxt", "");
         PlayerPrefs.SetInt($"{slotNum}_QuestCurCnt", 0);

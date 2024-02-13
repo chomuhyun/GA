@@ -7,7 +7,7 @@ public class PlayerUDChanger : MonoBehaviour
 {
     public DataMgrDontDestroy dataMgr;
 
-    public Text plyaerHUDLv;
+    public Text playerHUDLv;
     public Text playerHUDName;
     public Image playerHUDFace;
     public Sprite[] playerHUDFaceSet;
@@ -17,7 +17,7 @@ public class PlayerUDChanger : MonoBehaviour
     {
         dataMgr = DataMgrDontDestroy.Instance;
 
-        plyaerHUDLv.text = $"Lv {dataMgr.level.ToString()}";
+        playerHUDLv.text = $"Lv {dataMgr.level.ToString()}";
         playerHUDName.text = dataMgr.nickName;
 
         if (dataMgr.classNum == 0)
@@ -32,6 +32,7 @@ public class PlayerUDChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        playerHUDName.text = dataMgr.nickName;
+        playerHUDLv.text = $"Lv {dataMgr.level.ToString()}";
     }
 }

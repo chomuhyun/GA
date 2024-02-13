@@ -1835,6 +1835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178e506cb56fb9b46bb851526935cfcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cDunMgr: {fileID: 0}
   detectionRadius: 10
   playerTag: Player
   nearbyPlayer: []
@@ -2075,13 +2076,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataMgrDontDestroy: {fileID: 0}
   level: 1
-  exp: 0
-  maxhp: 20000
-  hp: 20000
+  maxhp: 15000
   weaponLevel: 0
-  attackPower: 80
-  criChance: 35
-  criDamage: 130
+  hp: 15000
+  attackPower: 20
+  criChance: 28
+  criDamage: 120
+  exp: 0
+  ONPlayer: 0
   userGold: 0
   userMaterial: 0
   userExpPotion: 0
@@ -6783,7 +6785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 5567452353469448382}
-  atkPer: 123
+  atkPer: 80
   player: {fileID: 0}
 --- !u!54 &2728713104683872261
 Rigidbody:
@@ -6844,6 +6846,10 @@ PrefabInstance:
       propertyPath: looping
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4245480918620153635, guid: 666caa110d61694448b721b5d9f915c1, type: 3}
+      propertyPath: sm
+      value: 
+      objectReference: {fileID: 5567452353469448382}
     - target: {fileID: 6358566156498434482, guid: 666caa110d61694448b721b5d9f915c1, type: 3}
       propertyPath: m_LocalPosition.y
       value: -6.61
@@ -7081,7 +7087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 5567452353469448382}
-  atkPer: 123
+  atkPer: 80
   player: {fileID: 0}
 --- !u!54 &325599327161041527
 Rigidbody:
@@ -7249,7 +7255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 5567452353469448382}
-  atkPer: 123
+  atkPer: 80
   player: {fileID: 0}
 --- !u!54 &5305299757843077839
 Rigidbody:
@@ -7403,7 +7409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 5567452353469448382}
-  atkPer: 123
+  atkPer: 80
   player: {fileID: 0}
 --- !u!54 &7484759389888596370
 Rigidbody:

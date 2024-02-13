@@ -119,14 +119,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2b234d65ba7b84485082702a4067fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhp: 3000
-  hp: 100
-  atk: 0
+  dataMgrDontDestroy: {fileID: 0}
+  level: 1
+  maxhp: 4000
+  weaponLevel: 0
+  hp: 4000
+  attackPower: 0
   criChance: 50
   criDamage: 1.5
-  def: 0
-  gageTime: 0
-  asdf: 0
+  exp: 0
+  ONPlayer: 0
+  userGold: 0
+  userMaterial: 0
+  userExpPotion: 0
+  hudManager: {fileID: 0}
+  pv: {fileID: 0}
 --- !u!114 &-2333520306331739335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +146,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa2b71845733ad448dba9d86e22a3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SaveZone: {fileID: 6424583148328831481, guid: d2ffbc8b168cdf74a9dbb7c6c1cfdf2f,
-    type: 3}
+  SaveZone: {fileID: 6424583148328831481, guid: d2ffbc8b168cdf74a9dbb7c6c1cfdf2f, type: 3}
   Sm: {fileID: -8076262145329726173}

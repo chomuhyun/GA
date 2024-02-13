@@ -204,7 +204,7 @@ public class EnforceMgr : MonoBehaviourPunCallbacks
             beforeAtk.text = playerAttackPower.ToString();
             afterAtk.text = (playerAttackPower + (int)(jsonData["Enforce"][replace]["PlusAtk"])).ToString();
             successPanel.SetActive(true);
-            playerAttackPower += 20;
+            playerAttackPower += 30;
             playerWeaponLevel += 1;
             successweaponNowTxt.text = $"{jsonData["Enforce"][playerWeaponLv]["ForceLv"]} ´Ü°è";
             //trophyMgr.TrophyIndexUp(3);

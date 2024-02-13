@@ -6370,6 +6370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb6128e2003f0742a54a70fd3224734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cDunMgr: {fileID: 0}
   speed: 2.5
   rotSpeed: 5
   range: 10
@@ -6410,13 +6411,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataMgrDontDestroy: {fileID: 0}
   level: 1
-  exp: 0
-  maxhp: 10000
-  hp: 10000
+  maxhp: 13000
   weaponLevel: 0
-  attackPower: 100
+  hp: 13000
+  attackPower: 50
   criChance: 30
   criDamage: 130
+  exp: 0
+  ONPlayer: 0
   userGold: 0
   userMaterial: 0
   userExpPotion: 0

@@ -7049,6 +7049,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   detectionRadius: 10
   playerTag: Player
+  neM1area: {fileID: 8821188965738105768}
+  prefabs:
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  - {fileID: 7841723335360785396, guid: c64eef41d416c7549bf9f56634781efe, type: 3}
+  nem2Area: {fileID: 8662998407160962646, guid: b81dcfabb7a8bb74593860eaaff61d5e, type: 3}
+  safeZoneBall: {fileID: 4060544494506954394, guid: e333b43aa630554419d6a4c41bbde5c8, type: 3}
+  patternTime: 0
+  nem2PatternTime: 0
   speed: 2.5
   rotSpeed: 5
   range: 8
@@ -7288,6 +7314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d036e4551422a7a4eb1984a9720154bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  os: {fileID: 0}
   btnSound: {fileID: 0}
   aP_qSound: {fileID: 0}
   aP_eSound: {fileID: 0}
@@ -7305,6 +7332,7 @@ MonoBehaviour:
   swordPattern: {fileID: 8300000, guid: b957c1fc7ea3a2a44b95d1908a0b2d0b, type: 3}
   healthUpPattern: {fileID: 8300000, guid: 8bc2c6918c73f414c8db1d62178eed44, type: 3}
   spinPattern: {fileID: 8300000, guid: 16bda0b136a5c424199b2d13b6cde782, type: 3}
+  groundCrush: {fileID: 0}
 --- !u!1 &8628034541666123030
 GameObject:
   m_ObjectHideFlags: 0

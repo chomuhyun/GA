@@ -5,7 +5,7 @@ using UnityEngine;
 public class DataMgrDontDestroy : MonoBehaviour
 {
     public static DataMgrDontDestroy _instance;
-    public bool playerDie; 
+    public bool playerDie = false;
     public static DataMgrDontDestroy Instance
     {
         get

@@ -62,6 +62,7 @@ public class HUDManager : MonoBehaviourPunCallbacks
         if (pv.IsMine)
         {
             ChangeUserHUD();
+
             float targetFillAmount = Mathf.InverseLerp(0, stateManager.maxhp, stateManager.hp);
 
             if (DHpBar.fillAmount > targetFillAmount)

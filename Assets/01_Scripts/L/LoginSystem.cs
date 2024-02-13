@@ -51,4 +51,8 @@ public class LoginSystem : MonoBehaviour
             }
         }
     }
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }

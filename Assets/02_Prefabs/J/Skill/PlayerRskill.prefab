@@ -44285,7 +44285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 0}
-  atkPer: 300
+  atkPer: 400
 --- !u!54 &139620477499372618
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -28,6 +28,12 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks,IPunObservable
     private Transform currentTarget;
     private Vector3 currPos;
     private Quaternion currRot;
+    public BoxCollider neM1area;
+    public GameObject[] prefabs;
+    public GameObject nem2Area;
+    public GameObject safeZoneBall;
+    public float patternTime;
+    public float nem2PatternTime;
     [Header("Move")]
     public float speed = 2.5f;
     public float rotSpeed = 5f;
@@ -116,14 +122,20 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks,IPunObservable
             pv.TransferOwnership(PhotonNetwork.LocalPlayer);
             if (!die)
             {
+                patternTime += Time.deltaTime;
+                nem2PatternTime += Time.deltaTime;
                 NearByPlayer();
                 BreakTime();
                 PatternTimeCheck();
                 DieNowPatternt();
                 NEM1();
+                NemStart();
                 Dieing();
                 healthUpPattern();
                 GroundOner();
+                Nem2Start();
+
+
                 switch (raidBoss)
                 {
                     case RAIDBOSS.IDLE:
@@ -436,6 +448,9 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks,IPunObservable
     [PunRPC]
     IEnumerator breakTiming()
     {
+        DownPattern.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        DownPattern.SetActive(false);
         yield return new WaitForSeconds(3f);
         float dista = Vector3.Distance(targetPlayer.position, transform.position);
         if (dista > attakRange)
@@ -447,9 +462,6 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks,IPunObservable
             raidBoss = RAIDBOSS.ATTACK;
         }
         breakOn = false;
-        DownPattern.SetActive(true);
-        yield return new WaitForSeconds(2f);
-        DownPattern.SetActive(false);
     }
     [PunRPC]
     void Dieing()
@@ -533,6 +545,24 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks,IPunObservable
         page1 = 0;
     }
     [PunRPC]
+    private void NemStart()
+    {
+        if (patternTime >= 60f)
+        {
+            Spawns();
+            StartCoroutine(Nem1delay());
+        }
+    }
+    [PunRPC]
+    private void Nem2Start()
+    {
+        if (nem2PatternTime >= 120f)
+        {
+            Nem2();
+            nem2PatternTime = 0;
+        }
+    }
+    [PunRPC]
     void Spawn()
     {
 
@@ -574,6 +604,53 @@ public class RaidBossCtrl : MonoBehaviourPunCallbacks,IPunObservable
         {
             raidBoss = RAIDBOSS.ATTACK;
         }
+    }
+
+
+    [PunRPC]
+    private Vector3 SaveBallPosition()
+    {
+        Vector3 basePosition = transform.position;
+
+        Vector3 size = neM1area.size;
+
+        float posX = basePosition.x + Random.Range(-size.x, size.x);
+        float posY = basePosition.y + 1f;
+        float posZ = basePosition.z + Random.Range(-size.z, size.z);
+
+        Vector3 spawnPos = new Vector3(posX, posY, posZ);
+
+        return spawnPos;
+    }
+
+    [PunRPC]
+    void Spawns()
+    {
+
+        int selection = Random.Range(0, prefabs.Length);
+
+        GameObject selectedPrefab = prefabs[selection];
+
+        Vector3 spawnPos = GetRandomPosition();
+
+        GameObject instance = Instantiate(selectedPrefab, spawnPos, Quaternion.Euler(0, 0, 0));
+        gameObjects.Add(instance);
+
+        raidBoss = RAIDBOSS.IDLE;
+    }
+    [PunRPC]
+    void Nem2()
+    {
+        Vector3 spawnPos = SaveBallPosition();
+
+        Instantiate(safeZoneBall, spawnPos, Quaternion.Euler(0, 0, 0));
+        Instantiate(nem2Area, transform.position, transform.rotation);
+
+    }
+    IEnumerator Nem1delay()
+    {
+        yield return new WaitForSeconds(0.8f);
+        patternTime = 0;
     }
 
     void EffectInvoke()

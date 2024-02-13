@@ -14,7 +14,7 @@ public class BulletCtrl : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.forward * 0.3f);
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 0.5f);
     }
 
     private void OnTriggerEnter(Collider other)

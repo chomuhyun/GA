@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Photon.Pun;
 using static MageMiddleBoss;
 
 
-public class ChaosDungeonMgr : MonoBehaviour
+public class ChaosDungeonMgr : MonoBehaviourPunCallbacks
 {
     public DataMgrDontDestroy dataMgrDontDestroy;
 
@@ -30,18 +32,13 @@ public class ChaosDungeonMgr : MonoBehaviour
     public GameObject endBossEffect;
     public GameObject chaosEndClearEffect;
     public GameObject clearPanel;
-
+    
 
 
     private void Start()
     {
-        if(dataMgrDontDestroy != null)
-        {
-            dungeonNumIdx = DataMgrDontDestroy.Instance.DungeonNumIdx;
-
             dataMgrDontDestroy = DataMgrDontDestroy.Instance;
-            
-        }
+        dungeonNumIdx = DataMgrDontDestroy.Instance.DungeonNumIdx;
     }
 
     #region 1º¸½º ¼ÒÈ¯
@@ -64,9 +61,17 @@ public class ChaosDungeonMgr : MonoBehaviour
     {
         GameObject mob1 = Instantiate(mobPrefab[1], mobSpawnPoint[1]);
         yield return new WaitForSeconds(0.5f);
-        mob1.GetComponentInChildren<StateManager>().maxhp *= dungeonNumIdx;
-        mob1.GetComponentInChildren<StateManager>().hp *= dungeonNumIdx;
-        mob1.GetComponentInChildren<StateManager>().attackPower += (dungeonNumIdx * 30);
+        StateManager[] stateManagers = mob1.GetComponentsInChildren<StateManager>();
+        foreach (StateManager stateManager in stateManagers)
+        {
+            stateManager.maxhp *= dungeonNumIdx;
+            stateManager.hp *= dungeonNumIdx;
+            stateManager.attackPower += (dungeonNumIdx * 30);
+        }
+
+        //mob1.GetComponentInChildren<StateManager>().maxhp *= dungeonNumIdx;
+        //mob1.GetComponentInChildren<StateManager>().hp *= dungeonNumIdx;
+        //mob1.GetComponentInChildren<StateManager>().attackPower += (dungeonNumIdx * 30);
     }
     #endregion
 
@@ -90,9 +95,13 @@ public class ChaosDungeonMgr : MonoBehaviour
     {
         GameObject mob1 = Instantiate(mobPrefab[2], mobSpawnPoint[2]);
         yield return new WaitForSeconds(0.5f);
-        mob1.GetComponentInChildren<StateManager>().maxhp *= dungeonNumIdx;
-        mob1.GetComponentInChildren<StateManager>().hp *= dungeonNumIdx;
-        mob1.GetComponentInChildren<StateManager>().attackPower += (dungeonNumIdx * 30);
+        StateManager[] stateManagers = mob1.GetComponentsInChildren<StateManager>();
+        foreach (StateManager stateManager in stateManagers)
+        {
+            stateManager.maxhp *= dungeonNumIdx;
+            stateManager.hp *= dungeonNumIdx;
+            stateManager.attackPower += (dungeonNumIdx * 30);
+        }
     }
     #endregion
 
@@ -116,9 +125,13 @@ public class ChaosDungeonMgr : MonoBehaviour
     {
         GameObject mob1 = Instantiate(mobPrefab[3], mobSpawnPoint[3]);
         yield return new WaitForSeconds(0.5f);
-        mob1.GetComponentInChildren<StateManager>().maxhp *= dungeonNumIdx;
-        mob1.GetComponentInChildren<StateManager>().hp *= dungeonNumIdx;
-        mob1.GetComponentInChildren<StateManager>().attackPower += (dungeonNumIdx * 30);
+        StateManager[] stateManagers = mob1.GetComponentsInChildren<StateManager>();
+        foreach (StateManager stateManager in stateManagers)
+        {
+            stateManager.maxhp *= dungeonNumIdx;
+            stateManager.hp *= dungeonNumIdx;
+            stateManager.attackPower += (dungeonNumIdx * 30);
+        }
     }
     #endregion
 
@@ -126,28 +139,30 @@ public class ChaosDungeonMgr : MonoBehaviour
     {
         if (isBattle == false)
         {
-            Jun_TweenRuntime[] gameObject1 = door[2].GetComponents<Jun_TweenRuntime>();
-            Jun_TweenRuntime[] gameObject2 = door[3].GetComponents<Jun_TweenRuntime>();
-            Jun_TweenRuntime[] gameObject3 = door[4].GetComponents<Jun_TweenRuntime>();
-            Jun_TweenRuntime[] gameObject4 = door[5].GetComponents<Jun_TweenRuntime>();
+            Jun_TweenRuntime[] gameObject3 = door[2].GetComponents<Jun_TweenRuntime>();
+            Jun_TweenRuntime[] gameObject4 = door[3].GetComponents<Jun_TweenRuntime>();
+            Jun_TweenRuntime[] gameObject5 = door[4].GetComponents<Jun_TweenRuntime>();
+            Jun_TweenRuntime[] gameObject6 = door[5].GetComponents<Jun_TweenRuntime>();
             yield return new WaitForSeconds(0.5f);
-            gameObject1[0].Play(); // ´ÝÈ÷±â
-            gameObject2[0].Play(); // ´ÝÈ÷±â
+            
             gameObject3[0].Play(); // ´ÝÈ÷±â
             gameObject4[0].Play(); // ´ÝÈ÷±â
+            gameObject5[0].Play(); // ´ÝÈ÷±â
+            gameObject6[0].Play(); // ´ÝÈ÷±â
             isBattle = true;
         }
         else
         {
-            Jun_TweenRuntime[] gameObject1 = door[2].GetComponents<Jun_TweenRuntime>();
-            Jun_TweenRuntime[] gameObject2 = door[3].GetComponents<Jun_TweenRuntime>();
-            Jun_TweenRuntime[] gameObject3 = door[4].GetComponents<Jun_TweenRuntime>();
-            Jun_TweenRuntime[] gameObject4 = door[5].GetComponents<Jun_TweenRuntime>();
+            Jun_TweenRuntime[] gameObject3 = door[2].GetComponents<Jun_TweenRuntime>();
+            Jun_TweenRuntime[] gameObject4 = door[3].GetComponents<Jun_TweenRuntime>();
+            Jun_TweenRuntime[] gameObject5 = door[4].GetComponents<Jun_TweenRuntime>();
+            Jun_TweenRuntime[] gameObject6 = door[5].GetComponents<Jun_TweenRuntime>();
             yield return new WaitForSeconds(0.5f);
-            gameObject1[1].Play(); // ¿­·Á¶ó Âü±ú
-            gameObject2[1].Play(); // ¿­·Á¶ó Âü±ú
+
             gameObject3[1].Play(); // ¿­·Á¶ó Âü±ú
             gameObject4[1].Play(); // ¿­·Á¶ó Âü±ú
+            gameObject5[1].Play(); // ¿­·Á¶ó Âü±ú
+            gameObject6[1].Play(); // ¿­·Á¶ó Âü±ú
             isBattle = false;
         }
     }
@@ -179,8 +194,13 @@ public class ChaosDungeonMgr : MonoBehaviour
     public void MoveTown()
     {
         dataMgrDontDestroy.DungeonSortIdx = 0;
-        //¸¶À»·Î ÀÌµ¿ Ãß°¡.
+        dataMgrDontDestroy.playerDie = false;
+
+        PhotonNetwork.LeaveRoom();
+        SceneManager.LoadScene("DungeonLoadingScene");
     }
+
+    
     public void Update()
     {
 

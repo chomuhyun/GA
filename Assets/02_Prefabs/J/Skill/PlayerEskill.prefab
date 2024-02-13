@@ -29476,7 +29476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 0}
-  atkPer: 150
+  atkPer: 250
 --- !u!1 &1985817477992794
 GameObject:
   m_ObjectHideFlags: 0

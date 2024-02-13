@@ -9,7 +9,6 @@ public class LoadPlayerInfo : MonoBehaviour
     public int currentSlotNum;
 
     private DataMgrDontDestroy dataMgrDontDestroy;
-    public int classNum;
     public string nickName;
     public int classNum;
     public int level;

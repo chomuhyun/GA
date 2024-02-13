@@ -9835,7 +9835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 1035065995105691986, guid: 2ac1d62cfddc25545844e4b5f7bcc7fa, type: 3}
-  atkPer: 130
+  atkPer: 150
   player: {fileID: 0}
 --- !u!65 &8196592517805192111
 BoxCollider:
@@ -9856,8 +9856,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.5, y: 1, z: 11}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 1, y: 1, z: 11}
+  m_Center: {x: 0, y: 0, z: -0.71}
 --- !u!114 &1759732883673987801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9870,6 +9870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d036e4551422a7a4eb1984a9720154bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  os: {fileID: 0}
   btnSound: {fileID: 0}
   aP_qSound: {fileID: 0}
   aP_eSound: {fileID: 0}
@@ -9887,6 +9888,7 @@ MonoBehaviour:
   swordPattern: {fileID: 8300000, guid: b957c1fc7ea3a2a44b95d1908a0b2d0b, type: 3}
   healthUpPattern: {fileID: 0}
   spinPattern: {fileID: 0}
+  groundCrush: {fileID: 0}
 --- !u!1 &1508279336647300792
 GameObject:
   m_ObjectHideFlags: 0

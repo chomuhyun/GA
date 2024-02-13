@@ -55,9 +55,14 @@ public class TalkMgr : MonoBehaviour
         textName.text = string.Empty;
         textSentence.text = string.Empty;
         StopAllCoroutines();
+        StartCoroutine(TypeName(naming.Dequeue()));
         StartCoroutine(TypeSentence(sentences.Dequeue()));
     }
-    
+    IEnumerator TypeName(string name)
+    {
+        textName.text = name;
+        yield return null;
+    }
     IEnumerator TypeSentence(string sentence)
     {
         foreach (var letter in sentence)

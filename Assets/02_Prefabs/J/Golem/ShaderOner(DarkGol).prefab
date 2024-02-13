@@ -476,12 +476,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataMgrDontDestroy: {fileID: 0}
   level: 1
-  maxhp: 4000
+  maxhp: 5000
   weaponLevel: 0
-  hp: 4000
-  attackPower: 0
-  criChance: 20
-  criDamage: 1.5
+  hp: 5000
+  attackPower: 30
+  criChance: 15
+  criDamage: 110
   exp: 0
   ONPlayer: 0
   userGold: 0

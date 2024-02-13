@@ -24429,7 +24429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sm: {fileID: 0}
-  atkPer: 200
+  atkPer: 300
 --- !u!65 &5917327450205912561
 BoxCollider:
   m_ObjectHideFlags: 0

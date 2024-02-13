@@ -9332,17 +9332,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   os: {fileID: 0}
   btnSound: {fileID: 0}
-  aP_qSound: {fileID: 8300000, guid: 2c7158131b641fd4da2061200dcb7d93, type: 3}
+  aP_qSound: {fileID: 8300000, guid: f81f5ad668269ad4287d1eb71af5f584, type: 3}
   aP_eSound: {fileID: 8300000, guid: c9bb4171cafd3dd47829336ea4c8d988, type: 3}
-  aP_rSound: {fileID: 8300000, guid: ebb22e4fe07270e4ba97f773410425e7, type: 3}
-  aP_normalAtkSound: {fileID: 8300000, guid: 581fc75a0fae5a749b952a8b7e31dc9f, type: 3}
-  sP_qSound: {fileID: 8300000, guid: 4a293aa82fd5c57498a35957f7983066, type: 3}
-  sP_eSound: {fileID: 8300000, guid: 2fea265e53f8c594780f6bee85b3ed83, type: 3}
-  sP_rSound: {fileID: 8300000, guid: 96480c447638db040a2aa9e19c021f98, type: 3}
-  sP_normalAtkSound: {fileID: 0}
-  mP_qSound: {fileID: 8300000, guid: 6592fae36ae1ee6419198f33d3c74427, type: 3}
+  aP_rSound: {fileID: 8300000, guid: 9ab836928586db24b8f8f2aaa99e7921, type: 3}
+  aP_normalAtkSound: {fileID: 8300000, guid: 247f16d55d90c4544840b780420027be, type: 3}
+  sP_qSound: {fileID: 8300000, guid: b3f3709ff8829cd44992568a5be12071, type: 3}
+  sP_eSound: {fileID: 8300000, guid: 944b9ac30176820459f65b337c19df66, type: 3}
+  sP_rSound: {fileID: 8300000, guid: 366d0db9b80a94c49a7d7d5f3ee0efbf, type: 3}
+  sP_normalAtkSound: {fileID: 8300000, guid: ae5d157679b2a504eae6aa9a73464faf, type: 3}
+  mP_qSound: {fileID: 8300000, guid: a2c658ab4cee89f489668aab233e5c9a, type: 3}
   mP_eSound: {fileID: 8300000, guid: adcac75087a17704ca6c0c3b15bc3aa5, type: 3}
-  mP_rSound: {fileID: 8300000, guid: 54c7809113f69ee419d00184a9f7e9f9, type: 3}
+  mP_rSound: {fileID: 8300000, guid: 9d2d7d8fb78a875439fca58f98a75bc6, type: 3}
   mP_normalAtkSound: {fileID: 0}
   bossFire: {fileID: 0}
   swordPattern: {fileID: 0}
@@ -10931,7 +10931,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 813a20a35c8beaa4a84de6d77f91df41, type: 3}
-    m_FontSize: 20
+    m_FontSize: 23
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
